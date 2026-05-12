@@ -115,7 +115,63 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .wide-ratio { aspect-ratio: 16/9; object-fit: cover; }
 .contain-img { object-fit: contain; }
 
-@media (max-width: 1100px) { .kpi4, .h3, .sg, .img-grid, .img-grid.cols-3, .img-grid.cols-6, .matrix-grid { grid-template-columns: 1fr 1fr; } .yoy { grid-template-columns: 1fr; } .yoy-arrow { transform: rotate(90deg); padding: 12px 0; } .main { padding: 20px; } }
+
+/* ── PHASE 3 TIMELINE (컨텐츠 노출 스케줄) ── */
+.timeline-wrap { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px 26px 24px; box-shadow: var(--sh); margin-bottom: 24px; }
+.timeline-title { font-size: 13px; font-weight: 800; color: var(--t1); margin-bottom: 4px; letter-spacing: -0.01em; }
+.timeline-sub { font-size: 12px; color: var(--t3); margin-bottom: 18px; line-height: 1.6; }
+.timeline { display: grid; grid-template-columns: repeat(6, 1fr); position: relative; padding-top: 8px; }
+.timeline::before { content: ''; position: absolute; top: 16px; left: 8%; right: 8%; height: 2px; background: linear-gradient(90deg, var(--amb), var(--s4), var(--s4), var(--lav), var(--lav), var(--grn)); border-radius: 2px; z-index: 1; }
+.timeline-step { text-align: center; position: relative; padding: 0 4px; z-index: 2; }
+.timeline-dot { width: 18px; height: 18px; border-radius: 50%; margin: 0 auto 10px; background: var(--white); border: 3px solid; position: relative; box-shadow: 0 0 0 4px var(--white); }
+.timeline-step.s1 .timeline-dot { border-color: var(--amb); }
+.timeline-step.s2 .timeline-dot { border-color: var(--s4); }
+.timeline-step.s3 .timeline-dot { border-color: var(--s4); background: var(--s4); }
+.timeline-step.s4 .timeline-dot { border-color: var(--lav); }
+.timeline-step.s5 .timeline-dot { border-color: var(--lav); }
+.timeline-step.s6 .timeline-dot { border-color: var(--grn); background: var(--grn); }
+.timeline-date { font-size: 12px; font-weight: 800; color: var(--t1); margin-bottom: 4px; letter-spacing: -0.01em; }
+.timeline-label { font-size: 11px; color: var(--t2); line-height: 1.5; font-weight: 500; min-height: 30px; }
+.timeline-step.peak .timeline-date { color: var(--grn); }
+.timeline-step.peak .timeline-label { color: var(--grn-t); font-weight: 700; }
+.timeline-peak-tag { display: inline-block; font-size: 9px; font-weight: 800; letter-spacing: 0.1em; padding: 2px 7px; border-radius: 4px; background: var(--grn-bg); color: var(--grn); margin-top: 4px; text-transform: uppercase; }
+
+/* ── AI INSIGHT (3 카드) ── */
+.ai-insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px; }
+.ai-insight-card { background: linear-gradient(135deg, var(--s0), var(--white)); border: 1px solid var(--bdr); border-radius: 12px; padding: 16px 18px; position: relative; }
+.ai-insight-icon { font-size: 22px; margin-bottom: 8px; }
+.ai-insight-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: var(--s1); color: var(--s5); letter-spacing: 0.06em; margin-bottom: 6px; text-transform: uppercase; }
+.ai-insight-title { font-size: 14px; font-weight: 800; color: var(--t1); margin-bottom: 6px; }
+.ai-insight-desc { font-size: 12px; color: var(--t2); line-height: 1.65; }
+.ai-insight-desc b { color: var(--t1); font-weight: 700; }
+
+/* ── 인플 3인 카드 ── */
+.infl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
+.infl-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; overflow: hidden; box-shadow: var(--sh); transition: transform 0.2s, box-shadow 0.2s; }
+.infl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(58,164,205,0.18); }
+.infl-photo { background: var(--s0); aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--t4); border-bottom: 1px solid var(--bdr); position: relative; }
+.infl-photo-icon { font-size: 36px; opacity: 0.4; margin-bottom: 6px; }
+.infl-photo-note { font-size: 11px; color: var(--t4); font-weight: 500; }
+.infl-rank { position: absolute; top: 10px; left: 10px; background: var(--amb); color: #fff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 5px; letter-spacing: 0.08em; }
+.infl-body { padding: 16px 18px; }
+.infl-name { font-size: 18px; font-weight: 800; color: var(--t1); margin-bottom: 2px; letter-spacing: -0.01em; }
+.infl-handle { font-size: 12px; color: var(--s5); font-weight: 600; margin-bottom: 12px; }
+.infl-stats { display: flex; gap: 22px; padding: 10px 14px; background: var(--s0); border-radius: 8px; margin-bottom: 12px; }
+.infl-stat-lbl { font-size: 10px; font-weight: 700; color: var(--t3); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
+.infl-stat-val { font-size: 17px; font-weight: 800; color: var(--t1); }
+.infl-ai-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; background: var(--amb-bg); color: var(--amb-t); margin-bottom: 8px; letter-spacing: 0.04em; }
+.infl-rationale { font-size: 12px; color: var(--t2); line-height: 1.65; }
+.infl-rationale b { color: var(--t1); font-weight: 700; }
+
+/* ── 활용 채널 카드 ── */
+.channel-card { background: linear-gradient(135deg, var(--lav-bg), var(--white)); border: 1px solid rgba(123,104,212,0.30); border-radius: 12px; padding: 16px 20px; }
+.channel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; flex-wrap: wrap; }
+.channel-title { font-size: 13px; font-weight: 800; color: var(--t1); }
+.channel-config { font-size: 11px; font-weight: 700; color: var(--lav); padding: 3px 10px; background: rgba(123,104,212,0.14); border-radius: 5px; letter-spacing: 0.02em; }
+.channel-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.channel-tag { font-size: 11px; font-weight: 600; padding: 5px 11px; background: var(--white); border: 1px solid rgba(123,104,212,0.30); border-radius: 20px; color: var(--lav); }
+
+@media (max-width: 1100px) { .kpi4, .h3, .sg, .img-grid, .img-grid.cols-3, .img-grid.cols-6, .matrix-grid, .ai-insight-grid, .infl-grid { grid-template-columns: 1fr 1fr; } .timeline { grid-template-columns: repeat(3, 1fr); row-gap: 16px; } .timeline::before { display: none; } .yoy { grid-template-columns: 1fr; } .yoy-arrow { transform: rotate(90deg); padding: 12px 0; } .main { padding: 20px; } }
 </style>
 </head>
 <body>
@@ -144,6 +200,46 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         <div class="h3c-icon">🏆</div>
         <div class="h3c-t">1차 카테고리 순위</div>
         <div class="h3c-b">17위 → <b>3위</b> (운동화 카테고리 <b>▲14단계</b>)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━ TIMELINE (컨텐츠 노출 스케줄) ━━━━━━━━━━━━━━━━━ -->
+  <div class="timeline-wrap">
+    <div class="timeline-title">📅 26SS 웨이브제인 마케팅 스케줄 · 컨텐츠 노출 타임라인</div>
+    <div class="timeline-sub">닝닝 SU 무드 COMM → 매출 타겟 메가 인플 PPL + 제휴몰 기획전으로 대표 앰버서더 화제성을 6월 2차 매출피크까지 연결</div>
+    <div class="timeline">
+      <div class="timeline-step s1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">5/7</div>
+        <div class="timeline-label">닝닝 SU 2차<br>컨텐츠 공개 (웨이브제인)</div>
+      </div>
+      <div class="timeline-step s2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">5/12~</div>
+        <div class="timeline-label">닝닝 + 메가 인플<br>컨텐츠 릴리즈</div>
+      </div>
+      <div class="timeline-step s3 peak">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">5월 3주차</div>
+        <div class="timeline-label">1차 매출 상승 시점</div>
+        <div class="timeline-peak-tag">PEAK 1</div>
+      </div>
+      <div class="timeline-step s4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">5/15</div>
+        <div class="timeline-label">웨이브제인<br>자사몰 기획전</div>
+      </div>
+      <div class="timeline-step s5">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">5/19</div>
+        <div class="timeline-label">웨이브제인<br>무신사 기획전</div>
+      </div>
+      <div class="timeline-step s6 peak">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">6월 2주차</div>
+        <div class="timeline-label">2차 매출 피크 시점</div>
+        <div class="timeline-peak-tag">PEAK 2</div>
       </div>
     </div>
   </div>
@@ -200,43 +296,110 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     <div style="margin-top:14px"><div class="ins-g"><b>1차 사이클 검증 베이스라인:</b> 닝닝 1차 효과로 확보된 매출 데이터. <b>2차 사이클은 이 베이스 위에 추가 가속도를 목표</b>로 추진.</div></div>
   </div>
 
-  <!-- ━━━ 02 · 메가 인플 활용 전략 ━━━━━━━━━━━━━━━━ -->
-  <div class="sec">02 · 메가 인플루언서 활용 전략</div>
+  <!-- ━━━ 02 · 메가 인플 셀럽 PPL (AI 추천) ━━━━━━━━━━━━ -->
+  <div class="sec">02 · 메가 인플 셀럽 PPL 활용 전략 (AI 추천 기반)</div>
+
   <div class="card">
-    <div class="card-t">메가 인플 셀링 콘텐츠</div>
-    <div class="img-grid">
-      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #01</div><div>셀링 컷</div></div>
-      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #02</div><div>셀링 컷</div></div>
-      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #03</div><div>셀링 컷</div></div>
-      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #04</div><div>셀링 컷</div></div>
+    <div class="card-t">AI 추천 인사이트 — 매출 전환에 유리한 셀럽 PPL 선정 기준</div>
+    <div class="ai-insight-grid">
+      <div class="ai-insight-card">
+        <div class="ai-insight-icon">👟</div>
+        <span class="ai-insight-tag">INSIGHT 01</span>
+        <div class="ai-insight-title">슈즈 매출 전환력</div>
+        <div class="ai-insight-desc">슈즈 카테고리 <b>셀링파워</b>가 검증된 인플 우선 매칭. 착장 콘텐츠 → 구매 자극력 강화.</div>
+      </div>
+      <div class="ai-insight-card">
+        <div class="ai-insight-icon">🛍️</div>
+        <span class="ai-insight-tag">INSIGHT 02</span>
+        <div class="ai-insight-title">제휴몰 활용 빈도</div>
+        <div class="ai-insight-desc">최근 <b>무신사·W컨셉</b> 등 제휴몰 기획전·PPL 참여 횟수가 많은 인물 우선. 채널 연계 시너지.</div>
+      </div>
+      <div class="ai-insight-card">
+        <div class="ai-insight-icon">🔥</div>
+        <span class="ai-insight-tag">INSIGHT 03</span>
+        <div class="ai-insight-title">슈즈 브랜드 PPL 화제도</div>
+        <div class="ai-insight-desc">최근 <b>뉴발란스·휠라</b> 등 슈즈 브랜드 PPL로 화제가 된 인물 우선. 카테고리 친화도 검증.</div>
+      </div>
     </div>
-    <div style="margin-top:16px">
-      <div class="kpi4">
-        <div class="kpi">
-          <div class="kl">메가·파워페이지</div>
-          <div class="kv">18<span style="font-size:18px;color:var(--t3)">건</span></div>
-          <div class="kn">V15 검증</div>
-          <span class="kb kb-s">베이스라인</span>
+    <div class="ins-g"><b>🤖 AI 추천 활용 프로세스:</b> 위 3개 인사이트 기준으로 AI가 후보 인플루언서 풀에서 자동 매칭 → <b>3인의 셀럽 PPL 활용 전략</b> 도출. AI 분석을 실제 마케팅 실행에 반영한 의사결정 프로세스.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">선정 결과 · 웨이브제인 기획전 메가 인플 3인</div>
+    <div class="infl-grid">
+      <div class="infl-card">
+        <div class="infl-photo">
+          <div class="infl-rank">PICK 01</div>
+          <div class="infl-photo-icon">👤</div>
+          <div class="infl-photo-note">(사진 placeholder)</div>
         </div>
-        <div class="kpi">
-          <div class="kl">메가 인플 IMP</div>
-          <div class="kv"><span class="blank-v">노출</span></div>
-          <div class="kn">합산 노출</div>
-          <span class="kb kb-a">측정 중</span>
-        </div>
-        <div class="kpi">
-          <div class="kl">CTR / 전환율</div>
-          <div class="kv"><span class="blank-v">전환율</span></div>
-          <div class="kn">콘텐츠 → 상세 페이지</div>
-          <span class="kb kb-a">측정 중</span>
-        </div>
-        <div class="kpi">
-          <div class="kl">메가 인플 기여 매출</div>
-          <div class="kv"><span class="blank-v">기여 매출</span></div>
-          <div class="kn">기여도 분석</div>
-          <span class="kb kb-a">측정 중</span>
+        <div class="infl-body">
+          <div class="infl-name">민영</div>
+          <div class="infl-handle">@lamuzes</div>
+          <div class="infl-stats">
+            <div><div class="infl-stat-lbl">FLW</div><div class="infl-stat-val">49만</div></div>
+            <div><div class="infl-stat-lbl">ENG</div><div class="infl-stat-val">0.6만</div></div>
+          </div>
+          <span class="infl-ai-tag">🤖 AI 매칭 · 뉴발란스 PPL 화제</span>
+          <div class="infl-rationale"><b>여성 팬 다수</b> 보유한 셀링파워. 최근 결혼 이슈로 <b>인지도·관심도 동반 상승</b>.</div>
         </div>
       </div>
+
+      <div class="infl-card">
+        <div class="infl-photo">
+          <div class="infl-rank">PICK 02</div>
+          <div class="infl-photo-icon">👤</div>
+          <div class="infl-photo-note">(사진 placeholder)</div>
+        </div>
+        <div class="infl-body">
+          <div class="infl-name">이유정</div>
+          <div class="infl-handle">@leeeeu.j</div>
+          <div class="infl-stats">
+            <div><div class="infl-stat-lbl">FLW</div><div class="infl-stat-val">55.6만</div></div>
+            <div><div class="infl-stat-lbl">ENG</div><div class="infl-stat-val">1만</div></div>
+          </div>
+          <span class="infl-ai-tag">🤖 AI 매칭 · 휠라 PPL · W컨셉 다수</span>
+          <div class="infl-rationale"><b>환승연애 3</b> 출연으로 화제. <b>W컨셉 기획전 진행 다수</b>로 제휴몰 적합도 우수.</div>
+        </div>
+      </div>
+
+      <div class="infl-card">
+        <div class="infl-photo">
+          <div class="infl-rank">PICK 03</div>
+          <div class="infl-photo-icon">👤</div>
+          <div class="infl-photo-note">(사진 placeholder)</div>
+        </div>
+        <div class="infl-body">
+          <div class="infl-name">박현지</div>
+          <div class="infl-handle">@hyundipark</div>
+          <div class="infl-stats">
+            <div><div class="infl-stat-lbl">FLW</div><div class="infl-stat-val">36.4만</div></div>
+            <div><div class="infl-stat-lbl">ENG</div><div class="infl-stat-val">4만</div></div>
+          </div>
+          <span class="infl-ai-tag">🤖 AI 매칭 · 환승연애 PPL 화제</span>
+          <div class="infl-rationale"><b>환승연애</b> 출연 이후 <b>착장 문의 다수</b>. ENG 4만 — 3인 중 최고 참여율.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <div class="channel-header">
+        <div class="channel-title">📡 활용 채널 — 온라인 ALL</div>
+        <div class="channel-config">구성: 인스타그램 PPL 1건</div>
+      </div>
+      <div class="channel-tags">
+        <span class="channel-tag">공식 SNS 리그램</span>
+        <span class="channel-tag">자사몰</span>
+        <span class="channel-tag">외부몰</span>
+        <span class="channel-tag">기획전</span>
+        <span class="channel-tag">메타광고</span>
+        <span class="channel-tag">바이럴 (인스타매체·블로그)</span>
+        <span class="channel-tag">보도자료</span>
+      </div>
+    </div>
+
+    <div style="margin-top:14px">
+      <div class="ins-g"><b>AI 추천 → 실행 프로세스 어필:</b> AI 인사이트 3종(슈즈 매출 전환력 · 제휴몰 빈도 · 슈즈 브랜드 PPL 화제도)으로 후보 선별 → 인물별 <b>매출 파급력</b>이 검증된 PPL 1건 콘텐츠 제작 → 온라인 ALL 채널로 동시 확산. <b>AI 데이터 기반 의사결정 → 마케팅 실행</b>으로 매출 가속도 극대화.</div>
     </div>
   </div>
 
