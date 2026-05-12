@@ -189,6 +189,20 @@ body { min-height: 100vh; }
 .wide-ratio { aspect-ratio: 16/9; object-fit: cover; }
 .contain-img { object-fit: contain; }
 
+/* ── THUMBNAIL GRID (19 매체 바이럴 썸네일) ── */
+.thumb-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.thumb-card { position: relative; border-radius: 10px; overflow: hidden; background: var(--s0); border: 1px solid var(--bdr); transition: transform 0.2s, box-shadow 0.2s; }
+.thumb-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(58,164,205,0.18); }
+.thumb-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+.thumb-card figcaption { font-size: 11px; color: var(--t2); padding: 6px 8px; background: var(--white); border-top: 1px solid var(--bdr); text-align: center; font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.thumb-card.star { border-color: rgba(212,136,42,0.45); }
+.thumb-card.star figcaption { background: var(--amb-bg); color: var(--amb-t); }
+.thumb-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 12px; color: var(--t3); }
+.thumb-meta b { color: var(--t1); font-weight: 700; }
+.thumb-legend { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--t3); }
+.thumb-legend .dot { width: 10px; height: 10px; border-radius: 3px; border: 1px solid; }
+.thumb-legend .dot.star { background: var(--amb-bg); border-color: rgba(212,136,42,0.45); }
+
 /* ── DRAFT BANNER ─────────────────────── */
 .draft-banner { background: var(--lav-bg); border-bottom: 1px solid rgba(123,104,212,0.20); padding: 8px 40px; font-size: 12px; color: var(--lav); display: flex; align-items: center; gap: 10px; }
 .draft-banner b { font-weight: 700; }
@@ -196,6 +210,7 @@ body { min-height: 100vh; }
 @media (max-width: 1100px) {
   .kpi4, .h3, .sg, .sg.cols-4, .img-grid, .img-grid.cols-3, .ai-grid, .matrix-grid { grid-template-columns: 1fr 1fr; }
   .flow, .yoy, .compare { grid-template-columns: 1fr; }
+  .thumb-grid { grid-template-columns: repeat(3, 1fr); }
   .flow-arrow, .yoy-arrow { transform: rotate(90deg); padding: 8px 0; }
   .main { padding: 20px; }
   .draft-banner { padding: 8px 20px; }
@@ -495,14 +510,33 @@ body { min-height: 100vh; }
 
   <div class="sec">02 · 여성 2030 웰니스 무드 재집중</div>
   <div class="card">
-    <div class="card-t">닝닝 2차 릴리즈 컷</div>
-    <div class="img-grid">
-      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #01</div><div>여성 2030 무드</div></div>
-      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #02</div><div>액티브 웰니스</div></div>
-      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #03</div><div>릴리즈 비주얼</div></div>
-      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #04</div><div>코어 타깃 컷</div></div>
+    <div class="card-t">닝닝 2차 바이럴 썸네일 · 19개 매체 확보</div>
+    <div class="thumb-meta">
+      <span><b>총 19개 매체</b> · ★ 우선순위 10개 + 일반 9개</span>
+      <span class="thumb-legend"><span class="dot star"></span>★ 우선순위 매체</span>
     </div>
-    <div style="margin-top:16px"><div class="ins-g"><b>긍정 신호:</b> 1차 릴리즈에서 검증된 <b>여성 2030 웰니스 무드</b>를 2차에서 재집중. 변우석 행사의 액티브 무드와 시너지로 코어 타깃 도달 강화.</div></div>
+    <div class="thumb-grid">
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★뉴소스 VER 1.jpg" alt="뉴소스" loading="lazy"><figcaption>★ 뉴소스</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★더스타 VER 2.jpg" alt="더스타" loading="lazy"><figcaption>★ 더스타</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★데패뉴 VER 1.jpg" alt="데패뉴" loading="lazy"><figcaption>★ 데패뉴</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★뷰매거진 VER 2.jpg" alt="뷰매거진" loading="lazy"><figcaption>★ 뷰매거진</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★셀패진 VER 2.jpg" alt="셀패진" loading="lazy"><figcaption>★ 셀패진</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★아이즈 VER 1.jpg" alt="아이즈" loading="lazy"><figcaption>★ 아이즈</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★트립고잉 VER 1.jpg" alt="트립고잉" loading="lazy"><figcaption>★ 트립고잉</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★팝매거진 VER 2.jpg" alt="팝매거진" loading="lazy"><figcaption>★ 팝매거진</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★패스트페이퍼 VER 1.jpg" alt="패스트페이퍼" loading="lazy"><figcaption>★ 패스트페이퍼</figcaption></figure>
+      <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★하입잭 VER 1.jpg" alt="하입잭" loading="lazy"><figcaption>★ 하입잭</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/뷰픽 VER 1.jpg" alt="뷰픽" loading="lazy"><figcaption>뷰픽</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/숱마테 VER 1.jpg" alt="숱마테" loading="lazy"><figcaption>숱마테</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/스타일모아봄 VER 2.jpg" alt="스타일모아봄" loading="lazy"><figcaption>스타일모아봄</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/아워로그 VER 2.jpg" alt="아워로그" loading="lazy"><figcaption>아워로그</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/오프닛 VER 1.jpg" alt="오프닛" loading="lazy"><figcaption>오프닛</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/이짓매거진 VER 1.jpg" alt="이짓매거진" loading="lazy"><figcaption>이짓매거진</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/트립핀코 VER 1.jpg" alt="트립핀코" loading="lazy"><figcaption>트립핀코</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/패션앤스타일 VER 1.jpg" alt="패션앤스타일" loading="lazy"><figcaption>패션앤스타일</figcaption></figure>
+      <figure class="thumb-card"><img src="assets/tab3-닝닝-바이럴썸네일/하이니티 VER 1.jpg" alt="하이니티" loading="lazy"><figcaption>하이니티</figcaption></figure>
+    </div>
+    <div style="margin-top:16px"><div class="ins-g"><b>긍정 신호:</b> 1차 릴리즈에서 검증된 <b>여성 2030 웰니스 무드</b>를 2차에서 재집중. 변우석 행사의 액티브 무드와 시너지로 코어 타깃 도달 강화. <b>19개 매체 바이럴 썸네일</b> 확보로 다채널 확산 준비 완료.</div></div>
   </div>
 
   <div class="sec">03 · AI 기반 액티브 웰니스 무드 강화</div>
