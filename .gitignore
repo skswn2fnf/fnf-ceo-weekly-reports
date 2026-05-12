@@ -1,0 +1,19 @@
+# ── OS junk ─────────────────────────────────────
+.DS_Store
+.localized
+Thumbs.db
+desktop.ini
+
+# ── Redundant archives (폴더 버전이 같은 위치에 존재) ──
+*.zip
+
+# ── Editor / IDE ───────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+
+# ── Temp / build ───────────────────────────────
+*.tmp
+*.bak
+__pycache__/

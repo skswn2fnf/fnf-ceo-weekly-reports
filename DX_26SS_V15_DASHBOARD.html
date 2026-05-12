@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DX 26SS V15 — AI Marketing Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --s0:#EFF8FB; --s1:#D6EEF9; --s2:#A8D8EE; --s3:#6BBCDE; --s4:#3AA4CD; --s5:#1A7FAA;
+  --bg:#F4F9FD; --white:#fff;
+  --t1:#0F2733; --t2:#2C4F61; --t3:#5A7F92; --t4:#A0BCC8;
+  --bdr:rgba(58,164,205,0.18); --bdr2:rgba(58,164,205,0.38);
+  --grn:#2EAA78; --grn-bg:#E8F7F1;
+  --red:#E05A6B; --red-bg:#FEF0F2;
+  --amb:#D4882A; --amb-bg:#FDF3E3;
+  --lav:#7B68D4; --lav-bg:#F0EEF9;
+  --rad:14px; --sh:0 2px 14px rgba(58,164,205,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: var(--bg); font-family: 'Outfit', sans-serif; color: var(--t1); overflow: hidden; }
+
+.layout { height: 100vh; display: flex; flex-direction: column; }
+
+.top-header {
+  background: linear-gradient(135deg, #0D2230 0%, #163A50 60%, #1A7FAA 100%);
+  height: 62px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; flex-shrink: 0; box-shadow: 0 2px 16px rgba(13,34,48,0.4);
+  position: relative; z-index: 200;
+}
+.top-header::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:rgba(107,188,222,0.25); }
+.hdr-brand { display: flex; align-items: baseline; gap: 10px; }
+.hdr-logo { font-family: 'DM Serif Display', serif; font-size: 19px; color: #fff; }
+.hdr-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.25); align-self: center; }
+.hdr-sub { font-size: 12px; font-weight: 500; color: var(--s2); letter-spacing: .04em; }
+.hdr-pills { display: flex; align-items: center; gap: 6px; }
+.pill { background: rgba(255,255,255,0.12); color: var(--s1); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(107,188,222,0.28); }
+.pill-grn { background: rgba(46,170,120,0.18); color: #5CDBA4; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(46,170,120,0.35); }
+.pill-v3 { background: rgba(212,136,42,0.22); color: #FFD08A; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(212,136,42,0.45); }
+
+.tab-bar {
+  background: var(--white); border-bottom: 2px solid var(--bdr);
+  display: flex; align-items: stretch; padding: 0 24px; flex-shrink: 0;
+  box-shadow: 0 1px 8px rgba(58,164,205,0.07); z-index: 100;
+}
+.tab-btn {
+  position: relative; display: flex; align-items: center; gap: 8px;
+  padding: 0 22px; height: 48px; font-family: 'Outfit', sans-serif;
+  font-size: 13px; font-weight: 600; color: var(--t3); background: none;
+  border: none; cursor: pointer; transition: color 0.2s; white-space: nowrap;
+}
+.tab-btn:hover { color: var(--s4); }
+.tab-btn.active { color: var(--s5); }
+.tab-btn::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 2px; background: var(--s4); border-radius: 2px 2px 0 0;
+  transform: scaleX(0); transition: transform 0.2s ease;
+}
+.tab-btn.active::after { transform: scaleX(1); }
+.tab-num {
+  background: var(--s1); color: var(--s5); font-size: 10px; font-weight: 700;
+  width: 18px; height: 18px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--bdr2); transition: background 0.2s, color 0.2s;
+}
+.tab-btn.active .tab-num { background: var(--s4); color: #fff; border-color: var(--s4); }
+.tab-divider { width: 1px; height: 20px; background: var(--bdr); margin: 0 4px; align-self: center; }
+
+.frame-wrapper { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.frame-pane { display: none; flex: 1; width: 100%; height: 100%; position: relative; }
+.frame-pane.active { display: flex; }
+.frame-pane iframe { flex: 1; width: 100%; height: 100%; border: none; background: var(--bg); }
+.frame-loading {
+  position: absolute; inset: 0; background: var(--bg);
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; z-index: 10;
+  transition: opacity 0.4s;
+}
+.frame-loading.done { opacity: 0; pointer-events: none; }
+.spinner { width: 36px; height: 36px; border: 3px solid var(--s1); border-top-color: var(--s4); border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-size: 13px; color: var(--t3); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="layout">
+  <header class="top-header">
+    <div class="hdr-brand">
+      <span class="hdr-logo">DX 26SS MARKETING</span>
+      <div class="hdr-divider"></div>
+      <span class="hdr-sub">AI-POWERED ANALYSIS DASHBOARD · V15</span>
+    </div>
+    <div class="hdr-pills">
+      <span class="pill">Active Wellness × Dual Muse × Street Landing</span>
+      <span class="pill">Discovery Expedition</span>
+      <span class="pill-grn">DCS AI Verified</span>
+      <span class="pill-v3">V15 Refined</span>
+    </div>
+  </header>
+
+  <nav class="tab-bar">
+    <button class="tab-btn active" data-tab="1" onclick="switchTab(1)">
+      <span style="font-size:15px">🎯</span> 26SS AI 핵심 인사이트 <span class="tab-num">1</span>
+    </button>
+    <div class="tab-divider"></div>
+    <button class="tab-btn" data-tab="2" onclick="switchTab(2)">
+      <span style="font-size:15px">📊</span> 닝닝 앵커 × 인플 부스터 성과 <span class="tab-num">2</span>
+    </button>
+    <div class="tab-divider"></div>
+    <button class="tab-btn" data-tab="3" onclick="switchTab(3)">
+      <span style="font-size:15px">🏃</span> 변우석 행사 AI 설계 <span class="tab-num">3</span>
+    </button>
+    <div class="tab-divider"></div>
+    <button class="tab-btn" data-tab="4" onclick="switchTab(4)">
+      <span style="font-size:15px">👟</span> 웨이브 제인 전략·로드맵 <span class="tab-num">4</span>
+    </button>
+  </nav>
+
+  <div class="frame-wrapper">
+    <div class="frame-pane active" id="pane-1">
+      <div class="frame-loading" id="loading-1"><div class="spinner"></div><div class="loading-text">26SS AI 핵심 인사이트 로딩 중...</div></div>
+      <iframe id="frame-1" src="tab1.html" onload="onFrameLoad(1)"></iframe>
+    </div>
+    <div class="frame-pane" id="pane-2">
+      <div class="frame-loading" id="loading-2"><div class="spinner"></div><div class="loading-text">닝닝 앵커 × 인플 부스터 로딩 중...</div></div>
+      <iframe id="frame-2" src="tab2.html" onload="onFrameLoad(2)"></iframe>
+    </div>
+    <div class="frame-pane" id="pane-3">
+      <div class="frame-loading" id="loading-3"><div class="spinner"></div><div class="loading-text">변우석 행사 AI 설계 로딩 중...</div></div>
+      <iframe id="frame-3" src="tab3.html" onload="onFrameLoad(3)"></iframe>
+    </div>
+    <div class="frame-pane" id="pane-4">
+      <div class="frame-loading" id="loading-4"><div class="spinner"></div><div class="loading-text">웨이브 제인 로딩 중...</div></div>
+      <iframe id="frame-4" src="tab4.html" onload="onFrameLoad(4)"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+var currentTab = 1;
+function switchTab(num) {
+  if (num === currentTab) return;
+  document.querySelector('.tab-btn[data-tab="'+currentTab+'"]').classList.remove('active');
+  document.getElementById('pane-'+currentTab).classList.remove('active');
+  currentTab = num;
+  document.querySelector('.tab-btn[data-tab="'+num+'"]').classList.add('active');
+  document.getElementById('pane-'+num).classList.add('active');
+}
+function onFrameLoad(num) {
+  var l = document.getElementById('loading-'+num);
+  if (l) { l.classList.add('done'); setTimeout(function(){ l.style.display='none'; }, 500); }
+}
+</script>
+</body>
+</html>

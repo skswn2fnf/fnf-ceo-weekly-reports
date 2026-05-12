@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>TAB 3 · 닝닝 2차 릴리즈 — 5월 13일주차 CEO 보고</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --s0:#F0F8FD; --s1:#D6EEF9; --s2:#A8D8EE; --s3:#6BBCDE; --s4:#3AA4CD; --s5:#1A7FAA;
+  --bg:#F4F9FD; --white:#fff;
+  --t1:#0F2733; --t2:#2C4F61; --t3:#5A7F92; --t4:#A0BCC8;
+  --bdr:rgba(58,164,205,0.18); --bdr2:rgba(58,164,205,0.38);
+  --grn:#2EAA78; --grn-bg:#E8F7F1; --grn-t:#0A4A2A;
+  --red:#E05A6B; --red-bg:#FEF0F2; --red-t:#7A1A2A;
+  --amb:#D4882A; --amb-bg:#FDF3E3; --amb-t:#7A3E00;
+  --lav:#7B68D4; --lav-bg:#F0EEF9;
+  --rad:14px; --sh:0 2px 18px rgba(58,164,205,0.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); font-family: 'Outfit', sans-serif; color: var(--t1); font-size: 14px; }
+.main { max-width: 1340px; margin: 0 auto; padding: 28px 40px 80px; }
+
+.hero { background: linear-gradient(135deg, #0D2230 0%, #163A50 50%, #1A7FAA 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(107,188,222,0.18), transparent 65%); pointer-events: none; }
+.hero-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--s2); margin-bottom: 12px; }
+.hero-title { font-family: 'DM Serif Display', serif; font-size: 24px; color: #fff; line-height: 1.45; margin-bottom: 14px; }
+.hero-body { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.85; margin-bottom: 24px; max-width: 860px; }
+.hero-body b { color: #fff; font-weight: 600; }
+.h3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.h3c { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 18px 20px; backdrop-filter: blur(4px); }
+.h3c-icon { font-size: 22px; margin-bottom: 10px; }
+.h3c-t { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.h3c-b { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.65; }
+.h3c-b b { color: #fff; font-weight: 600; }
+
+.sec { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); margin: 36px 0 16px; display: flex; align-items: center; gap: 10px; }
+.sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); }
+
+.kpi4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+.kpi { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 20px 22px; box-shadow: var(--sh); position: relative; overflow: hidden; }
+.kpi::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--s2), var(--s4)); border-radius: var(--rad) var(--rad) 0 0; }
+.kl { font-size: 12px; color: var(--t3); margin-bottom: 6px; }
+.kv { font-size: 26px; font-weight: 700; color: var(--t1); letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+.kn { font-size: 12px; color: var(--t3); }
+.kb { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 600; margin-top: 6px; }
+.kb-g { background: var(--grn-bg); color: var(--grn); }
+.kb-s { background: var(--s1); color: var(--s5); }
+.kb-a { background: var(--amb-bg); color: var(--amb); }
+
+.card { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px 24px; box-shadow: var(--sh); }
+.card + .card { margin-top: 16px; }
+.card-t { font-size: 15px; font-weight: 700; color: var(--t1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid var(--bdr); }
+
+.ins   { background: var(--s0);     border-left: 3px solid var(--s4);  border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--t2);   line-height: 1.7; }
+.ins-g { background: var(--grn-bg); border-left: 3px solid var(--grn); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--grn-t); line-height: 1.7; }
+.ins-r { background: var(--red-bg); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--red-t); line-height: 1.7; }
+.ins-a { background: var(--amb-bg); border-left: 3px solid var(--amb); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--amb-t); line-height: 1.7; }
+.ins b, .ins-g b, .ins-r b, .ins-a b { font-weight: 600; }
+.ins b { color: var(--t1); }
+
+/* COMPARE TABLE (1차 vs 2차) */
+.compare { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); overflow: hidden; box-shadow: var(--sh); }
+.compare > div { padding: 14px 18px; border-bottom: 1px solid var(--bdr); display: flex; align-items: center; }
+.compare > div:nth-last-child(-n+4) { border-bottom: none; }
+.cmp-head { background: var(--s0); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); }
+.cmp-row-lbl { font-size: 13px; font-weight: 600; color: var(--t2); background: var(--s0); }
+.cmp-val { font-size: 15px; font-weight: 700; color: var(--t1); font-variant-numeric: tabular-nums; }
+.cmp-val .delta { font-size: 11px; padding: 2px 7px; border-radius: 12px; margin-left: 6px; font-weight: 600; }
+.cmp-val .delta.up { background: var(--grn-bg); color: var(--grn); }
+.cmp-val .delta.down { background: var(--red-bg); color: var(--red); }
+
+/* IMAGE GRID */
+.img-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.img-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.blank-img { background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 10px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px; text-align: center; color: var(--t4); font-size: 12px; line-height: 1.5; }
+.blank-img.wide { aspect-ratio: 16/9; }
+.blank-img.square { aspect-ratio: 1/1; }
+.blank-img-icon { font-size: 22px; opacity: 0.6; }
+.blank-img-label { font-weight: 600; letter-spacing: 0.04em; }
+
+/* DATA BLANK */
+.blank-v { display: inline-block; min-width: 110px; padding: 6px 14px; background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 8px; color: var(--t4); font-size: 16px; font-weight: 600; letter-spacing: 0.04em; text-align: center; vertical-align: middle; line-height: 1.2; }
+.blank-inline { display: inline-block; padding: 1px 8px; background: var(--s0); border: 1.5px dashed var(--bdr2); border-radius: 5px; color: var(--t3); font-size: 12px; font-weight: 500; }
+.blank-box { background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 10px; padding: 22px 20px; text-align: center; color: var(--t4); font-size: 13px; line-height: 1.7; }
+
+/* AI BRIDGE BOX (2 col) */
+.ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.portrait { aspect-ratio: 3/4; object-fit: cover; }
+.wide-ratio { aspect-ratio: 16/9; object-fit: cover; }
+.contain-img { object-fit: contain; }
+
+@media (max-width: 1100px) { .kpi4, .h3, .img-grid, .img-grid.cols-3, .ai-grid { grid-template-columns: 1fr 1fr; } .compare { grid-template-columns: 1fr; } .main { padding: 20px; } }
+</style>
+</head>
+<body>
+<main class="main">
+
+  <!-- ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="hero">
+    <div class="hero-eye">PHASE 2 · 여성 2030 확산 집중</div>
+    <div class="hero-title">1차에서 검증된 닝닝 앵커를 2차 릴리즈로 재집중,<br>여성 2030 액티브 웰니스 무드를 재가열했습니다</div>
+    <div class="hero-body">
+      변우석 행사로 점화된 화제성을 <b>닝닝 앵커 + AI 기반 무드 콘텐츠</b>로 받아내어, 여성 2030 코어 타깃의 액티브 웰니스 무드를 재집중시켰습니다.
+      1차 릴리즈 대비 2차에서 어떤 증분이 발생했는지가 Phase 2의 성패 지표입니다.
+    </div>
+    <div class="h3">
+      <div class="h3c">
+        <div class="h3c-icon">🎤</div>
+        <div class="h3c-t">닝닝 2차 릴리즈</div>
+        <div class="h3c-b">1차 대비 증분 <span class="blank-inline">측정 중</span></div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">💃</div>
+        <div class="h3c-t">여성 2030 무드</div>
+        <div class="h3c-b">웰니스 무드 재집중 <span class="blank-inline">반응 측정 중</span></div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">🤖</div>
+        <div class="h3c-t">AI 무드 콘텐츠</div>
+        <div class="h3c-b">AI 기반 액티브 웰니스 무드 강화 <span class="blank-inline">사례 수 입력</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━ 01 · 1차 vs 2차 비교 ━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">01 · 1차 vs 2차 비교 KPI</div>
+  <div class="compare">
+    <div class="cmp-head">지표</div>
+    <div class="cmp-head">1차 릴리즈 (V15 검증)</div>
+    <div class="cmp-head">2차 릴리즈 (이번 주)</div>
+    <div class="cmp-head">증감</div>
+
+    <div class="cmp-row-lbl">인플 총 포스트</div>
+    <div class="cmp-val">240 건</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">총 노출 (TTL IMP)</div>
+    <div class="cmp-val">856.2 만</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">평균 노출 (AVG IMP)</div>
+    <div class="cmp-val">3.6 만 / post</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">총 참여 (TTL ENG)</div>
+    <div class="cmp-val">41.9 만</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">평균 참여 (AVG ENG)</div>
+    <div class="cmp-val">1,748 / post</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+  </div>
+
+  <!-- ━━━ 02 · 여성 2030 무드 재집중 ━━━━━━━━━━━━━━━━ -->
+  <div class="sec">02 · 여성 2030 웰니스 무드 재집중</div>
+  <div class="card">
+    <div class="card-t">닝닝 2차 릴리즈 컷</div>
+    <div class="img-grid">
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #01</div><div>여성 2030 무드</div></div>
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #02</div><div>액티브 웰니스</div></div>
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #03</div><div>릴리즈 비주얼</div></div>
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #04</div><div>코어 타깃 컷</div></div>
+    </div>
+    <div style="margin-top:16px">
+      <div class="ins-g"><b>긍정 신호:</b> 1차 릴리즈에서 검증된 <b>여성 2030 웰니스 무드</b>를 2차에서 재집중. 변우석 행사의 액티브 무드와 시너지로 코어 타깃 도달 강화.</div>
+    </div>
+  </div>
+
+  <!-- ━━━ 03 · AI 기반 액티브 웰니스 무드 강화 ━━━━━━━ -->
+  <div class="sec">03 · AI 기반 액티브 웰니스 무드 강화</div>
+  <div class="ai-grid">
+    <div class="card">
+      <div class="card-t">AI 무드 콘텐츠 사례</div>
+      <div class="img-grid cols-3">
+        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #01</div></div>
+        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #02</div></div>
+        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #03</div></div>
+      </div>
+      <div style="margin-top:14px"><div class="ins"><b>AI 활용 포인트:</b> <span class="blank-inline">AI 생성/큐레이션 방식 설명 입력</span> — 액티브 웰니스 무드를 시각적으로 강화한 AI 콘텐츠 사례.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-t">AI 콘텐츠 기여 측정</div>
+      <div class="kpi4" style="grid-template-columns:1fr 1fr">
+        <div class="kpi">
+          <div class="kl">AI 콘텐츠 수</div>
+          <div class="kv"><span class="blank-v">건수</span></div>
+          <div class="kn">2차 릴리즈 기간 내</div>
+        </div>
+        <div class="kpi">
+          <div class="kl">AI 콘텐츠 IMP</div>
+          <div class="kv"><span class="blank-v">노출</span></div>
+          <div class="kn">합산 노출</div>
+        </div>
+        <div class="kpi">
+          <div class="kl">AI vs 일반 콘텐츠</div>
+          <div class="kv"><span class="blank-v">비교</span></div>
+          <div class="kn">참여율 비교</div>
+        </div>
+        <div class="kpi">
+          <div class="kl">무드 일관성 점수</div>
+          <div class="kv"><span class="blank-v">점수</span></div>
+          <div class="kn">정성 평가</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━ 04 · 다음 단계 브릿지 ━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">04 · Phase 3 매출 전환으로의 브릿지</div>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px">
+    <div class="ins"><b>전환 가설:</b> 변우석 화제성 + 닝닝 2차 무드 재집중이 <b>웨이브제인 셀링 시점에 매출 가속도</b>로 작용. Phase 3에서 메가 인플·제휴몰을 통해 매출 실증.</div>
+    <div class="ins-g"><b>긍정:</b> 1차 릴리즈에서 닝닝 앵커의 <b>실판매 증빙</b>(웨이브제인 YoY +266%)이 V15에서 검증됨. 2차도 동일 메커니즘 기대.</div>
+    <div class="ins-a"><b>주의:</b> 2차 릴리즈 측정 결과가 1차보다 낮을 경우, 닝닝 앵커의 <b>마모(saturation)</b>를 시그널로 해석해 다음 사이클 전략 재설계 필요.</div>
+    <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span> — 화제성 → 무드 재집중 → 매출 전환 사이의 시간 갭이 길어지면 매출 전환율 저하 우려.</div>
+  </div>
+
+</main>
+</body>
+</html>

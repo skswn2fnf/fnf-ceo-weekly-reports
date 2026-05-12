@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>KARINA EDITION VOL.2 — Unified Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --s0:#F0F8FD; --s1:#D6EEF9; --s2:#A8D8EE; --s3:#6BBCDE; --s4:#3AA4CD; --s5:#1A7FAA;
+  --bg:#F4F9FD; --white:#fff;
+  --t1:#0F2733; --t2:#2C4F61; --t3:#5A7F92;
+  --bdr:rgba(58,164,205,0.18); --bdr2:rgba(58,164,205,0.38);
+  --grn:#2EAA78; --grn-bg:#E8F7F1;
+  --rad:14px; --sh:0 2px 18px rgba(58,164,205,0.10);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  font-family: 'Outfit', sans-serif;
+  color: var(--t1);
+  overflow: hidden;
+}
+
+/* ══ TOP HEADER ══ */
+.top-header {
+  background: linear-gradient(135deg, #0D2230 0%, #163A50 60%, #1A7FAA 100%);
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 16px rgba(13,34,48,0.4);
+  position: relative;
+  z-index: 200;
+}
+
+.top-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: rgba(107,188,222,0.25);
+}
+
+.hdr-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.hdr-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 19px;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+.hdr-divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,0.25);
+  align-self: center;
+}
+
+.hdr-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--s2);
+  letter-spacing: 0.04em;
+}
+
+.hdr-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pill {
+  background: rgba(255,255,255,0.12);
+  color: var(--s1);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(107,188,222,0.28);
+  letter-spacing: 0.03em;
+}
+
+.pill-grn {
+  background: rgba(46,170,120,0.18);
+  color: #5CDBA4;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(46,170,120,0.35);
+}
+
+/* ══ TAB BAR ══ */
+.tab-bar {
+  background: var(--white);
+  border-bottom: 2px solid var(--bdr);
+  display: flex;
+  align-items: stretch;
+  padding: 0 24px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 8px rgba(58,164,205,0.07);
+  position: relative;
+  z-index: 100;
+}
+
+.tab-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 22px;
+  height: 48px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--t3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.tab-btn:hover {
+  color: var(--s4);
+}
+
+.tab-btn.active {
+  color: var(--s5);
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--s4);
+  border-radius: 2px 2px 0 0;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
+}
+
+.tab-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.tab-num {
+  background: var(--s1);
+  color: var(--s5);
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bdr2);
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.active .tab-num {
+  background: var(--s4);
+  color: #fff;
+  border-color: var(--s4);
+}
+
+/* ══ IFRAME CONTAINER ══ */
+.frame-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.frame-pane {
+  display: none;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.frame-pane.active {
+  display: flex;
+}
+
+.frame-pane iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: var(--bg);
+}
+
+/* Layout root */
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loading overlay per frame */
+.frame-loading {
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10;
+  transition: opacity 0.4s;
+}
+
+.frame-loading.done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--s1);
+  border-top-color: var(--s4);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loading-text {
+  font-size: 13px;
+  color: var(--t3);
+  font-weight: 500;
+}
+
+.frame-pane {
+  position: relative;
+}
+
+/* Divider between tabs */
+.tab-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--bdr);
+  margin: 0 4px;
+  align-self: center;
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ══ TOP HEADER ══ -->
+  <header class="top-header">
+    <div class="hdr-brand">
+      <span class="hdr-logo">KARINA EDITION VOL.2</span>
+      <div class="hdr-divider"></div>
+      <span class="hdr-sub">GLOBAL MARKETING · AI DASHBOARD</span>
+    </div>
+    <div class="hdr-pills">
+      <span class="pill">MAR 21 1ST DROP</span>
+      <span class="pill">MAR 28 2ND DROP</span>
+      <span class="pill">7 Markets</span>
+      <span class="pill-grn">✅ ALL SOLD OUT</span>
+    </div>
+  </header>
+
+  <!-- ══ TAB BAR ══ -->
+  <nav class="tab-bar">
+    <button class="tab-btn active" data-tab="1" onclick="switchTab(1)">
+      <span class="tab-icon">📊</span>
+      판매전략 분석
+      <span class="tab-num">1</span>
+    </button>
+    <div class="tab-divider"></div>
+    <button class="tab-btn" data-tab="2" onclick="switchTab(2)">
+      <span class="tab-icon">📱</span>
+      TEASER 컨텐츠 분석
+      <span class="tab-num">2</span>
+    </button>
+    <div class="tab-divider"></div>
+    <button class="tab-btn" data-tab="3" onclick="switchTab(3)">
+      <span class="tab-icon">⭐</span>
+      KOL 컨텐츠 분석
+      <span class="tab-num">3</span>
+    </button>
+    <div class="tab-divider"></div>
+    <button class="tab-btn" data-tab="4" onclick="switchTab(4)">
+      <span class="tab-icon">🚀</span>
+      NEXT STRATEGY
+      <span class="tab-num">4</span>
+    </button>
+  </nav>
+
+  <!-- ══ IFRAME PANELS ══ -->
+  <div class="frame-wrapper">
+
+    <div class="frame-pane active" id="pane-1">
+      <div class="frame-loading" id="loading-1">
+        <div class="spinner"></div>
+        <div class="loading-text">판매전략 분석 로딩 중...</div>
+      </div>
+      <iframe
+        id="frame-1"
+        src="tab1.html"
+        allow="autoplay"
+        onload="onFrameLoad(1)"
+        title="판매전략 분석"
+      ></iframe>
+    </div>
+
+    <div class="frame-pane" id="pane-2">
+      <div class="frame-loading" id="loading-2">
+        <div class="spinner"></div>
+        <div class="loading-text">TEASER 컨텐츠 분석 로딩 중...</div>
+      </div>
+      <iframe
+        id="frame-2"
+        src="tab2.html"
+        allow="autoplay"
+        onload="onFrameLoad(2)"
+        title="TEASER 컨텐츠 분석"
+      ></iframe>
+    </div>
+
+    <div class="frame-pane" id="pane-3">
+      <div class="frame-loading" id="loading-3">
+        <div class="spinner"></div>
+        <div class="loading-text">KOL 컨텐츠 분석 로딩 중...</div>
+      </div>
+      <iframe
+        id="frame-3"
+        src="tab3.html"
+        allow="autoplay"
+        onload="onFrameLoad(3)"
+        title="KOL 컨텐츠 분석"
+      ></iframe>
+    </div>
+
+    <div class="frame-pane" id="pane-4">
+      <div class="frame-loading" id="loading-4">
+        <div class="spinner"></div>
+        <div class="loading-text">NEXT STRATEGY 로딩 중...</div>
+      </div>
+      <iframe
+        id="frame-4"
+        src="tab4.html"
+        allow="autoplay"
+        onload="onFrameLoad(4)"
+        title="NEXT STRATEGY"
+      ></iframe>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+var currentTab = 1;
+
+function switchTab(num) {
+  if (num === currentTab) return;
+
+  // Deactivate current
+  document.querySelector('.tab-btn[data-tab="' + currentTab + '"]').classList.remove('active');
+  document.getElementById('pane-' + currentTab).classList.remove('active');
+
+  // Activate new
+  currentTab = num;
+  document.querySelector('.tab-btn[data-tab="' + num + '"]').classList.add('active');
+  var pane = document.getElementById('pane-' + num);
+  pane.classList.add('active');
+
+  // Trigger video playback in the newly visible iframe
+  setTimeout(function() {
+    triggerVideosInFrame(num);
+  }, 100);
+}
+
+function onFrameLoad(num) {
+  var loading = document.getElementById('loading-' + num);
+  if (loading) {
+    loading.classList.add('done');
+    setTimeout(function() { loading.style.display = 'none'; }, 500);
+  }
+  // Try to play videos in this frame
+  triggerVideosInFrame(num);
+}
+
+function triggerVideosInFrame(num) {
+  var iframe = document.getElementById('frame-' + num);
+  if (!iframe) return;
+  try {
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    if (!doc) return;
+    doc.querySelectorAll('video').forEach(function(v) {
+      v.muted = true;
+      v.loop = true;
+      v.playsInline = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('loop', '');
+      v.setAttribute('playsinline', '');
+      if (v.readyState === 0) v.load();
+      var p = v.play();
+      if (p) p.catch(function() {});
+    });
+  } catch(e) {
+    // cross-origin or access denied — videos will autoplay via iframe's own script
+  }
+}
+
+// Periodically ensure videos keep playing in visible tab
+setInterval(function() {
+  triggerVideosInFrame(currentTab);
+}, 3000);
+
+// On user interaction, trigger videos in current frame
+['click', 'touchstart', 'keydown'].forEach(function(evt) {
+  document.addEventListener(evt, function() {
+    triggerVideosInFrame(currentTab);
+  }, { passive: true });
+});
+
+// Initial trigger after page loads
+window.addEventListener('load', function() {
+  setTimeout(function() { triggerVideosInFrame(1); }, 500);
+  setTimeout(function() { triggerVideosInFrame(1); }, 1500);
+});
+</script>
+
+</body>
+</html>

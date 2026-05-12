@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>TAB 4 · 웨이브제인 셀링 — 5월 13일주차 CEO 보고</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --s0:#F0F8FD; --s1:#D6EEF9; --s2:#A8D8EE; --s3:#6BBCDE; --s4:#3AA4CD; --s5:#1A7FAA;
+  --bg:#F4F9FD; --white:#fff;
+  --t1:#0F2733; --t2:#2C4F61; --t3:#5A7F92; --t4:#A0BCC8;
+  --bdr:rgba(58,164,205,0.18); --bdr2:rgba(58,164,205,0.38);
+  --grn:#2EAA78; --grn-bg:#E8F7F1; --grn-t:#0A4A2A;
+  --red:#E05A6B; --red-bg:#FEF0F2; --red-t:#7A1A2A;
+  --amb:#D4882A; --amb-bg:#FDF3E3; --amb-t:#7A3E00;
+  --lav:#7B68D4; --lav-bg:#F0EEF9;
+  --rad:14px; --sh:0 2px 18px rgba(58,164,205,0.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); font-family: 'Outfit', sans-serif; color: var(--t1); font-size: 14px; }
+.main { max-width: 1340px; margin: 0 auto; padding: 28px 40px 80px; }
+
+.hero { background: linear-gradient(135deg, #0D2230 0%, #163A50 50%, #1A7FAA 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(107,188,222,0.18), transparent 65%); pointer-events: none; }
+.hero-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--s2); margin-bottom: 12px; }
+.hero-title { font-family: 'DM Serif Display', serif; font-size: 26px; color: #fff; line-height: 1.45; margin-bottom: 14px; }
+.hero-body { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.85; margin-bottom: 24px; max-width: 920px; }
+.hero-body b { color: #fff; font-weight: 600; }
+.h3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.h3c { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 18px 20px; backdrop-filter: blur(4px); }
+.h3c-icon { font-size: 22px; margin-bottom: 10px; }
+.h3c-t { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.h3c-b { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.65; }
+.h3c-b b { color: #fff; font-weight: 600; }
+
+.sec { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); margin: 36px 0 16px; display: flex; align-items: center; gap: 10px; }
+.sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); }
+
+.kpi4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+.kpi { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 20px 22px; box-shadow: var(--sh); position: relative; overflow: hidden; }
+.kpi::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--s2), var(--s4)); border-radius: var(--rad) var(--rad) 0 0; }
+.kpi.hl::after { background: linear-gradient(90deg, var(--grn), #5CDBA4); }
+.kl { font-size: 12px; color: var(--t3); margin-bottom: 6px; }
+.kv { font-size: 30px; font-weight: 700; color: var(--t1); letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+.kn { font-size: 12px; color: var(--t3); }
+.kb { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 600; margin-top: 6px; }
+.kb-g { background: var(--grn-bg); color: var(--grn); }
+.kb-s { background: var(--s1); color: var(--s5); }
+.kb-a { background: var(--amb-bg); color: var(--amb); }
+
+.card { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px 24px; box-shadow: var(--sh); }
+.card + .card { margin-top: 16px; }
+.card-t { font-size: 15px; font-weight: 700; color: var(--t1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid var(--bdr); }
+
+.ins   { background: var(--s0);     border-left: 3px solid var(--s4);  border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--t2);   line-height: 1.7; }
+.ins-g { background: var(--grn-bg); border-left: 3px solid var(--grn); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--grn-t); line-height: 1.7; }
+.ins-r { background: var(--red-bg); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--red-t); line-height: 1.7; }
+.ins-a { background: var(--amb-bg); border-left: 3px solid var(--amb); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--amb-t); line-height: 1.7; }
+.ins b, .ins-g b, .ins-r b, .ins-a b { font-weight: 600; }
+.ins b { color: var(--t1); }
+
+/* YoY COMPARE */
+.yoy { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 24px; box-shadow: var(--sh); align-items: stretch; }
+.yoy-side { padding: 16px 22px; border-radius: 12px; }
+.yoy-side.prev { background: var(--s0); }
+.yoy-side.curr { background: linear-gradient(160deg, #E8F7F1, #C9EEDB); }
+.yoy-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--t3); margin-bottom: 8px; }
+.yoy-side.curr .yoy-tag { color: var(--grn); }
+.yoy-val { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--t1); margin-bottom: 4px; line-height: 1.1; }
+.yoy-sub { font-size: 13px; color: var(--t3); }
+.yoy-arrow { display: flex; align-items: center; justify-content: center; padding: 0 20px; }
+.yoy-arrow-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.yoy-arrow-icon { font-size: 32px; color: var(--grn); font-weight: 700; }
+.yoy-arrow-pct { font-size: 18px; font-weight: 700; color: var(--grn); }
+
+/* STRATEGY NUMBERED (Roadmap) */
+.sg { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.sc { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px; box-shadow: var(--sh); position: relative; }
+.sn { font-family: 'DM Serif Display', serif; font-size: 38px; color: var(--s2); line-height: 1; margin-bottom: 8px; }
+.sc-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.sc-tag.short { background: var(--amb-bg); color: var(--amb); }
+.sc-tag.mid { background: var(--s1); color: var(--s5); }
+.sc-tag.long { background: var(--grn-bg); color: var(--grn); }
+.st { font-size: 15px; font-weight: 700; color: var(--t1); margin-bottom: 7px; line-height: 1.4; }
+.sb { font-size: 13px; color: var(--t3); line-height: 1.75; }
+.sb b { color: var(--t1); font-weight: 600; }
+
+/* IMAGE GRID */
+.img-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.img-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.img-grid.cols-6 { grid-template-columns: repeat(6, 1fr); }
+.blank-img { background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 10px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px; text-align: center; color: var(--t4); font-size: 12px; line-height: 1.5; }
+.blank-img.wide { aspect-ratio: 16/9; }
+.blank-img.square { aspect-ratio: 1/1; }
+.blank-img-icon { font-size: 22px; opacity: 0.6; }
+.blank-img-label { font-weight: 600; letter-spacing: 0.04em; }
+
+/* DATA BLANK */
+.blank-v { display: inline-block; min-width: 110px; padding: 6px 14px; background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 8px; color: var(--t4); font-size: 16px; font-weight: 600; letter-spacing: 0.04em; text-align: center; vertical-align: middle; line-height: 1.2; }
+.blank-inline { display: inline-block; padding: 1px 8px; background: var(--s0); border: 1.5px dashed var(--bdr2); border-radius: 5px; color: var(--t3); font-size: 12px; font-weight: 500; }
+.blank-box { background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 10px; padding: 22px 20px; text-align: center; color: var(--t4); font-size: 13px; line-height: 1.7; }
+
+/* CHANNEL MATRIX */
+.matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.matrix-box { background: var(--s0); border-radius: 12px; padding: 16px 18px; }
+.matrix-h { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--s5); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--bdr); }
+.matrix-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 13px; }
+.matrix-row + .matrix-row { border-top: 1px dashed var(--bdr); }
+.matrix-row .lbl { color: var(--t3); }
+.matrix-row .val { font-weight: 700; color: var(--t1); }
+
+.portrait { aspect-ratio: 3/4; object-fit: cover; }
+.wide-ratio { aspect-ratio: 16/9; object-fit: cover; }
+.contain-img { object-fit: contain; }
+
+@media (max-width: 1100px) { .kpi4, .h3, .sg, .img-grid, .img-grid.cols-3, .img-grid.cols-6, .matrix-grid { grid-template-columns: 1fr 1fr; } .yoy { grid-template-columns: 1fr; } .yoy-arrow { transform: rotate(90deg); padding: 12px 0; } .main { padding: 20px; } }
+</style>
+</head>
+<body>
+<main class="main">
+
+  <!-- ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="hero">
+    <div class="hero-eye">PHASE 3 · 매출 전환 극대화</div>
+    <div class="hero-title">메가 인플 + 제휴몰 연계로 웨이브제인 매출이<br>YoY +266%, 운동화 3위로 점프했습니다</div>
+    <div class="hero-body">
+      변우석 화제성과 닝닝 2차 릴리즈의 무드가 모이는 시점에 <b>웨이브제인 기획전 + 메가 인플 셀링</b>을 가동, 실판매로 연결시켰습니다.
+      DCS AI 지식그래프 실측 기준 26SS 웨이브제인은 <b>3.82억원 · 4,158qty · 운동화 3위</b>로, 25SS 대비 <b>매출 +266% · 수량 +260% · 순위 ▲14단계</b>의 점프를 기록했습니다.
+    </div>
+    <div class="h3">
+      <div class="h3c">
+        <div class="h3c-icon">💰</div>
+        <div class="h3c-t">매출 점프</div>
+        <div class="h3c-b">1.04억 → <b>3.82억원</b> (YoY <b>+266%</b>)</div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">📦</div>
+        <div class="h3c-t">수량 점프</div>
+        <div class="h3c-b">1,156 → <b>4,158 qty</b> (YoY <b>+260%</b>)</div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">🏆</div>
+        <div class="h3c-t">카테고리 순위</div>
+        <div class="h3c-b">17위 → <b>3위</b> (운동화 카테고리 <b>▲14단계</b>)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━ 01 · 웨이브제인 매출 KPI ━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">01 · 웨이브제인 매출 KPI (DCS AI 검증 실측)</div>
+  <div class="kpi4">
+    <div class="kpi hl">
+      <div class="kl">매출 (26SS)</div>
+      <div class="kv">3.82<span style="font-size:18px;color:var(--t3)">억원</span></div>
+      <div class="kn">25SS 1.04억원</div>
+      <span class="kb kb-g">YoY +266%</span>
+    </div>
+    <div class="kpi hl">
+      <div class="kl">수량 (26SS)</div>
+      <div class="kv">4,158<span style="font-size:18px;color:var(--t3)">qty</span></div>
+      <div class="kn">25SS 1,156 qty</div>
+      <span class="kb kb-g">YoY +260%</span>
+    </div>
+    <div class="kpi hl">
+      <div class="kl">운동화 순위</div>
+      <div class="kv">3<span style="font-size:18px;color:var(--t3)">위</span></div>
+      <div class="kn">25SS 17위</div>
+      <span class="kb kb-g">▲ 14 단계</span>
+    </div>
+    <div class="kpi">
+      <div class="kl">측정 기간</div>
+      <div class="kv" style="font-size:18px;font-weight:600">3/1 ~ 4/17</div>
+      <div class="kn">BRD_CD='X' 기준</div>
+      <span class="kb kb-s">5월 증분 측정 중</span>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="card-t">25SS → 26SS YoY 점프 한눈에 보기</div>
+    <div class="yoy">
+      <div class="yoy-side prev">
+        <div class="yoy-tag">25SS · 작년</div>
+        <div class="yoy-val">1.04억원</div>
+        <div class="yoy-sub">1,156 qty · 운동화 17위</div>
+      </div>
+      <div class="yoy-arrow">
+        <div class="yoy-arrow-inner">
+          <div class="yoy-arrow-icon">→</div>
+          <div class="yoy-arrow-pct">+266%</div>
+        </div>
+      </div>
+      <div class="yoy-side curr">
+        <div class="yoy-tag">26SS · 올해</div>
+        <div class="yoy-val">3.82억원</div>
+        <div class="yoy-sub">4,158 qty · 운동화 <b>3위</b> (▲14)</div>
+      </div>
+    </div>
+    <div style="margin-top:14px"><div class="ins-g"><b>닝닝 착용 제품 실판매 증빙:</b> 화제성→매출 전환 구조가 <b>DCS AI 지식그래프 실측</b>으로 확정 검증된 핵심 수치.</div></div>
+  </div>
+
+  <!-- ━━━ 02 · 메가 인플 활용 전략 ━━━━━━━━━━━━━━━━ -->
+  <div class="sec">02 · 메가 인플루언서 활용 전략</div>
+  <div class="card">
+    <div class="card-t">메가 인플 셀링 콘텐츠</div>
+    <div class="img-grid">
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #01</div><div>셀링 컷</div></div>
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #02</div><div>셀링 컷</div></div>
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #03</div><div>셀링 컷</div></div>
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #04</div><div>셀링 컷</div></div>
+    </div>
+    <div style="margin-top:16px">
+      <div class="kpi4">
+        <div class="kpi">
+          <div class="kl">메가·파워페이지</div>
+          <div class="kv">18<span style="font-size:18px;color:var(--t3)">건</span></div>
+          <div class="kn">V15 검증</div>
+          <span class="kb kb-s">베이스라인</span>
+        </div>
+        <div class="kpi">
+          <div class="kl">메가 인플 IMP</div>
+          <div class="kv"><span class="blank-v">노출</span></div>
+          <div class="kn">합산 노출</div>
+          <span class="kb kb-a">측정 중</span>
+        </div>
+        <div class="kpi">
+          <div class="kl">CTR / 전환율</div>
+          <div class="kv"><span class="blank-v">전환율</span></div>
+          <div class="kn">콘텐츠 → 상세 페이지</div>
+          <span class="kb kb-a">측정 중</span>
+        </div>
+        <div class="kpi">
+          <div class="kl">메가 인플 기여 매출</div>
+          <div class="kv"><span class="blank-v">기여 매출</span></div>
+          <div class="kn">기여도 분석</div>
+          <span class="kb kb-a">측정 중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━ 03 · 셀링 콘텐츠 & 제휴몰 연계 ━━━━━━━━━━━━ -->
+  <div class="sec">03 · 셀링 콘텐츠 & 제휴몰 연계</div>
+  <div class="card">
+    <div class="card-t">제휴몰 기획전 & 셀링 콘텐츠</div>
+    <div class="img-grid cols-3">
+      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #01</div><div>웨이브제인 메인</div></div>
+      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #02</div><div>액티브 웰니스 페이지</div></div>
+      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #03</div><div>닝닝 콜라보 페이지</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">채널 매트릭스</div>
+    <div class="matrix-grid">
+      <div class="matrix-box">
+        <div class="matrix-h">자사 채널</div>
+        <div class="matrix-row"><span class="lbl">공식 온라인</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">오프라인 매장</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">자사 SNS 트래픽</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+      </div>
+      <div class="matrix-box">
+        <div class="matrix-h">제휴 채널</div>
+        <div class="matrix-row"><span class="lbl">제휴몰 A</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">제휴몰 B</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">메가 인플 링크</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+      </div>
+    </div>
+    <div style="margin-top:14px"><div class="ins"><b>채널 믹스 포인트:</b> 자사 + 제휴몰 + 메가 인플 링크의 <b>믹스 비율</b>이 매출 전환 효율성을 좌우. <span class="blank-inline">믹스 비율 결정 후 입력</span></div></div>
+  </div>
+
+  <!-- ━━━ 04 · 매출 전환 극대화 로드맵 ━━━━━━━━━━━━━━ -->
+  <div class="sec">04 · 매출 전환 극대화 로드맵</div>
+  <div class="sg">
+    <div class="sc">
+      <div class="sn">01</div>
+      <span class="sc-tag short">단기 · 1~2주</span>
+      <div class="st">현재 모멘텀 유지 & 셀링 강화</div>
+      <div class="sb">변우석 화제성 + 닝닝 2차 무드가 살아있는 동안 <b>메가 인플 셀링 콘텐츠 확산</b>을 유지하고, 제휴몰 기획전 노출 강화로 매출 가속도 유지.<br><span class="blank-inline">단기 액션 입력</span></div>
+    </div>
+    <div class="sc">
+      <div class="sn">02</div>
+      <span class="sc-tag mid">중기 · 1개월</span>
+      <div class="st">웨이브제인 카테고리 추가 확장</div>
+      <div class="sb">운동화 <b>3위 → Top 2 진입</b> 목표. 후속 컬러웨이/사이즈 확장 및 <b>제휴몰 단독 에디션</b>으로 신규 수요 흡수.<br><span class="blank-inline">중기 액션 입력</span></div>
+    </div>
+    <div class="sc">
+      <div class="sn">03</div>
+      <span class="sc-tag long">장기 · 다음 시즌</span>
+      <div class="st">화제성→매출 전환 구조 재사용</div>
+      <div class="sb">3단 전환(<b>화제성→확산→매출</b>)을 <b>26FW 시즌에도 적용</b>. 변우석/닝닝 같은 앵커 + AI 무드 콘텐츠 + 메가 인플 셀링의 표준 플레이북화.<br><span class="blank-inline">장기 액션 입력</span></div>
+    </div>
+  </div>
+
+  <!-- ━━━ 05 · 종합 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">05 · Phase 3 종합</div>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px">
+    <div class="ins-g"><b>핵심 성과:</b> 화제성 → 확산 → 매출의 <b>3단 전환 구조</b>가 웨이브제인 YoY <b>+266%</b>·운동화 <b>3위(▲14)</b>로 실증. 닝닝 앵커의 실판매 증빙 효과 확정.</div>
+    <div class="ins"><b>다음 단계:</b> 5월 신규 측정값이 들어오면 본 페이지의 메가 인플 IMP·전환율·기여 매출 KPI를 업데이트. 화제성→매출 갭(time lag) 데이터 확보로 다음 시즌 플레이북 정교화.</div>
+    <div class="ins-a"><b>주의:</b> 26SS 매출 호조가 <b>닝닝 앵커 단일 의존</b>일 경우 시즌 후반 마모 리스크. 메가 인플·제휴몰 채널 확장으로 의존도 분산 필요.</div>
+    <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span></div>
+  </div>
+
+</main>
+</body>
+</html>

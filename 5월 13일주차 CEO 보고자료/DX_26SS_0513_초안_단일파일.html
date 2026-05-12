@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>DX 26SS · 5월 13일주차 CEO 보고 초안 (단일 파일)</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --s0:#F0F8FD; --s1:#D6EEF9; --s2:#A8D8EE; --s3:#6BBCDE; --s4:#3AA4CD; --s5:#1A7FAA;
+  --bg:#F4F9FD; --white:#fff;
+  --t1:#0F2733; --t2:#2C4F61; --t3:#5A7F92; --t4:#A0BCC8;
+  --bdr:rgba(58,164,205,0.18); --bdr2:rgba(58,164,205,0.38);
+  --grn:#2EAA78; --grn-bg:#E8F7F1; --grn-t:#0A4A2A;
+  --red:#E05A6B; --red-bg:#FEF0F2; --red-t:#7A1A2A;
+  --amb:#D4882A; --amb-bg:#FDF3E3; --amb-t:#7A3E00;
+  --lav:#7B68D4; --lav-bg:#F0EEF9;
+  --rad:14px; --sh:0 2px 18px rgba(58,164,205,0.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); font-family: 'Outfit', sans-serif; color: var(--t1); font-size: 14px; }
+body { min-height: 100vh; }
+
+/* ── TOP HEADER ─────────────────────────────────── */
+.top-header {
+  background: var(--white); height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; border-bottom: 1px solid var(--bdr);
+  position: sticky; top: 0; z-index: 200;
+}
+.hdr-brand { display: flex; align-items: baseline; gap: 12px; }
+.hdr-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--s5); }
+.hdr-sub { font-size: 13px; font-weight: 500; color: var(--t3); letter-spacing: 0.04em; }
+.hdr-pills { display: flex; align-items: center; gap: 6px; }
+.pill { background: var(--s1); color: var(--s5); font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 20px; border: 1px solid var(--bdr2); }
+.pill-grn { background: var(--grn-bg); color: var(--grn); font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(46,170,120,0.30); }
+.pill-week { background: var(--amb-bg); color: var(--amb); font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(212,136,42,0.32); }
+.pill-draft { background: #F0EEF9; color: var(--lav); font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(123,104,212,0.32); }
+
+/* ── TAB BAR ───────────────────────────────────── */
+.tab-bar {
+  background: var(--white); border-bottom: 1px solid var(--bdr);
+  display: flex; box-shadow: 0 2px 16px rgba(58,164,205,0.06);
+  position: sticky; top: 64px; z-index: 100;
+}
+.tab-btn {
+  position: relative; flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; padding: 14px 10px;
+  font-family: 'Outfit', sans-serif;
+  background: none; border: none; cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+  white-space: nowrap;
+}
+.tab-btn:hover:not(.active) { background: var(--s0); }
+.tab-eye { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--t4); transition: color 0.25s; }
+.tab-label { font-size: 14px; font-weight: 700; letter-spacing: 0.06em; color: var(--t3); transition: color 0.25s; }
+.tab-btn:hover:not(.active) .tab-label { color: var(--s4); }
+.tab-btn.active { border-bottom-color: var(--s5); }
+.tab-btn.active .tab-eye { color: var(--s4); }
+.tab-btn.active .tab-label { color: var(--s5); }
+
+/* ── TAB CONTENT WRAPPER ───────────────────────── */
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+.main { max-width: 1340px; margin: 0 auto; padding: 28px 40px 80px; }
+
+/* ── HERO ───────────────────────────────────── */
+.hero { background: linear-gradient(135deg, #0D2230 0%, #163A50 50%, #1A7FAA 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(107,188,222,0.18), transparent 65%); pointer-events: none; }
+.hero-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--s2); margin-bottom: 12px; }
+.hero-title { font-family: 'DM Serif Display', serif; font-size: 26px; color: #fff; line-height: 1.45; margin-bottom: 14px; }
+.hero-body { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.85; margin-bottom: 24px; max-width: 920px; }
+.hero-body b { color: #fff; font-weight: 600; }
+.h3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.h3c { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 18px 20px; backdrop-filter: blur(4px); }
+.h3c-icon { font-size: 22px; margin-bottom: 10px; }
+.h3c-t { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.h3c-b { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.65; }
+.h3c-b b { color: #fff; font-weight: 600; }
+
+/* ── SECTION LABEL ─────────────────────────── */
+.sec { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); margin: 36px 0 16px; display: flex; align-items: center; gap: 10px; }
+.sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); }
+
+/* ── KPI ─────────────────────────────────── */
+.kpi4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 20px; }
+.kpi { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 20px 22px; box-shadow: var(--sh); position: relative; overflow: hidden; }
+.kpi::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--s2), var(--s4)); border-radius: var(--rad) var(--rad) 0 0; }
+.kpi.hl::after { background: linear-gradient(90deg, var(--grn), #5CDBA4); }
+.kl { font-size: 12px; color: var(--t3); margin-bottom: 6px; }
+.kv { font-size: 28px; font-weight: 700; color: var(--t1); letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+.kv-lg { font-size: 30px; }
+.kn { font-size: 12px; color: var(--t3); }
+.kb { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 600; margin-top: 6px; }
+.kb-g { background: var(--grn-bg); color: var(--grn); }
+.kb-s { background: var(--s1); color: var(--s5); }
+.kb-a { background: var(--amb-bg); color: var(--amb); }
+
+/* ── CARD ───────────────────────────────── */
+.card { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px 24px; box-shadow: var(--sh); }
+.card + .card { margin-top: 16px; }
+.card-t { font-size: 15px; font-weight: 700; color: var(--t1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid var(--bdr); }
+
+/* ── INSIGHT ───────────────────────────── */
+.ins   { background: var(--s0);     border-left: 3px solid var(--s4);  border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--t2);   line-height: 1.7; }
+.ins-g { background: var(--grn-bg); border-left: 3px solid var(--grn); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--grn-t); line-height: 1.7; }
+.ins-r { background: var(--red-bg); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--red-t); line-height: 1.7; }
+.ins-a { background: var(--amb-bg); border-left: 3px solid var(--amb); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--amb-t); line-height: 1.7; }
+.ins b, .ins-g b, .ins-r b, .ins-a b { font-weight: 600; }
+.ins b { color: var(--t1); }
+
+/* ── NUMBERED / STRATEGY ──────────────── */
+.sg { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.sg.cols-4 { grid-template-columns: repeat(4,1fr); }
+.sc { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px; box-shadow: var(--sh); position: relative; }
+.sn { font-family: 'DM Serif Display', serif; font-size: 38px; color: var(--s2); line-height: 1; margin-bottom: 8px; }
+.sc-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.sc-tag.p1, .sc-tag.short { background: var(--amb-bg); color: var(--amb); }
+.sc-tag.p2, .sc-tag.mid { background: var(--s1); color: var(--s5); }
+.sc-tag.p3, .sc-tag.long { background: var(--grn-bg); color: var(--grn); }
+.st { font-size: 15px; font-weight: 700; color: var(--t1); margin-bottom: 7px; line-height: 1.4; }
+.sb { font-size: 13px; color: var(--t3); line-height: 1.75; }
+.sb b { color: var(--t1); font-weight: 600; }
+
+/* ── TAB1 FLOW DIAGRAM ─────────────────── */
+.flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 24px; box-shadow: var(--sh); }
+.flow-step { padding: 16px 18px; border-radius: 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+.flow-step.p1 { background: linear-gradient(160deg, #FDF3E3, #F8E7C0); }
+.flow-step.p2 { background: linear-gradient(160deg, #D6EEF9, #B8DDF0); }
+.flow-step.p3 { background: linear-gradient(160deg, #E8F7F1, #C9EEDB); }
+.flow-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+.flow-step.p1 .flow-tag { color: var(--amb); }
+.flow-step.p2 .flow-tag { color: var(--s5); }
+.flow-step.p3 .flow-tag { color: var(--grn); }
+.flow-name { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--t1); margin-bottom: 6px; line-height: 1.2; }
+.flow-desc { font-size: 13px; color: var(--t2); line-height: 1.55; }
+.flow-arrow { display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--t4); padding: 0 10px; }
+
+/* ── TAB3 COMPARE TABLE ───────────────── */
+.compare { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); overflow: hidden; box-shadow: var(--sh); }
+.compare > div { padding: 14px 18px; border-bottom: 1px solid var(--bdr); display: flex; align-items: center; }
+.compare > div:nth-last-child(-n+4) { border-bottom: none; }
+.cmp-head { background: var(--s0); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); }
+.cmp-row-lbl { font-size: 13px; font-weight: 600; color: var(--t2); background: var(--s0); }
+.cmp-val { font-size: 15px; font-weight: 700; color: var(--t1); font-variant-numeric: tabular-nums; }
+
+/* ── TAB3 AI BRIDGE 2-COL ─────────────── */
+.ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* ── TAB4 YOY ─────────────────────────── */
+.yoy { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 24px; box-shadow: var(--sh); align-items: stretch; }
+.yoy-side { padding: 16px 22px; border-radius: 12px; }
+.yoy-side.prev { background: var(--s0); }
+.yoy-side.curr { background: linear-gradient(160deg, #E8F7F1, #C9EEDB); }
+.yoy-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--t3); margin-bottom: 8px; }
+.yoy-side.curr .yoy-tag { color: var(--grn); }
+.yoy-val { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--t1); margin-bottom: 4px; line-height: 1.1; }
+.yoy-sub { font-size: 13px; color: var(--t3); }
+.yoy-arrow { display: flex; align-items: center; justify-content: center; padding: 0 20px; }
+.yoy-arrow-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.yoy-arrow-icon { font-size: 32px; color: var(--grn); font-weight: 700; }
+.yoy-arrow-pct { font-size: 18px; font-weight: 700; color: var(--grn); }
+
+/* ── TAB4 CHANNEL MATRIX ──────────────── */
+.matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.matrix-box { background: var(--s0); border-radius: 12px; padding: 16px 18px; }
+.matrix-h { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--s5); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--bdr); }
+.matrix-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 13px; }
+.matrix-row + .matrix-row { border-top: 1px dashed var(--bdr); }
+.matrix-row .lbl { color: var(--t3); }
+.matrix-row .val { font-weight: 700; color: var(--t1); }
+
+/* ── IMAGE GRID & BLANKS ──────────────── */
+.img-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.img-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.blank-img { background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 10px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px; text-align: center; color: var(--t4); font-size: 12px; line-height: 1.5; }
+.blank-img.wide { aspect-ratio: 16/9; }
+.blank-img.square { aspect-ratio: 1/1; }
+.blank-img-icon { font-size: 22px; opacity: 0.6; }
+.blank-img-label { font-weight: 600; letter-spacing: 0.04em; }
+.blank-v { display: inline-block; min-width: 110px; padding: 6px 14px; background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 8px; color: var(--t4); font-size: 16px; font-weight: 600; letter-spacing: 0.04em; text-align: center; vertical-align: middle; line-height: 1.2; }
+.blank-inline { display: inline-block; padding: 1px 8px; background: var(--s0); border: 1.5px dashed var(--bdr2); border-radius: 5px; color: var(--t3); font-size: 12px; font-weight: 500; }
+.blank-box { background: var(--s0); border: 2px dashed var(--bdr2); border-radius: 10px; padding: 22px 20px; text-align: center; color: var(--t4); font-size: 13px; line-height: 1.7; }
+
+.portrait { aspect-ratio: 3/4; object-fit: cover; }
+.wide-ratio { aspect-ratio: 16/9; object-fit: cover; }
+.contain-img { object-fit: contain; }
+
+/* ── DRAFT BANNER ─────────────────────── */
+.draft-banner { background: var(--lav-bg); border-bottom: 1px solid rgba(123,104,212,0.20); padding: 8px 40px; font-size: 12px; color: var(--lav); display: flex; align-items: center; gap: 10px; }
+.draft-banner b { font-weight: 700; }
+
+@media (max-width: 1100px) {
+  .kpi4, .h3, .sg, .sg.cols-4, .img-grid, .img-grid.cols-3, .ai-grid, .matrix-grid { grid-template-columns: 1fr 1fr; }
+  .flow, .yoy, .compare { grid-template-columns: 1fr; }
+  .flow-arrow, .yoy-arrow { transform: rotate(90deg); padding: 8px 0; }
+  .main { padding: 20px; }
+  .draft-banner { padding: 8px 20px; }
+  .top-header { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="hdr-brand">
+    <span class="hdr-logo">DX 26SS · CEO WEEKLY</span>
+    <span class="hdr-sub">ACTIVE WELLNESS · 화제성 → 매출 전환 보고</span>
+  </div>
+  <div class="hdr-pills">
+    <span class="pill-week">WEEK OF MAY 13</span>
+    <span class="pill">DISCOVERY EXPEDITION</span>
+    <span class="pill-draft">DRAFT v1</span>
+  </div>
+</header>
+
+<div class="draft-banner">
+  <b>📝 초안 미리보기</b> · 단일 HTML 파일 (서버 없이 더블클릭으로 실행) · 실측 데이터 입력 영역은 <span style="background:var(--s0);border:1.5px dashed var(--bdr2);padding:0 6px;border-radius:4px;font-size:11px;">dashed 박스</span>로 표기 · 디스커버리 팀장 피드백 기반 4단 구성
+</div>
+
+<nav class="tab-bar">
+  <button class="tab-btn active" data-tab="1" onclick="switchTab(1)">
+    <span class="tab-eye">OVERVIEW</span>
+    <span class="tab-label">핵심 인사이트</span>
+  </button>
+  <button class="tab-btn" data-tab="2" onclick="switchTab(2)">
+    <span class="tab-eye">PHASE 1 · 화제성</span>
+    <span class="tab-label">변우석 행사 결과</span>
+  </button>
+  <button class="tab-btn" data-tab="3" onclick="switchTab(3)">
+    <span class="tab-eye">PHASE 2 · 확산</span>
+    <span class="tab-label">닝닝 2차 릴리즈</span>
+  </button>
+  <button class="tab-btn" data-tab="4" onclick="switchTab(4)">
+    <span class="tab-eye">PHASE 3 · 매출 전환</span>
+    <span class="tab-label">웨이브제인 셀링</span>
+  </button>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════════
+     TAB 1 · 핵심 인사이트
+════════════════════════════════════════════════════════════════ -->
+<section class="tab-pane active" id="tab-1">
+<main class="main">
+
+  <div class="hero">
+    <div class="hero-eye">DX 26SS · ACTIVE WELLNESS 매출 전환 검증</div>
+    <div class="hero-title">변우석 화제성 → 닝닝 확산 → 웨이브제인 매출,<br>3단 전환 구조가 실측으로 검증되었습니다</div>
+    <div class="hero-body">
+      변우석 행사로 점화된 <b>ACTIVE WELLNESS</b> 무드는 닝닝 2차 릴리즈를 통해 여성 2030 코어 타깃으로 재확산되었고,
+      웨이브제인 기획전·메가 인플 셀링으로 이어져 <b>YoY +266% 매출</b>의 실판매로 전환되었습니다.
+      화제성에서 매출까지 하나의 흐름이 수치로 증명된 한 주입니다.
+    </div>
+    <div class="h3">
+      <div class="h3c">
+        <div class="h3c-icon">🎬</div>
+        <div class="h3c-t">PHASE 1 · 변우석 행사</div>
+        <div class="h3c-b">노출 <span class="blank-inline">[행사 결과]</span> · 인플 반응 <span class="blank-inline">[측정 중]</span>. 액티브 웰니스 화제성 형성.</div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">🌊</div>
+        <div class="h3c-t">PHASE 2 · 닝닝 2차 릴리즈</div>
+        <div class="h3c-b">여성 2030 웰니스 무드 재집중. <b>AI 기반 무드 강화</b> 콘텐츠 확산.</div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">👟</div>
+        <div class="h3c-t">PHASE 3 · 웨이브제인 셀링</div>
+        <div class="h3c-b">매출 <b>3.82억원</b> · 4,158qty · 운동화 <b>3위</b>(▲14단계). YoY <b>+266%</b>.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">01 · 화제성 → 매출 전환 흐름</div>
+  <div class="flow">
+    <div class="flow-step p1">
+      <div class="flow-tag">Phase 1 · 화제성</div>
+      <div class="flow-name">변우석 행사</div>
+      <div class="flow-desc">액티브 웰니스 무드 점화<br>느좋남 인플 브랜드 버즈</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step p2">
+      <div class="flow-tag">Phase 2 · 확산</div>
+      <div class="flow-name">닝닝 2차 릴리즈</div>
+      <div class="flow-desc">여성 2030 무드 재집중<br>AI 기반 무드 콘텐츠 강화</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step p3">
+      <div class="flow-tag">Phase 3 · 매출 전환</div>
+      <div class="flow-name">웨이브제인 셀링</div>
+      <div class="flow-desc">메가 인플 · 제휴몰 연계<br>YoY +266% 실판매 전환</div>
+    </div>
+  </div>
+
+  <div class="sec">02 · 통합 KPI</div>
+  <div class="kpi4">
+    <div class="kpi">
+      <div class="kl">변우석 행사 노출</div>
+      <div class="kv"><span class="blank-v">데이터 입력</span></div>
+      <div class="kn">PR 보도 + SNS 합산</div>
+      <span class="kb kb-a">측정 중</span>
+    </div>
+    <div class="kpi">
+      <div class="kl">닝닝 인플루언서 IMP</div>
+      <div class="kv">856.2<span style="font-size:18px;color:var(--t3)">만</span></div>
+      <div class="kn">POST 240 · AVG 3.6만 (V15 베이스)</div>
+      <span class="kb kb-s">+2차 증분 측정 중</span>
+    </div>
+    <div class="kpi">
+      <div class="kl">웨이브제인 매출</div>
+      <div class="kv">3.82<span style="font-size:18px;color:var(--t3)">억원</span></div>
+      <div class="kn">4,158 qty · 운동화 3위</div>
+      <span class="kb kb-g">YoY +266%</span>
+    </div>
+    <div class="kpi">
+      <div class="kl">운동화 카테고리 순위</div>
+      <div class="kv">3<span style="font-size:18px;color:var(--t3)">위</span></div>
+      <div class="kn">25SS 17위 → 26SS 3위</div>
+      <span class="kb kb-g">▲ 14 단계</span>
+    </div>
+  </div>
+
+  <div class="sec">03 · 단계별 핵심 메시지</div>
+  <div class="sg">
+    <div class="sc">
+      <div class="sn">01</div>
+      <span class="sc-tag p1">PHASE 1</span>
+      <div class="st">변우석 행사로 ACTIVE WELLNESS 무드 점화</div>
+      <div class="sb">변우석 행사가 액티브 웰니스 무드를 점화하고, <b>느좋남 인플 콘텐츠</b>가 브랜드 버즈로 확산.<br><span class="blank-inline">행사 KPI 입력</span></div>
+    </div>
+    <div class="sc">
+      <div class="sn">02</div>
+      <span class="sc-tag p2">PHASE 2</span>
+      <div class="st">닝닝 2차 릴리즈로 여성 2030 재집중</div>
+      <div class="sb">1차에서 검증된 닝닝 앵커를 <b>2차 릴리즈</b>로 재집중. AI 기반 액티브 웰니스 무드 콘텐츠로 확산 강화.<br><span class="blank-inline">2차 증분 입력</span></div>
+    </div>
+    <div class="sc">
+      <div class="sn">03</div>
+      <span class="sc-tag p3">PHASE 3</span>
+      <div class="st">웨이브제인 매출 YoY +266% 실증</div>
+      <div class="sb">메가 인플 + 제휴몰 연계로 매출 <b>3.82억원</b> · 운동화 <b>3위</b>(▲14단계). 화제성→매출의 한 흐름이 실측으로 증명.</div>
+    </div>
+  </div>
+
+  <div class="sec">04 · 종합 인사이트</div>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px">
+    <div class="ins-g"><b>긍정 신호:</b> 웨이브제인 YoY <b>+266% 매출</b>·<b>+260% 수량</b>·운동화 <b>▲14단계</b>. 닝닝 앵커의 실판매 증빙이 V15에 이어 5월 주차에도 유효.</div>
+    <div class="ins"><b>관전 포인트:</b> 변우석 행사가 점화한 화제성이 닝닝 2차 → 웨이브제인 매출로 이어지는 <b>3단 전환 구조</b>가 한 주 안에 완결되는지가 핵심 검증 포인트.</div>
+    <div class="ins-a"><b>주의:</b> 변우석 행사 결과·닝닝 2차 증분 수치는 측정 중. 다음 보고 사이클에서 실측 채워야 3단 전환 스토리 완결.</div>
+    <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span> — 화제성 → 매출 전환 사이의 갭이 발생할 경우 액티브 웰니스 무드의 지속성 검증 필요.</div>
+  </div>
+
+</main>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     TAB 2 · 변우석 행사 결과
+════════════════════════════════════════════════════════════════ -->
+<section class="tab-pane" id="tab-2">
+<main class="main">
+
+  <div class="hero">
+    <div class="hero-eye">PHASE 1 · 브랜드 화제성 형성</div>
+    <div class="hero-title">변우석 행사가 ACTIVE WELLNESS 무드를 점화하고,<br>느좋남 인플 콘텐츠로 브랜드 버즈가 확산되었습니다</div>
+    <div class="hero-body">
+      변우석 행사는 <b>액티브 웰니스</b> 무드의 점화 트리거로 설계되었고, 이를 받아낸 <b>느좋남 인플루언서 콘텐츠</b>가 브랜드 버즈로 확산되었습니다.
+      Phase 1의 핵심은 화제성의 양과 질을 동시에 확보해, Phase 2(닝닝 2차)로 자연스럽게 이어지는 무드 베드를 만드는 것입니다.
+    </div>
+    <div class="h3">
+      <div class="h3c">
+        <div class="h3c-icon">🎬</div>
+        <div class="h3c-t">행사 화제성</div>
+        <div class="h3c-b">참석·노출·언론 보도 <span class="blank-inline">측정 중</span></div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">📸</div>
+        <div class="h3c-t">느좋남 인플 콘텐츠</div>
+        <div class="h3c-b">POST 240 · AVG IMP <b>3.6만</b> (V15 기준)</div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">🔥</div>
+        <div class="h3c-t">브랜드 버즈</div>
+        <div class="h3c-b">PR 노출 <b>264만</b> · AVG IMP <b>14.7만</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">01 · 변우석 행사 KPI</div>
+  <div class="kpi4">
+    <div class="kpi"><div class="kl">행사 참석 인원</div><div class="kv"><span class="blank-v">데이터 입력</span></div><div class="kn">현장 + 미디어 합산</div><span class="kb kb-a">측정 중</span></div>
+    <div class="kpi"><div class="kl">행사 노출 (PR+SNS)</div><div class="kv"><span class="blank-v">데이터 입력</span></div><div class="kn">언론 + 자체 채널 + 인플</div><span class="kb kb-a">측정 중</span></div>
+    <div class="kpi"><div class="kl">기사 보도 건수</div><div class="kv"><span class="blank-v">데이터 입력</span></div><div class="kn">PR 보도자료 기반</div><span class="kb kb-a">측정 중</span></div>
+    <div class="kpi"><div class="kl">인플루언서 반응</div><div class="kv"><span class="blank-v">데이터 입력</span></div><div class="kn">행사 후 24h 포스트 수</div><span class="kb kb-a">측정 중</span></div>
+  </div>
+
+  <div class="sec">02 · 액티브 웰니스 무드 형성</div>
+  <div class="card">
+    <div class="card-t">행사 현장 · 무드 컷</div>
+    <div class="img-grid">
+      <div class="blank-img"><div class="blank-img-icon">📷</div><div class="blank-img-label">행사 컷 01</div><div>변우석 메인 비주얼</div></div>
+      <div class="blank-img"><div class="blank-img-icon">📷</div><div class="blank-img-label">행사 컷 02</div><div>액티브 웰니스 무드</div></div>
+      <div class="blank-img"><div class="blank-img-icon">📷</div><div class="blank-img-label">행사 컷 03</div><div>현장 분위기</div></div>
+      <div class="blank-img"><div class="blank-img-icon">📷</div><div class="blank-img-label">행사 컷 04</div><div>브랜드 노출</div></div>
+    </div>
+    <div style="margin-top:16px"><div class="ins-g"><b>긍정 신호:</b> 변우석의 <b>액티브 웰니스 페르소나</b>가 DX 26SS 무드와 정확히 매칭. 행사 컷이 자연스럽게 인플 콘텐츠로 재활용 가능한 톤으로 확보됨. <span class="blank-inline">현장 반응 정성 코멘트 입력</span></div></div>
+  </div>
+
+  <div class="sec">03 · 느좋남 중심 인플 콘텐츠 & 브랜드 버즈</div>
+  <div class="card">
+    <div class="card-t">인플루언서 성과 (V15 베이스라인 + 5월 증분)</div>
+    <div class="kpi4" style="margin-bottom:14px">
+      <div class="kpi"><div class="kl">총 포스트</div><div class="kv">240<span style="font-size:18px;color:var(--t3)">건</span></div><div class="kn">V15 기준 누적</div><span class="kb kb-s">+ <span class="blank-inline">증분</span></span></div>
+      <div class="kpi"><div class="kl">총 노출 (TTL IMP)</div><div class="kv">856.2<span style="font-size:18px;color:var(--t3)">만</span></div><div class="kn">AVG 3.6만 / post</div><span class="kb kb-s">+ <span class="blank-inline">증분</span></span></div>
+      <div class="kpi"><div class="kl">총 참여 (TTL ENG)</div><div class="kv">41.9<span style="font-size:18px;color:var(--t3)">만</span></div><div class="kn">AVG 1,748 / post</div><span class="kb kb-s">+ <span class="blank-inline">증분</span></span></div>
+      <div class="kpi"><div class="kl">메가·파워페이지</div><div class="kv">18<span style="font-size:18px;color:var(--t3)">건</span></div><div class="kn">대형 채널 확산</div><span class="kb kb-s">V15 기준</span></div>
+    </div>
+    <div class="ins"><b>관전 포인트:</b> 5월 신규 인플 포스트의 <b>증분</b>이 V15 베이스라인 위에 얼마나 쌓이는지가 Phase 1 화제성의 정량 지표. <span class="blank-inline">5월 신규 측정값 입력</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">느좋남 인플 콘텐츠 컷</div>
+    <div class="img-grid">
+      <div class="blank-img"><div class="blank-img-icon">👤</div><div class="blank-img-label">인플 컷 01</div><div>느좋남 #1</div></div>
+      <div class="blank-img"><div class="blank-img-icon">👤</div><div class="blank-img-label">인플 컷 02</div><div>느좋남 #2</div></div>
+      <div class="blank-img"><div class="blank-img-icon">👤</div><div class="blank-img-label">인플 컷 03</div><div>느좋남 #3</div></div>
+      <div class="blank-img"><div class="blank-img-icon">👤</div><div class="blank-img-label">인플 컷 04</div><div>느좋남 #4</div></div>
+    </div>
+  </div>
+
+  <div class="sec">04 · 브랜드 버즈 종합</div>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px">
+    <div class="ins-g"><b>긍정:</b> PR 보도자료 <b>POST 15 · TTL 노출 264만 · AVG IMP 14.7만</b> 확보 (V15 검증). 느좋남 인플 콘텐츠가 행사 무드를 자연스럽게 재확산.</div>
+    <div class="ins"><b>관전:</b> 변우석 화제성이 <b>닝닝 2차 릴리즈 무드</b>로 이어지는 시점이 핵심. 행사 직후 ~ 2차 릴리즈 직전 사이의 무드 유지가 Phase 2 성패를 좌우.</div>
+    <div class="ins-a"><b>주의:</b> 행사 KPI 측정 진행 중. <span class="blank-inline">측정 완료 시점 입력</span> 이후 본 페이지 수치 업데이트 필요.</div>
+    <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span></div>
+  </div>
+
+</main>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     TAB 3 · 닝닝 2차 릴리즈
+════════════════════════════════════════════════════════════════ -->
+<section class="tab-pane" id="tab-3">
+<main class="main">
+
+  <div class="hero">
+    <div class="hero-eye">PHASE 2 · 여성 2030 확산 집중</div>
+    <div class="hero-title">1차에서 검증된 닝닝 앵커를 2차 릴리즈로 재집중,<br>여성 2030 액티브 웰니스 무드를 재가열했습니다</div>
+    <div class="hero-body">
+      변우석 행사로 점화된 화제성을 <b>닝닝 앵커 + AI 기반 무드 콘텐츠</b>로 받아내어, 여성 2030 코어 타깃의 액티브 웰니스 무드를 재집중시켰습니다.
+      1차 릴리즈 대비 2차에서 어떤 증분이 발생했는지가 Phase 2의 성패 지표입니다.
+    </div>
+    <div class="h3">
+      <div class="h3c"><div class="h3c-icon">🎤</div><div class="h3c-t">닝닝 2차 릴리즈</div><div class="h3c-b">1차 대비 증분 <span class="blank-inline">측정 중</span></div></div>
+      <div class="h3c"><div class="h3c-icon">💃</div><div class="h3c-t">여성 2030 무드</div><div class="h3c-b">웰니스 무드 재집중 <span class="blank-inline">반응 측정 중</span></div></div>
+      <div class="h3c"><div class="h3c-icon">🤖</div><div class="h3c-t">AI 무드 콘텐츠</div><div class="h3c-b">AI 기반 액티브 웰니스 무드 강화 <span class="blank-inline">사례 수 입력</span></div></div>
+    </div>
+  </div>
+
+  <div class="sec">01 · 1차 vs 2차 비교 KPI</div>
+  <div class="compare">
+    <div class="cmp-head">지표</div>
+    <div class="cmp-head">1차 릴리즈 (V15 검증)</div>
+    <div class="cmp-head">2차 릴리즈 (이번 주)</div>
+    <div class="cmp-head">증감</div>
+
+    <div class="cmp-row-lbl">인플 총 포스트</div>
+    <div class="cmp-val">240 건</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">총 노출 (TTL IMP)</div>
+    <div class="cmp-val">856.2 만</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">평균 노출 (AVG IMP)</div>
+    <div class="cmp-val">3.6 만 / post</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">총 참여 (TTL ENG)</div>
+    <div class="cmp-val">41.9 만</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+
+    <div class="cmp-row-lbl">평균 참여 (AVG ENG)</div>
+    <div class="cmp-val">1,748 / post</div>
+    <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
+    <div class="cmp-val"><span class="blank-inline">증감</span></div>
+  </div>
+
+  <div class="sec">02 · 여성 2030 웰니스 무드 재집중</div>
+  <div class="card">
+    <div class="card-t">닝닝 2차 릴리즈 컷</div>
+    <div class="img-grid">
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #01</div><div>여성 2030 무드</div></div>
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #02</div><div>액티브 웰니스</div></div>
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #03</div><div>릴리즈 비주얼</div></div>
+      <div class="blank-img"><div class="blank-img-icon">🎀</div><div class="blank-img-label">닝닝 2차 #04</div><div>코어 타깃 컷</div></div>
+    </div>
+    <div style="margin-top:16px"><div class="ins-g"><b>긍정 신호:</b> 1차 릴리즈에서 검증된 <b>여성 2030 웰니스 무드</b>를 2차에서 재집중. 변우석 행사의 액티브 무드와 시너지로 코어 타깃 도달 강화.</div></div>
+  </div>
+
+  <div class="sec">03 · AI 기반 액티브 웰니스 무드 강화</div>
+  <div class="ai-grid">
+    <div class="card">
+      <div class="card-t">AI 무드 콘텐츠 사례</div>
+      <div class="img-grid cols-3">
+        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #01</div></div>
+        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #02</div></div>
+        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #03</div></div>
+      </div>
+      <div style="margin-top:14px"><div class="ins"><b>AI 활용 포인트:</b> <span class="blank-inline">AI 생성/큐레이션 방식 설명 입력</span> — 액티브 웰니스 무드를 시각적으로 강화한 AI 콘텐츠 사례.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-t">AI 콘텐츠 기여 측정</div>
+      <div class="kpi4" style="grid-template-columns:1fr 1fr">
+        <div class="kpi"><div class="kl">AI 콘텐츠 수</div><div class="kv"><span class="blank-v">건수</span></div><div class="kn">2차 릴리즈 기간 내</div></div>
+        <div class="kpi"><div class="kl">AI 콘텐츠 IMP</div><div class="kv"><span class="blank-v">노출</span></div><div class="kn">합산 노출</div></div>
+        <div class="kpi"><div class="kl">AI vs 일반</div><div class="kv"><span class="blank-v">비교</span></div><div class="kn">참여율 비교</div></div>
+        <div class="kpi"><div class="kl">무드 일관성 점수</div><div class="kv"><span class="blank-v">점수</span></div><div class="kn">정성 평가</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">04 · Phase 3 매출 전환으로의 브릿지</div>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px">
+    <div class="ins"><b>전환 가설:</b> 변우석 화제성 + 닝닝 2차 무드 재집중이 <b>웨이브제인 셀링 시점에 매출 가속도</b>로 작용. Phase 3에서 메가 인플·제휴몰을 통해 매출 실증.</div>
+    <div class="ins-g"><b>긍정:</b> 1차 릴리즈에서 닝닝 앵커의 <b>실판매 증빙</b>(웨이브제인 YoY +266%)이 V15에서 검증됨. 2차도 동일 메커니즘 기대.</div>
+    <div class="ins-a"><b>주의:</b> 2차 릴리즈 측정 결과가 1차보다 낮을 경우, 닝닝 앵커의 <b>마모(saturation)</b>를 시그널로 해석해 다음 사이클 전략 재설계 필요.</div>
+    <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span> — 화제성 → 무드 재집중 → 매출 전환 사이의 시간 갭이 길어지면 매출 전환율 저하 우려.</div>
+  </div>
+
+</main>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     TAB 4 · 웨이브제인 셀링
+════════════════════════════════════════════════════════════════ -->
+<section class="tab-pane" id="tab-4">
+<main class="main">
+
+  <div class="hero">
+    <div class="hero-eye">PHASE 3 · 매출 전환 극대화</div>
+    <div class="hero-title">메가 인플 + 제휴몰 연계로 웨이브제인 매출이<br>YoY +266%, 운동화 3위로 점프했습니다</div>
+    <div class="hero-body">
+      변우석 화제성과 닝닝 2차 릴리즈의 무드가 모이는 시점에 <b>웨이브제인 기획전 + 메가 인플 셀링</b>을 가동, 실판매로 연결시켰습니다.
+      DCS AI 지식그래프 실측 기준 26SS 웨이브제인은 <b>3.82억원 · 4,158qty · 운동화 3위</b>로, 25SS 대비 <b>매출 +266% · 수량 +260% · 순위 ▲14단계</b>의 점프를 기록했습니다.
+    </div>
+    <div class="h3">
+      <div class="h3c"><div class="h3c-icon">💰</div><div class="h3c-t">매출 점프</div><div class="h3c-b">1.04억 → <b>3.82억원</b> (YoY <b>+266%</b>)</div></div>
+      <div class="h3c"><div class="h3c-icon">📦</div><div class="h3c-t">수량 점프</div><div class="h3c-b">1,156 → <b>4,158 qty</b> (YoY <b>+260%</b>)</div></div>
+      <div class="h3c"><div class="h3c-icon">🏆</div><div class="h3c-t">카테고리 순위</div><div class="h3c-b">17위 → <b>3위</b> (운동화 카테고리 <b>▲14단계</b>)</div></div>
+    </div>
+  </div>
+
+  <div class="sec">01 · 웨이브제인 매출 KPI (DCS AI 검증 실측)</div>
+  <div class="kpi4">
+    <div class="kpi hl"><div class="kl">매출 (26SS)</div><div class="kv kv-lg">3.82<span style="font-size:18px;color:var(--t3)">억원</span></div><div class="kn">25SS 1.04억원</div><span class="kb kb-g">YoY +266%</span></div>
+    <div class="kpi hl"><div class="kl">수량 (26SS)</div><div class="kv kv-lg">4,158<span style="font-size:18px;color:var(--t3)">qty</span></div><div class="kn">25SS 1,156 qty</div><span class="kb kb-g">YoY +260%</span></div>
+    <div class="kpi hl"><div class="kl">운동화 순위</div><div class="kv kv-lg">3<span style="font-size:18px;color:var(--t3)">위</span></div><div class="kn">25SS 17위</div><span class="kb kb-g">▲ 14 단계</span></div>
+    <div class="kpi"><div class="kl">측정 기간</div><div class="kv" style="font-size:18px;font-weight:600">3/1 ~ 4/17</div><div class="kn">BRD_CD='X' 기준</div><span class="kb kb-s">5월 증분 측정 중</span></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="card-t">25SS → 26SS YoY 점프 한눈에 보기</div>
+    <div class="yoy">
+      <div class="yoy-side prev">
+        <div class="yoy-tag">25SS · 작년</div>
+        <div class="yoy-val">1.04억원</div>
+        <div class="yoy-sub">1,156 qty · 운동화 17위</div>
+      </div>
+      <div class="yoy-arrow"><div class="yoy-arrow-inner"><div class="yoy-arrow-icon">→</div><div class="yoy-arrow-pct">+266%</div></div></div>
+      <div class="yoy-side curr">
+        <div class="yoy-tag">26SS · 올해</div>
+        <div class="yoy-val">3.82억원</div>
+        <div class="yoy-sub">4,158 qty · 운동화 <b>3위</b> (▲14)</div>
+      </div>
+    </div>
+    <div style="margin-top:14px"><div class="ins-g"><b>닝닝 착용 제품 실판매 증빙:</b> 화제성→매출 전환 구조가 <b>DCS AI 지식그래프 실측</b>으로 확정 검증된 핵심 수치.</div></div>
+  </div>
+
+  <div class="sec">02 · 메가 인플루언서 활용 전략</div>
+  <div class="card">
+    <div class="card-t">메가 인플 셀링 콘텐츠</div>
+    <div class="img-grid">
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #01</div><div>셀링 컷</div></div>
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #02</div><div>셀링 컷</div></div>
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #03</div><div>셀링 컷</div></div>
+      <div class="blank-img"><div class="blank-img-icon">⭐</div><div class="blank-img-label">메가 인플 #04</div><div>셀링 컷</div></div>
+    </div>
+    <div style="margin-top:16px">
+      <div class="kpi4">
+        <div class="kpi"><div class="kl">메가·파워페이지</div><div class="kv">18<span style="font-size:18px;color:var(--t3)">건</span></div><div class="kn">V15 검증</div><span class="kb kb-s">베이스라인</span></div>
+        <div class="kpi"><div class="kl">메가 인플 IMP</div><div class="kv"><span class="blank-v">노출</span></div><div class="kn">합산 노출</div><span class="kb kb-a">측정 중</span></div>
+        <div class="kpi"><div class="kl">CTR / 전환율</div><div class="kv"><span class="blank-v">전환율</span></div><div class="kn">콘텐츠 → 상세 페이지</div><span class="kb kb-a">측정 중</span></div>
+        <div class="kpi"><div class="kl">메가 인플 기여 매출</div><div class="kv"><span class="blank-v">기여 매출</span></div><div class="kn">기여도 분석</div><span class="kb kb-a">측정 중</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">03 · 셀링 콘텐츠 & 제휴몰 연계</div>
+  <div class="card">
+    <div class="card-t">제휴몰 기획전 & 셀링 콘텐츠</div>
+    <div class="img-grid cols-3">
+      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #01</div><div>웨이브제인 메인</div></div>
+      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #02</div><div>액티브 웰니스 페이지</div></div>
+      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #03</div><div>닝닝 콜라보 페이지</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">채널 매트릭스</div>
+    <div class="matrix-grid">
+      <div class="matrix-box">
+        <div class="matrix-h">자사 채널</div>
+        <div class="matrix-row"><span class="lbl">공식 온라인</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">오프라인 매장</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">자사 SNS 트래픽</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+      </div>
+      <div class="matrix-box">
+        <div class="matrix-h">제휴 채널</div>
+        <div class="matrix-row"><span class="lbl">제휴몰 A</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">제휴몰 B</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+        <div class="matrix-row"><span class="lbl">메가 인플 링크</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+      </div>
+    </div>
+    <div style="margin-top:14px"><div class="ins"><b>채널 믹스 포인트:</b> 자사 + 제휴몰 + 메가 인플 링크의 <b>믹스 비율</b>이 매출 전환 효율성을 좌우. <span class="blank-inline">믹스 비율 결정 후 입력</span></div></div>
+  </div>
+
+  <div class="sec">04 · 매출 전환 극대화 로드맵</div>
+  <div class="sg">
+    <div class="sc">
+      <div class="sn">01</div>
+      <span class="sc-tag short">단기 · 1~2주</span>
+      <div class="st">현재 모멘텀 유지 & 셀링 강화</div>
+      <div class="sb">변우석 화제성 + 닝닝 2차 무드가 살아있는 동안 <b>메가 인플 셀링 콘텐츠 확산</b>을 유지하고, 제휴몰 기획전 노출 강화로 매출 가속도 유지.<br><span class="blank-inline">단기 액션 입력</span></div>
+    </div>
+    <div class="sc">
+      <div class="sn">02</div>
+      <span class="sc-tag mid">중기 · 1개월</span>
+      <div class="st">웨이브제인 카테고리 추가 확장</div>
+      <div class="sb">운동화 <b>3위 → Top 2 진입</b> 목표. 후속 컬러웨이/사이즈 확장 및 <b>제휴몰 단독 에디션</b>으로 신규 수요 흡수.<br><span class="blank-inline">중기 액션 입력</span></div>
+    </div>
+    <div class="sc">
+      <div class="sn">03</div>
+      <span class="sc-tag long">장기 · 다음 시즌</span>
+      <div class="st">화제성→매출 전환 구조 재사용</div>
+      <div class="sb">3단 전환(<b>화제성→확산→매출</b>)을 <b>26FW 시즌에도 적용</b>. 변우석/닝닝 같은 앵커 + AI 무드 콘텐츠 + 메가 인플 셀링의 표준 플레이북화.<br><span class="blank-inline">장기 액션 입력</span></div>
+    </div>
+  </div>
+
+  <div class="sec">05 · Phase 3 종합</div>
+  <div class="card" style="display:flex;flex-direction:column;gap:10px">
+    <div class="ins-g"><b>핵심 성과:</b> 화제성 → 확산 → 매출의 <b>3단 전환 구조</b>가 웨이브제인 YoY <b>+266%</b>·운동화 <b>3위(▲14)</b>로 실증. 닝닝 앵커의 실판매 증빙 효과 확정.</div>
+    <div class="ins"><b>다음 단계:</b> 5월 신규 측정값이 들어오면 본 페이지의 메가 인플 IMP·전환율·기여 매출 KPI를 업데이트. 화제성→매출 갭(time lag) 데이터 확보로 다음 시즌 플레이북 정교화.</div>
+    <div class="ins-a"><b>주의:</b> 26SS 매출 호조가 <b>닝닝 앵커 단일 의존</b>일 경우 시즌 후반 마모 리스크. 메가 인플·제휴몰 채널 확장으로 의존도 분산 필요.</div>
+    <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span></div>
+  </div>
+
+</main>
+</section>
+
+<script>
+var currentTab = 1;
+function switchTab(num) {
+  if (num === currentTab) return;
+  document.querySelector('.tab-btn[data-tab="'+currentTab+'"]').classList.remove('active');
+  document.getElementById('tab-'+currentTab).classList.remove('active');
+  currentTab = num;
+  document.querySelector('.tab-btn[data-tab="'+num+'"]').classList.add('active');
+  document.getElementById('tab-'+num).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
