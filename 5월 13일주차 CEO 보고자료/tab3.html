@@ -132,14 +132,14 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .contain-img { object-fit: contain; }
 
 /* PRODUCT GRID (닝닝 착장 상품 누끼컷) */
-.product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.product-card { background: var(--s0); border: 1px solid var(--bdr); border-radius: 12px; padding: 18px; transition: transform 0.2s, box-shadow 0.2s; }
-.product-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(58,164,205,0.15); }
-.product-img-wrap { background: var(--white); border-radius: 8px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.product-img-wrap img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
-.product-meta { margin-top: 12px; display: flex; justify-content: space-between; align-items: center; }
-.product-sku { font-size: 12px; color: var(--t3); font-family: 'SF Mono', 'Menlo', monospace; letter-spacing: 0.04em; font-weight: 600; }
-.product-color { font-size: 11px; font-weight: 700; color: var(--s5); padding: 3px 10px; background: var(--s1); border-radius: 6px; letter-spacing: 0.06em; }
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.product-card { background: var(--s0); border: 1px solid var(--bdr); border-radius: 10px; padding: 10px; transition: transform 0.2s, box-shadow 0.2s; }
+.product-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(58,164,205,0.15); }
+.product-img-wrap { background: var(--white); border-radius: 6px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.product-img-wrap img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+.product-meta { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; }
+.product-sku { font-size: 11px; color: var(--t3); font-family: 'SF Mono', 'Menlo', monospace; letter-spacing: 0.04em; font-weight: 600; }
+.product-color { font-size: 10px; font-weight: 700; color: var(--s5); padding: 2px 8px; background: var(--s1); border-radius: 5px; letter-spacing: 0.06em; }
 
 /* THUMBNAIL GRID (19 매체 바이럴 썸네일) */
 .thumb-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
@@ -260,7 +260,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
   <div class="card">
-    <div class="card-t">닝닝 착장 상품 누끼컷 · 2개 컬러웨이</div>
+    <div class="card-t">닝닝 착장 메인 상품 누끼컷 · 3개 (T-shirt 2 + Shoes 1)</div>
     <div class="product-grid">
       <figure class="product-card">
         <div class="product-img-wrap"><img src="assets/tab3-닝닝-착장상품/DWRS94063-IVD_01_MS.jpg" alt="DWRS94063 IVD" loading="lazy"></div>
@@ -276,9 +276,16 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
           <span class="product-color">DGS</span>
         </div>
       </figure>
+      <figure class="product-card">
+        <div class="product-img-wrap"><img src="assets/tab3-닝닝-착장상품/DXSH7275N-BDS_01_MS.jpg" alt="DXSH7275N BDS" loading="lazy"></div>
+        <div class="product-meta">
+          <span class="product-sku">DXSH7275N</span>
+          <span class="product-color">BDS</span>
+        </div>
+      </figure>
     </div>
     <div style="margin-top:14px">
-      <div class="ins"><b>닝닝 2차 릴리즈 상품:</b> 2개 컬러웨이 (IVD · DGS) — 위 19개 매체 바이럴 콘텐츠와 매칭되는 실제 판매 상품. <span class="blank-inline">상품 카테고리·가격대·예상 매출 확인 필요</span></div>
+      <div class="ins"><b>닝닝 2차 릴리즈 메인 상품:</b> T-shirt 2 컬러웨이 (IVD · DGS) + Shoes 1 (BDS) — 위 19개 매체 바이럴 콘텐츠와 매칭되는 실제 판매 상품. <span class="blank-inline">상품 가격대·예상 매출 확인 필요</span></div>
     </div>
   </div>
 
