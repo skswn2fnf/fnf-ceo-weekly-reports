@@ -87,6 +87,45 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 
 /* AI BRIDGE BOX (2 col) */
 .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+/* AI FLOW (03 · AI 기반 무드 강화 — 4단 카드 플로우) */
+.ai-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; margin-bottom: 16px; }
+.ai-step { background: var(--s0); border: 1px solid var(--bdr); border-radius: 14px; padding: 20px 18px; position: relative; }
+.ai-step-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: var(--s5); padding: 3px 10px; border-radius: 5px; margin-bottom: 10px; text-transform: uppercase; }
+.ai-step-title { font-size: 16px; font-weight: 800; color: var(--t1); margin-bottom: 6px; letter-spacing: -0.01em; }
+.ai-step-desc { font-size: 12px; color: var(--t3); line-height: 1.65; margin-bottom: 14px; }
+.ai-flow-arrow { display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--t4); padding: 0 8px; font-weight: 700; }
+
+/* Step 1: Keyword pool */
+.keyword-pool { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.keyword { background: var(--white); border: 1px solid var(--bdr); color: var(--t2); font-size: 12px; font-weight: 500; padding: 4px 11px; border-radius: 20px; }
+.keyword.highlight { background: var(--amb-bg); border-color: rgba(212,136,42,0.55); color: var(--amb-t); font-weight: 700; }
+.keyword.highlight::before { content: '★ '; }
+.keyword-note { font-size: 11px; color: var(--t4); font-style: italic; line-height: 1.5; }
+
+/* Step 2: Selected */
+.ai-selected { background: var(--white); border-radius: 10px; padding: 16px 14px; text-align: center; }
+.ai-selected-cluster { font-size: 11px; font-weight: 700; color: var(--s5); letter-spacing: 0.04em; padding: 4px 10px; background: var(--s1); border-radius: 5px; display: inline-block; margin-bottom: 8px; }
+.ai-selected-arrow { font-size: 18px; color: var(--t4); margin: 4px 0; }
+.ai-selected-keyword { font-size: 22px; font-weight: 900; color: var(--amb); letter-spacing: -0.02em; margin-bottom: 6px; }
+.ai-selected-keyword::before { content: '★ '; }
+.ai-selected-rationale { font-size: 11px; color: var(--t3); font-weight: 500; line-height: 1.5; }
+
+/* Step 3: Combined */
+.ai-combine { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--white); border-radius: 10px; padding: 18px 12px; margin-bottom: 8px; }
+.ai-combine-a { font-size: 14px; font-weight: 800; color: var(--amb-t); padding: 6px 12px; background: var(--amb-bg); border-radius: 6px; border: 1px solid rgba(212,136,42,0.35); white-space: nowrap; }
+.ai-combine-x { font-size: 18px; color: var(--t3); font-weight: 700; }
+.ai-combine-b { font-size: 14px; font-weight: 800; color: var(--s5); padding: 6px 12px; background: var(--s1); border-radius: 6px; border: 1px solid var(--bdr2); white-space: nowrap; }
+.ai-combine-note { font-size: 11px; color: var(--t3); text-align: center; line-height: 1.5; font-weight: 500; }
+
+/* Step 4: Result */
+.ai-result { display: flex; gap: 16px; align-items: center; background: linear-gradient(135deg, var(--grn-bg), #C9EEDB); border: 1px solid rgba(46,170,120,0.30); border-radius: 14px; padding: 20px 24px; }
+.ai-result-icon { font-size: 36px; flex-shrink: 0; }
+.ai-result-content { flex: 1; }
+.ai-result-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: var(--grn); padding: 3px 10px; border-radius: 5px; margin-bottom: 6px; text-transform: uppercase; }
+.ai-result-title { font-size: 16px; font-weight: 800; color: var(--grn-t); margin-bottom: 6px; letter-spacing: -0.01em; }
+.ai-result-desc { font-size: 13px; color: var(--grn-t); line-height: 1.75; }
+.ai-result-desc b { color: var(--grn-t); font-weight: 800; }
+
 
 .portrait { aspect-ratio: 3/4; object-fit: cover; }
 .wide-ratio { aspect-ratio: 16/9; object-fit: cover; }
@@ -117,7 +156,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .thumb-legend .dot.star { background: var(--amb-bg); border-color: rgba(212,136,42,0.45); }
 .thumb-legend .dot.normal { background: var(--white); border-color: var(--bdr); }
 
-@media (max-width: 1100px) { .kpi4, .h3, .img-grid, .img-grid.cols-3, .ai-grid { grid-template-columns: 1fr 1fr; } .compare { grid-template-columns: 1fr; } .thumb-grid { grid-template-columns: repeat(3, 1fr); } .main { padding: 20px; } }
+@media (max-width: 1100px) { .kpi4, .h3, .img-grid, .img-grid.cols-3, .ai-grid { grid-template-columns: 1fr 1fr; } .compare { grid-template-columns: 1fr; } .ai-flow { grid-template-columns: 1fr; gap: 12px; } .ai-flow-arrow { transform: rotate(90deg); padding: 4px 0; } .thumb-grid { grid-template-columns: repeat(3, 1fr); } .main { padding: 20px; } }
 </style>
 </head>
 <body>
@@ -245,39 +284,68 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 
   <!-- ━━━ 03 · AI 기반 액티브 웰니스 무드 강화 ━━━━━━━ -->
   <div class="sec">03 · AI 기반 액티브 웰니스 무드 강화</div>
-  <div class="ai-grid">
-    <div class="card">
-      <div class="card-t">AI 무드 콘텐츠 사례</div>
-      <div class="img-grid cols-3">
-        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #01</div></div>
-        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #02</div></div>
-        <div class="blank-img square"><div class="blank-img-icon">🤖</div><div class="blank-img-label">AI 콘텐츠 #03</div></div>
+  <div class="card">
+    <div class="card-t">AI 인사이트 → 콘텐츠 적용 플로우</div>
+
+    <div class="ai-flow">
+      <!-- STEP 1: AI 크롤링 (키워드 풀) -->
+      <div class="ai-step">
+        <div class="ai-step-tag">STEP 01 · AI CRAWL</div>
+        <div class="ai-step-title">닝닝 관련 키워드 크롤링</div>
+        <div class="ai-step-desc">최근 앰버서더 닝닝의 활동·트렌드 관련 키워드를 AI가 자동 수집</div>
+        <div class="keyword-pool">
+          <span class="keyword">에스파 컴백</span>
+          <span class="keyword highlight">레모네이드</span>
+          <span class="keyword">Whiplash</span>
+          <span class="keyword">Supernova</span>
+          <span class="keyword">카리나</span>
+          <span class="keyword">KWANGYA</span>
+          <span class="keyword">Y2K</span>
+          <span class="keyword">시티팝</span>
+          <span class="keyword">페스티벌</span>
+          <span class="keyword">워터밤</span>
+        </div>
+        <div class="keyword-note">★ 강조: 최종 선정 키워드 · 나머지는 후보 (정확한 키워드 풀 확인 필요)</div>
       </div>
-      <div style="margin-top:14px"><div class="ins"><b>AI 활용 포인트:</b> <span class="blank-inline">AI 생성/큐레이션 방식 설명 입력</span> — 액티브 웰니스 무드를 시각적으로 강화한 AI 콘텐츠 사례.</div></div>
+
+      <div class="ai-flow-arrow">→</div>
+
+      <!-- STEP 2: 선정 -->
+      <div class="ai-step">
+        <div class="ai-step-tag">STEP 02 · SELECTED</div>
+        <div class="ai-step-title">키워드 선정</div>
+        <div class="ai-step-desc">"에스파 컴백" 군집 중 닝닝 2차 릴리즈 무드와 적합도가 높은 키워드 선정</div>
+        <div class="ai-selected">
+          <div class="ai-selected-cluster">에스파 컴백 군집</div>
+          <div class="ai-selected-arrow">↓</div>
+          <div class="ai-selected-keyword">레모네이드</div>
+          <div class="ai-selected-rationale">여름 시즌 + 청량 무드와 자연 매칭</div>
+        </div>
+      </div>
+
+      <div class="ai-flow-arrow">→</div>
+
+      <!-- STEP 3: 결합 -->
+      <div class="ai-step">
+        <div class="ai-step-tag">STEP 03 · COMBINED</div>
+        <div class="ai-step-title">콘셉트 결합</div>
+        <div class="ai-step-desc">"레모네이드 × 여름 무드"로 닝닝 2차 콘텐츠 톤 도출</div>
+        <div class="ai-combine">
+          <div class="ai-combine-a">레모네이드</div>
+          <div class="ai-combine-x">×</div>
+          <div class="ai-combine-b">여름 무드</div>
+        </div>
+        <div class="ai-combine-note">청량감 · 비타민 · 페미닌 무드</div>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-t">AI 콘텐츠 기여 측정</div>
-      <div class="kpi4" style="grid-template-columns:1fr 1fr">
-        <div class="kpi">
-          <div class="kl">AI 콘텐츠 수</div>
-          <div class="kv"><span class="blank-v">건수</span></div>
-          <div class="kn">2차 릴리즈 기간 내</div>
-        </div>
-        <div class="kpi">
-          <div class="kl">AI 콘텐츠 IMP</div>
-          <div class="kv"><span class="blank-v">노출</span></div>
-          <div class="kn">합산 노출</div>
-        </div>
-        <div class="kpi">
-          <div class="kl">AI vs 일반 콘텐츠</div>
-          <div class="kv"><span class="blank-v">비교</span></div>
-          <div class="kn">참여율 비교</div>
-        </div>
-        <div class="kpi">
-          <div class="kl">무드 일관성 점수</div>
-          <div class="kv"><span class="blank-v">점수</span></div>
-          <div class="kn">정성 평가</div>
-        </div>
+
+    <!-- STEP 4: 결과 적용 (강조 카드) -->
+    <div class="ai-result">
+      <div class="ai-result-icon">🎯</div>
+      <div class="ai-result-content">
+        <div class="ai-result-tag">STEP 04 · APPLIED</div>
+        <div class="ai-result-title">콘텐츠 적용 → 바이럴 확산</div>
+        <div class="ai-result-desc"><b>"레모네이드 × 여름 무드"</b> 콘셉트를 닝닝 2차 바이럴 썸네일 <b>19개 매체</b>에 일관 적용 → ★ 우선순위 10개 매체 중심으로 다채널 동시 확산. AI 크롤링 → 키워드 선정 → 콘셉트 결합 → 콘텐츠 적용까지 한 사이클로 묶음.</div>
       </div>
     </div>
   </div>
