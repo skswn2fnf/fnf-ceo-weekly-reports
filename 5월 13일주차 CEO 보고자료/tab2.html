@@ -92,6 +92,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .video-card { background: #1a1a1a; border-radius: 14px; overflow: hidden; position: relative; aspect-ratio: 9/16; box-shadow: 0 4px 16px rgba(0,0,0,.15); transition: transform 0.2s, box-shadow 0.2s; }
 .video-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.22); }
 .video-card video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
+.video-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .video-badge { position: absolute; top: 10px; left: 10px; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 5px; color: #fff; letter-spacing: 0.08em; backdrop-filter: blur(4px); text-transform: uppercase; }
 .video-badge.interview { background: rgba(212,136,42,.88); }
 .video-badge.meme { background: rgba(58,164,205,.88); }
@@ -184,11 +185,11 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
   <!-- ━━━ 02 · 변우석 바이럴 영상 ━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec">02 · 변우석 바이럴 영상 · 18개 (인터뷰 2 + 밈영상 9 + 오가닉 팬 7)</div>
+  <div class="sec">02 · 변우석 바이럴 영상 · 24개 (인터뷰 4 + 밈영상 13 + 오가닉 팬 7)</div>
   <div class="card">
     <div class="card-t">바이럴 영상 컬렉션 (자동 재생 · 음소거)</div>
     <div class="video-meta">
-      <span><b>총 18개</b> · 인터뷰 2 + 밈영상 9 + <b>오가닉 팬 영상 7</b> (~91 MB)</span>
+      <span><b>총 24개</b> · 인터뷰 4 + 밈영상 13 + <b>오가닉 팬 영상 7</b> (~122 MB)</span>
       <span class="video-legend"><span class="dot interview"></span>인터뷰 <span class="dot meme"></span>밈영상 <span class="dot fan"></span>오가닉 팬</span>
     </div>
     <div class="video-grid">
@@ -202,6 +203,8 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         <span class="video-badge interview">Interview</span><span class="video-num">2</span>
         <div class="video-caption">앰버서더 변우석 · DISCOVER YOUR ACTIVE SUMMER</div>
       </figure>
+      <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/인터뷰/interview-03.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge interview">Interview</span><span class="video-num">3</span><div class="video-caption">데패뉴 · 변우석 인터뷰</div></figure>
+      <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/인터뷰/interview-04.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge interview">Interview</span><span class="video-num">4</span><div class="video-caption">아이즈 · 변우석 인터뷰</div></figure>
       <figure class="video-card">
         <video src="assets/tab2-변우석-바이럴영상/밈영상/meme-01.mp4" muted loop autoplay playsinline preload="metadata"></video>
         <span class="video-badge meme">Meme</span><span class="video-num">1</span>
@@ -247,6 +250,10 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         <span class="video-badge meme">Meme</span><span class="video-num">9</span>
         <div class="video-caption">이안대군 성수 행차 · 웰니스 메세지 팝업</div>
       </figure>
+      <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/밈영상/meme-10.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Meme</span><span class="video-num">10</span><div class="video-caption">데패뉴 · 변우석 밈</div></figure>
+      <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/밈영상/meme-11.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Meme</span><span class="video-num">11</span><div class="video-caption">데패뉴 · 변우석 스케치</div></figure>
+      <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/밈영상/meme-12.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Meme</span><span class="video-num">12</span><div class="video-caption">아이즈 · 변우석 밈</div></figure>
+      <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/밈영상/meme-13.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Meme</span><span class="video-num">13</span><div class="video-caption">아이즈 · 변우석 스케치</div></figure>
       <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/팬영상/fan-01.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-fan-tag">오가닉 팬</span><div class="video-caption">변우석 팬 바이럴 영상</div></figure>
       <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/팬영상/fan-02.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-fan-tag">오가닉 팬</span><div class="video-caption">변우석 팬 바이럴 영상</div></figure>
       <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/팬영상/fan-03.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-fan-tag">오가닉 팬</span><div class="video-caption">변우석 팬 바이럴 영상</div></figure>
@@ -256,7 +263,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
       <figure class="video-card"><video src="assets/tab2-변우석-바이럴영상/팬영상/fan-07.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-fan-tag">오가닉 팬</span><div class="video-caption">변우석 팬 바이럴 영상</div></figure>
     </div>
     <div style="margin-top:14px">
-      <div class="ins-g"><b>변우석 바이럴 확산:</b> 인터뷰 2 + 밈영상 9 + <b>오가닉 팬 영상 7</b> = 총 <b>18개 영상 콘텐츠</b>. 매체 발(인터뷰/밈) + 팬덤 발(오가닉) 양쪽에서 행사 화제성이 SNS 바이럴로 동시 증폭.</div>
+      <div class="ins-g"><b>변우석 바이럴 확산:</b> 인터뷰 4 + 밈영상 13 + <b>오가닉 팬 영상 7</b> = 총 <b>24개 영상 콘텐츠</b>. 매체 발(인터뷰/밈) + 팬덤 발(오가닉) 양쪽에서 행사 화제성이 SNS 바이럴로 동시 증폭.</div>
     </div>
   </div>
 
@@ -294,17 +301,20 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
   <div class="card">
-    <div class="card-t">느좋남 바이럴 영상 · 5개 (매체 + 인플 바이럴)</div>
+    <div class="card-t">느좋남 바이럴 영상 · 8개 (매체 영상 5 + 매체 이미지 3)</div>
     <div class="video-meta">
-      <span><b>총 5개</b> · 바이럴 5 (~45 MB) — 매체에서 인플과 함께 만든 바이럴 + 인플이 자체 채널에 올린 바이럴</span>
+      <span><b>총 8개</b> · 영상 5 + 이미지 3 (~45 MB) — 매체에서 인플과 함께 만든 바이럴 + 인플이 자체 채널에 올린 바이럴</span>
       <span class="video-legend"><span class="dot meme"></span>바이럴</span>
     </div>
-    <div class="video-grid cols-5">
+    <div class="video-grid">
+      <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/패스트페이퍼 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">패스트페이퍼 · 느좋남 인터뷰</div></figure>
+      <figure class="video-card"><img src="assets/tab2-느좋남-바이럴영상/02-active-wellness-event.jpg" alt="Active Wellness 이벤트"><span class="video-badge meme">Viral</span><div class="video-caption">광고 · Active Wellness 이벤트</div></figure>
       <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/WWD 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">WWD · 느좋남 인터뷰</div></figure>
       <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/뉴소스 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">뉴소스 · 느좋남 인터뷰</div></figure>
       <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/데패뉴 느좋남 바이럴.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">데패뉴 · 느좋남 바이럴</div></figure>
+      <figure class="video-card"><img src="assets/tab2-느좋남-바이럴영상/07-mens-running-look.jpg" alt="느낌 좋은 내남자 러닝룩"><span class="video-badge meme">Viral</span><div class="video-caption">광고 · 느낌 좋은 내남자 러닝룩</div></figure>
       <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/아이즈 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">아이즈 · 느좋남 인터뷰</div></figure>
-      <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/패스트페이퍼 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">패스트페이퍼 · 느좋남 인터뷰</div></figure>
+      <figure class="video-card" style="background:var(--s0); display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--t4); border:2px dashed var(--bdr2); text-align:center; padding:16px; box-shadow:none;"><div style="font-size:24px; margin-bottom:6px; opacity:0.6;">📥</div><div style="font-size:11px; font-weight:600; line-height:1.5;">요즘 느좋 러닝 룩<br><span style="font-size:10px; color:var(--t3); font-weight:500;">(OneDrive 동기화 대기)</span></div></figure>
     </div>
   </div>
 
