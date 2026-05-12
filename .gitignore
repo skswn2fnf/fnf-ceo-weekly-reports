@@ -17,3 +17,8 @@ desktop.ini
 *.tmp
 *.bak
 __pycache__/
+
+# ── Local backups (작업자별 prefix, PR 머지 전 스냅샷) ──
+# 협업 규칙: 백업 파일은 git 추적 X (로컬 보관만)
+(skswn2fnf)*
+(Kimminhye-fnf)*
