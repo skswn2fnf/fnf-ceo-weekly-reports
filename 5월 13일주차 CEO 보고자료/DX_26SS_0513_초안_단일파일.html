@@ -369,8 +369,8 @@ body { min-height: 100vh; }
 
 /* ── LIFESTYLE GRID (29장 일반 인플) ── */
 .lifestyle-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; max-width: 100%; }
-.strategy-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 280px; margin-top: 12px; }
-.strategy-videos .video-card { aspect-ratio: 9/16; width: 100%; }
+.strategy-videos { display: flex; gap: 8px; margin-top: 12px; }
+.strategy-videos > .video-card { width: 136px !important; max-width: 136px !important; flex-shrink: 0; flex-grow: 0; aspect-ratio: 9/16; }
 .lifestyle-card { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 3/4; background: var(--s0); border: 1px solid var(--bdr); }
 .lifestyle-card.star { border-color: rgba(212,136,42,0.40); }
 .lifestyle-card.star::after { content: '★'; position: absolute; top: 3px; right: 3px; font-size: 9px; color: #fff; background: var(--amb); padding: 1px 5px; border-radius: 3px; font-weight: 700; }
@@ -1126,8 +1126,8 @@ body { min-height: 100vh; }
         <div class="strategy-title">제품 후기형 컨텐츠 (쇼츠)</div>
         <div class="strategy-desc"><b>"가을까지 쭉 신기 좋은" / "예쁘죠 ㅠㅠ"</b> 류의 솔직 후기 톤. 인플 쇼츠 1편으로 <b>구매 자극력</b> 극대화. 매체 후기 = 신뢰도 높음.</div>
         <div class="strategy-videos">
-          <figure class="video-card" style="aspect-ratio:9/16"><video src="assets/tab4-바이럴레퍼런스/reference-01.mov" muted loop autoplay playsinline preload="metadata"></video><span class="video-fan-tag" style="background:rgba(212,136,42,.88)">레퍼런스</span><div class="video-caption">쇼츠 후기 벤치마크</div></figure>
-          <figure class="video-card" style="aspect-ratio:9/16"><img src="assets/tab4-바이럴레퍼런스/reference-puma-meryjane.jpg" alt="푸마 메리제인 SNS 후기"><span class="video-fan-tag" style="background:rgba(212,136,42,.88)">레퍼런스</span><div class="video-caption">푸마 메리제인 SNS 후기</div></figure>
+          <figure class="video-card"><video src="assets/tab4-바이럴레퍼런스/reference-01.mov" muted loop autoplay playsinline preload="metadata"></video><span class="video-fan-tag" style="background:rgba(212,136,42,.88)">레퍼런스</span><div class="video-caption">쇼츠 후기 벤치마크</div></figure>
+          <figure class="video-card"><img src="assets/tab4-바이럴레퍼런스/reference-puma-meryjane.jpg" alt="푸마 메리제인 SNS 후기"><span class="video-fan-tag" style="background:rgba(212,136,42,.88)">레퍼런스</span><div class="video-caption">푸마 메리제인 SNS 후기</div></figure>
         </div>
       </div>
 
