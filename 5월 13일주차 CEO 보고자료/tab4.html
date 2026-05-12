@@ -149,8 +149,8 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .infl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
 .infl-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; overflow: hidden; box-shadow: var(--sh); transition: transform 0.2s, box-shadow 0.2s; }
 .infl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(58,164,205,0.18); }
-.infl-photo { background: var(--s0); aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--t4); border-bottom: 1px solid var(--bdr); position: relative; overflow: hidden; }
-.infl-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.infl-photo { background: var(--s0); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--t4); border-bottom: 1px solid var(--bdr); position: relative; overflow: hidden; }
+.infl-photo img { width: 100%; height: auto; display: block; }
 .infl-photo-icon { font-size: 36px; opacity: 0.4; margin-bottom: 6px; }
 .infl-photo-note { font-size: 11px; color: var(--t4); font-weight: 500; }
 .infl-rank { position: absolute; top: 10px; left: 10px; background: var(--amb); color: #fff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 5px; letter-spacing: 0.08em; }
@@ -172,7 +172,46 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .channel-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .channel-tag { font-size: 11px; font-weight: 600; padding: 5px 11px; background: var(--white); border: 1px solid rgba(123,104,212,0.30); border-radius: 20px; color: var(--lav); }
 
-@media (max-width: 1100px) { .kpi4, .h3, .sg, .img-grid, .img-grid.cols-3, .img-grid.cols-6, .matrix-grid, .ai-insight-grid, .infl-grid { grid-template-columns: 1fr 1fr; } .timeline { grid-template-columns: repeat(3, 1fr); row-gap: 16px; } .timeline::before { display: none; } .yoy { grid-template-columns: 1fr; } .yoy-arrow { transform: rotate(90deg); padding: 12px 0; } .main { padding: 20px; } }
+
+/* ── PRODUCT SPEC (메인/서브 상품) ── */
+.product-spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.product-spec-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; padding: 22px 24px; position: relative; box-shadow: var(--sh); }
+.product-spec-card.main { background: linear-gradient(135deg, var(--grn-bg), #C9EEDB); border-color: rgba(46,170,120,0.30); }
+.product-spec-card.main::before { content: '★ MKT MAIN'; position: absolute; top: 16px; right: 18px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 5px; background: var(--grn); color: #fff; }
+.product-spec-card.sub::before { content: 'MKT SUB'; position: absolute; top: 16px; right: 18px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 5px; background: var(--s4); color: #fff; }
+.spec-name { font-size: 22px; font-weight: 800; color: var(--t1); margin-bottom: 2px; letter-spacing: -0.02em; }
+.spec-sku { font-size: 11px; color: var(--t3); font-family: 'SF Mono', 'Menlo', monospace; margin-bottom: 14px; letter-spacing: 0.02em; }
+.spec-data { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding: 12px 0 0; border-top: 1px solid var(--bdr); }
+.spec-data-cell { text-align: center; }
+.spec-data-val { font-size: 18px; font-weight: 800; color: var(--t1); letter-spacing: -0.01em; }
+.spec-data-lbl { font-size: 10px; color: var(--t3); margin-top: 2px; letter-spacing: 0.04em; }
+
+/* ── STRATEGY 2종 ── */
+.strategy-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.strategy-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; padding: 20px 22px; box-shadow: var(--sh); }
+.strategy-icon { font-size: 26px; margin-bottom: 6px; }
+.strategy-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; background: var(--amb-bg); color: var(--amb-t); margin-bottom: 6px; letter-spacing: 0.06em; text-transform: uppercase; }
+.strategy-title { font-size: 15px; font-weight: 800; color: var(--t1); margin-bottom: 6px; letter-spacing: -0.01em; }
+.strategy-desc { font-size: 12px; color: var(--t2); line-height: 1.65; margin-bottom: 12px; }
+.strategy-desc b { color: var(--t1); font-weight: 700; }
+
+/* ── LIFESTYLE GRID (29장 일반 인플) ── */
+.lifestyle-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.lifestyle-card { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 3/4; background: var(--s0); border: 1px solid var(--bdr); }
+.lifestyle-card.star { border-color: rgba(212,136,42,0.40); }
+.lifestyle-card.star::after { content: '★'; position: absolute; top: 3px; right: 3px; font-size: 9px; color: #fff; background: var(--amb); padding: 1px 5px; border-radius: 3px; font-weight: 700; }
+.lifestyle-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── COLORWAY GRID ── */
+.colorway-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.colorway-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 8px; padding: 6px; }
+.colorway-card img { width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block; }
+.colorway-card-lbl { text-align: center; font-size: 10px; color: var(--t3); margin-top: 2px; font-family: 'SF Mono', 'Menlo', monospace; font-weight: 600; letter-spacing: 0.04em; }
+.colorway-section-title { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; font-weight: 800; color: var(--t1); }
+.colorway-section-title + .colorway-grid { margin-bottom: 18px; }
+.colorway-section-title .product-color.main-color { background: var(--grn-bg); color: var(--grn-t); }
+
+@media (max-width: 1100px) { .kpi4, .h3, .sg, .img-grid, .img-grid.cols-3, .img-grid.cols-6, .matrix-grid, .ai-insight-grid, .infl-grid, .product-spec-grid, .strategy-2col { grid-template-columns: 1fr 1fr; } .lifestyle-grid { grid-template-columns: repeat(4, 1fr); } .colorway-grid { grid-template-columns: repeat(4, 1fr); } .timeline { grid-template-columns: repeat(3, 1fr); row-gap: 16px; } .timeline::before { display: none; } .yoy { grid-template-columns: 1fr; } .yoy-arrow { transform: rotate(90deg); padding: 12px 0; } .main { padding: 20px; } }
 </style>
 </head>
 <body>
@@ -401,34 +440,135 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     </div>
   </div>
 
-  <!-- ━━━ 03 · 셀링 콘텐츠 & 제휴몰 연계 ━━━━━━━━━━━━ -->
-  <div class="sec">03 · 셀링 콘텐츠 & 제휴몰 연계</div>
+  <!-- ━━━ 03 · AI 추천 셀링 콘텐츠 전략 (메인/서브 상품 푸시) ━━━━━━━━━ -->
+  <div class="sec">03 · AI 추천 셀링 콘텐츠 전략 (메인/서브 상품 푸시)</div>
+
+  <!-- AI 상품 선정 -->
   <div class="card">
-    <div class="card-t">제휴몰 기획전 & 셀링 콘텐츠</div>
-    <div class="img-grid cols-3">
-      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #01</div><div>웨이브제인 메인</div></div>
-      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #02</div><div>액티브 웰니스 페이지</div></div>
-      <div class="blank-img wide"><div class="blank-img-icon">🛍️</div><div class="blank-img-label">제휴몰 기획전 #03</div><div>닝닝 콜라보 페이지</div></div>
+    <div class="card-t">AI 상품 선정 — 생산 금액 + 2030 여성 타겟 디자인 유효성 검토</div>
+
+    <div class="ai-insight-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 16px;">
+      <div class="ai-insight-card">
+        <div class="ai-insight-icon">💰</div>
+        <span class="ai-insight-tag">CRITERIA 01</span>
+        <div class="ai-insight-title">생산 금액 + 투자 우선순위</div>
+        <div class="ai-insight-desc">26SS 메리제인 라인업 3SKU <b>45.3억원 (49.4%)</b>, 그 중 <b>웨이브 제인 + 스트랩 38.1억원 (42%)</b> 생산 집중 — 매출 회수 우선순위 결정.</div>
+      </div>
+      <div class="ai-insight-card">
+        <div class="ai-insight-icon">👩</div>
+        <span class="ai-insight-tag">CRITERIA 02</span>
+        <div class="ai-insight-title">2030 여성 타겟 디자인 유효성</div>
+        <div class="ai-insight-desc">레이스/플랫 슈즈 트렌드 분석 → 메리제인 카테고리가 <b>2030 여성 코어</b>에 적합도 높음. 닝닝 2차 + 메가 인플과 시너지.</div>
+      </div>
     </div>
+
+    <div class="product-spec-grid">
+      <div class="product-spec-card main">
+        <div class="spec-name">웨이브 제인</div>
+        <div class="spec-sku">DXSH7275N · 6 컬러웨이</div>
+        <div class="spec-data">
+          <div class="spec-data-cell"><div class="spec-data-val">28.6<span style="font-size:13px;color:var(--t3)">억</span></div><div class="spec-data-lbl">생산 금액</div></div>
+          <div class="spec-data-cell"><div class="spec-data-val">28,900<span style="font-size:11px;color:var(--t3)">개</span></div><div class="spec-data-lbl">생산 수량</div></div>
+          <div class="spec-data-cell"><div class="spec-data-val">99,000<span style="font-size:11px;color:var(--t3)">원</span></div><div class="spec-data-lbl">판매가</div></div>
+        </div>
+      </div>
+      <div class="product-spec-card sub">
+        <div class="spec-name">웨이브 스트랩</div>
+        <div class="spec-sku">DXSH7336N · 4 컬러웨이</div>
+        <div class="spec-data">
+          <div class="spec-data-cell"><div class="spec-data-val">9.5<span style="font-size:13px;color:var(--t3)">억</span></div><div class="spec-data-lbl">생산 금액</div></div>
+          <div class="spec-data-cell"><div class="spec-data-val">8,000<span style="font-size:11px;color:var(--t3)">개</span></div><div class="spec-data-lbl">생산 수량</div></div>
+          <div class="spec-data-cell"><div class="spec-data-val">119,000<span style="font-size:11px;color:var(--t3)">원</span></div><div class="spec-data-lbl">판매가</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ins-g" style="margin-top:14px"><b>🤖 AI 데이터 기반 선정:</b> 생산 투자가 집중된 <b>웨이브 제인(MAIN) + 웨이브 스트랩(SUB)</b>을 푸시 핵심 SKU로 선정. AI가 생산 금액·디자인 유효성을 종합 분석해 매출 회수 우선순위 결정.</div>
   </div>
 
+  <!-- AI 추천 바이럴 전략 2종 -->
   <div class="card">
-    <div class="card-t">채널 매트릭스</div>
-    <div class="matrix-grid">
-      <div class="matrix-box">
-        <div class="matrix-h">자사 채널</div>
-        <div class="matrix-row"><span class="lbl">공식 온라인</span><span class="val"><span class="blank-inline">데이터</span></span></div>
-        <div class="matrix-row"><span class="lbl">오프라인 매장</span><span class="val"><span class="blank-inline">데이터</span></span></div>
-        <div class="matrix-row"><span class="lbl">자사 SNS 트래픽</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+    <div class="card-t">AI 추천 바이럴 전략 2종 — 쇼츠부터 라이프스타일 이미지까지 다방면 SNS 친화</div>
+
+    <div class="strategy-2col">
+      <div class="strategy-card">
+        <div class="strategy-icon">🎬</div>
+        <span class="strategy-tag">STRATEGY A</span>
+        <div class="strategy-title">제품 후기형 컨텐츠 (쇼츠)</div>
+        <div class="strategy-desc"><b>"가을까지 쭉 신기 좋은" / "예쁘죠 ㅠㅠ"</b> 류의 솔직 후기 톤. 인플 쇼츠 1편으로 <b>구매 자극력</b> 극대화. 매체 후기 = 신뢰도 높음.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <figure class="video-card" style="aspect-ratio:9/16"><video src="assets/tab4-바이럴레퍼런스/reference-01.mov" muted loop autoplay playsinline preload="metadata"></video><span class="video-fan-tag" style="background:rgba(212,136,42,.88)">레퍼런스</span><div class="video-caption">쇼츠 후기 벤치마크</div></figure>
+          <figure class="video-card" style="aspect-ratio:9/16"><img src="assets/tab4-바이럴레퍼런스/reference-puma-meryjane.jpg" alt="푸마 메리제인 SNS 후기"><span class="video-fan-tag" style="background:rgba(212,136,42,.88)">레퍼런스</span><div class="video-caption">푸마 메리제인 SNS 후기</div></figure>
+        </div>
       </div>
-      <div class="matrix-box">
-        <div class="matrix-h">제휴 채널</div>
-        <div class="matrix-row"><span class="lbl">제휴몰 A</span><span class="val"><span class="blank-inline">데이터</span></span></div>
-        <div class="matrix-row"><span class="lbl">제휴몰 B</span><span class="val"><span class="blank-inline">데이터</span></span></div>
-        <div class="matrix-row"><span class="lbl">메가 인플 링크</span><span class="val"><span class="blank-inline">데이터</span></span></div>
+
+      <div class="strategy-card">
+        <div class="strategy-icon">📸</div>
+        <span class="strategy-tag">STRATEGY B</span>
+        <div class="strategy-title">라이프스타일 공감 이미지</div>
+        <div class="strategy-desc">감성 코드로 무드 전달. <b>6명 일반 인플의 일상 컨텐츠</b>(카페·운동·여행 등)에 자연스럽게 노출 → 2030 여성 공감대 형성. ★ = 우선순위 컷.</div>
+        <div class="lifestyle-grid">
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@m00__n(4).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@m00__n(6).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@mingddo_h(2).jpg" alt="@mingddo_h" loading="lazy"></figure>
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@mingddo_h(4).jpg" alt="@mingddo_h" loading="lazy"></figure>
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@ryu.xx___(4).jpg" alt="@ryu" loading="lazy"></figure>
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@ryu.xx___(7).jpg" alt="@ryu" loading="lazy"></figure>
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@sabinchu(2).jpg" alt="@sabinchu" loading="lazy"></figure>
+        <figure class="lifestyle-card star"><img src="assets/tab4-일반인플-라이프스타일/★@sabinchu(3).jpg" alt="@sabinchu" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@hyunee_____(2).jpg" alt="@hyunee_____" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@hyunee_____(4).jpg" alt="@hyunee_____" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@hyunee_____(5).jpg" alt="@hyunee_____" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@m00__n(1).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@m00__n(2).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@m00__n(3).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@m00__n(5).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@m00__n(8).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@m00__n(9).jpg" alt="@m00__n" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@mingddo_h(1).jpg" alt="@mingddo_h" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@ryu.xx___(1).jpg" alt="@ryu" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@ryu.xx___(5).jpg" alt="@ryu" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@ryu.xx___(6).jpg" alt="@ryu" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@sabinchu(4).jpg" alt="@sabinchu" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@sabinchu(5).jpg" alt="@sabinchu" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@yona_yoon_(1).jpg" alt="@yona_yoon_" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@yona_yoon_(2).jpg" alt="@yona_yoon_" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@yona_yoon_(3).jpg" alt="@yona_yoon_" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@yona_yoon_(4).jpg" alt="@yona_yoon_" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@yona_yoon_(5).jpg" alt="@yona_yoon_" loading="lazy"></figure>
+        <figure class="lifestyle-card"><img src="assets/tab4-일반인플-라이프스타일/@yona_yoon_(6).jpg" alt="@yona_yoon_" loading="lazy"></figure>
+        </div>
       </div>
     </div>
-    <div style="margin-top:14px"><div class="ins"><b>채널 믹스 포인트:</b> 자사 + 제휴몰 + 메가 인플 링크의 <b>믹스 비율</b>이 매출 전환 효율성을 좌우. <span class="blank-inline">믹스 비율 결정 후 입력</span></div></div>
+
+    <div class="ins" style="margin-top:14px"><b>다방면 SNS 친화 전략:</b> 쇼츠(짧고 임팩트) + 라이프스타일 이미지(롱텀 노출) 양쪽으로 다채널 동시 진행. <b>AI 추천 콘텐츠 포맷 → 매출 전환 가속도 극대화</b>.</div>
+  </div>
+
+  <!-- 메인/서브 상품 라인업 -->
+  <div class="card">
+    <div class="card-t">메인/서브 상품 라인업 컬러웨이</div>
+    <div class="colorway-section-title">
+      <span class="product-color main-color">MAIN</span>
+      <span>웨이브 제인 · 6 컬러웨이 (DXSH7275N)</span>
+    </div>
+    <div class="colorway-grid">
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브제인/DXSH7275N-VOL_01_MS.png" alt="VOL"><div class="colorway-card-lbl">VOL</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브제인/DXSH7275N-GRL_01_MS.png" alt="GRL"><div class="colorway-card-lbl">GRL</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브제인/DXSH7275N-BDS_01_MS.png" alt="BDS"><div class="colorway-card-lbl">BDS</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브제인/DXSH7275N-RDS_02_MS.png" alt="RDS"><div class="colorway-card-lbl">RDS</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브제인/DXSH7275N-BLL_02_S.png" alt="BLL"><div class="colorway-card-lbl">BLL</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브제인/DXSH7275N-BKD_01_MS.png" alt="BKD"><div class="colorway-card-lbl">BKD</div></figure>
+    </div>
+    <div class="colorway-section-title" style="margin-top:20px">
+      <span class="product-color">SUB</span>
+      <span>웨이브 스트랩 · 4 컬러웨이 (DXSH7336N)</span>
+    </div>
+    <div class="colorway-grid">
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브스트랩/DXSH7336N-BKS_01_MS.png" alt="BKS"><div class="colorway-card-lbl">BKS</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브스트랩/DXSH7336N-BGL_01_MS.png" alt="BGL"><div class="colorway-card-lbl">BGL</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브스트랩/DXSH7336N-GRL_01_MS.png" alt="GRL"><div class="colorway-card-lbl">GRL</div></figure>
+        <figure class="colorway-card"><img src="assets/tab4-누끼컷-웨이브스트랩/DXSH7336N-BRD_01_MS.png" alt="BRD"><div class="colorway-card-lbl">BRD</div></figure>
+    </div>
   </div>
 
   <!-- ━━━ 04 · 매출 전환 극대화 로드맵 ━━━━━━━━━━━━━━ -->
