@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <title>DX 26SS · 5월 13일주차 CEO 보고 초안 (단일 파일)</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <style>
 :root {
   --s0:#F0F8FD; --s1:#D6EEF9; --s2:#A8D8EE; --s3:#6BBCDE; --s4:#3AA4CD; --s5:#1A7FAA;
@@ -19,7 +19,7 @@
   --rad:14px; --sh:0 2px 18px rgba(58,164,205,0.10);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { background: var(--bg); font-family: 'Outfit', sans-serif; color: var(--t1); font-size: 14px; }
+html, body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: var(--t1); font-size: 14px; }
 body { min-height: 100vh; }
 
 /* ── TOP HEADER ─────────────────────────────────── */
@@ -30,7 +30,7 @@ body { min-height: 100vh; }
   position: sticky; top: 0; z-index: 200;
 }
 .hdr-brand { display: flex; align-items: baseline; gap: 12px; }
-.hdr-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--s5); }
+.hdr-logo { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 20px; color: var(--s5); }
 .hdr-sub { font-size: 13px; font-weight: 500; color: var(--t3); letter-spacing: 0.04em; }
 .hdr-pills { display: flex; align-items: center; gap: 6px; }
 .pill { background: var(--s1); color: var(--s5); font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 20px; border: 1px solid var(--bdr2); }
@@ -48,7 +48,7 @@ body { min-height: 100vh; }
   position: relative; flex: 1;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 3px; padding: 14px 10px;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   background: none; border: none; cursor: pointer;
   border-bottom: 3px solid transparent;
   transition: color 0.25s, border-color 0.25s, background 0.25s;
@@ -71,7 +71,7 @@ body { min-height: 100vh; }
 .hero { background: linear-gradient(135deg, #0D2230 0%, #163A50 50%, #1A7FAA 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
 .hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(107,188,222,0.18), transparent 65%); pointer-events: none; }
 .hero-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--s2); margin-bottom: 12px; }
-.hero-title { font-family: 'DM Serif Display', serif; font-size: 26px; color: #fff; line-height: 1.45; margin-bottom: 14px; }
+.hero-title { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 26px; color: #fff; line-height: 1.45; margin-bottom: 14px; }
 .hero-body { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.85; margin-bottom: 24px; max-width: 920px; }
 .hero-body b { color: #fff; font-weight: 600; }
 .h3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
@@ -116,7 +116,7 @@ body { min-height: 100vh; }
 .sg { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
 .sg.cols-4 { grid-template-columns: repeat(4,1fr); }
 .sc { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px; box-shadow: var(--sh); position: relative; }
-.sn { font-family: 'DM Serif Display', serif; font-size: 38px; color: var(--s2); line-height: 1; margin-bottom: 8px; }
+.sn { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 38px; color: var(--s2); line-height: 1; margin-bottom: 8px; }
 .sc-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
 .sc-tag.p1, .sc-tag.short { background: var(--amb-bg); color: var(--amb); }
 .sc-tag.p2, .sc-tag.mid { background: var(--s1); color: var(--s5); }
@@ -135,7 +135,7 @@ body { min-height: 100vh; }
 .flow-step.p1 .flow-tag { color: var(--amb); }
 .flow-step.p2 .flow-tag { color: var(--s5); }
 .flow-step.p3 .flow-tag { color: var(--grn); }
-.flow-name { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--t1); margin-bottom: 6px; line-height: 1.2; }
+.flow-name { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 22px; color: var(--t1); margin-bottom: 6px; line-height: 1.2; }
 .flow-desc { font-size: 13px; color: var(--t2); line-height: 1.55; }
 .flow-arrow { display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--t4); padding: 0 10px; }
 
@@ -157,7 +157,7 @@ body { min-height: 100vh; }
 .yoy-side.curr { background: linear-gradient(160deg, #E8F7F1, #C9EEDB); }
 .yoy-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--t3); margin-bottom: 8px; }
 .yoy-side.curr .yoy-tag { color: var(--grn); }
-.yoy-val { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--t1); margin-bottom: 4px; line-height: 1.1; }
+.yoy-val { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 32px; color: var(--t1); margin-bottom: 4px; line-height: 1.1; }
 .yoy-sub { font-size: 13px; color: var(--t3); }
 .yoy-arrow { display: flex; align-items: center; justify-content: center; padding: 0 20px; }
 .yoy-arrow-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -197,7 +197,7 @@ body { min-height: 100vh; }
 .video-badge { position: absolute; top: 10px; left: 10px; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 5px; color: #fff; letter-spacing: 0.08em; backdrop-filter: blur(4px); text-transform: uppercase; }
 .video-badge.interview { background: rgba(212,136,42,.88); }
 .video-badge.meme { background: rgba(58,164,205,.88); }
-.video-num { position: absolute; top: 10px; right: 10px; font-family: 'DM Serif Display', serif; font-size: 13px; color: #fff; background: rgba(0,0,0,.55); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+.video-num { position: absolute; top: 10px; right: 10px; font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 13px; color: #fff; background: rgba(0,0,0,.55); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
 .video-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 12px 10px; background: linear-gradient(to top, rgba(0,0,0,.85), transparent); color: rgba(255,255,255,0.96); font-size: 11px; line-height: 1.4; font-weight: 500; }
 .video-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 12px; color: var(--t3); }
 .video-meta b { color: var(--t1); font-weight: 700; }
