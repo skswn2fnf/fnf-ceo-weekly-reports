@@ -90,6 +90,18 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .video-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
 .video-grid.cols-5 { grid-template-columns: repeat(5, 1fr); gap: 10px; }
 .video-grid.cols-4 { grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 66.67%; margin: 0 auto; }
+
+/* INFL CONTENT GRID — 4:5 격자 (인플 + '느좋남' 키워드 바이럴 합본) */
+.infl-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.infl-card { aspect-ratio: 4/5; border-radius: 10px; overflow: hidden; position: relative; background: #1a1a1a; border: 1px solid var(--bdr); transition: transform 0.2s, box-shadow 0.2s; }
+.infl-card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(58,164,205,0.18); }
+.infl-card img, .infl-card video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; background: #000; }
+.infl-badge { position: absolute; top: 8px; left: 8px; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 5px; color: #fff; background: rgba(212,136,42,0.92); letter-spacing: .08em; text-transform: uppercase; backdrop-filter: blur(3px); }
+.infl-cap { position: absolute; bottom: 0; left: 0; right: 0; padding: 18px 8px 7px; background: linear-gradient(transparent, rgba(0,0,0,0.78)); color: #fff; font-size: 10.5px; font-weight: 600; text-align: center; letter-spacing: -0.005em; }
+.infl-divider { display: flex; align-items: center; gap: 14px; margin: 36px 0 26px; }
+.infl-divider:first-of-type { margin-top: 12px; }
+.infl-divider::before, .infl-divider::after { content: ''; flex: 1; height: 1px; background: var(--bdr2); }
+.infl-divider-label { font-size: 15px; font-weight: 800; color: var(--t1); letter-spacing: -0.005em; }
 .video-card { background: #1a1a1a; border-radius: 14px; overflow: hidden; position: relative; aspect-ratio: 9/16; box-shadow: 0 4px 16px rgba(0,0,0,.15); transition: transform 0.2s, box-shadow 0.2s; }
 .video-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.22); }
 .video-card video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
@@ -309,53 +321,54 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     </div>
   </div>
 
-  <!-- ━━━ 03 · 느좋남 바이럴 영상 ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec">03 · 느좋남 바이럴 영상</div>
+  <!-- ━━━ 03 · 인플루언서 콘텐츠 & '느좋남' 키워드 바이럴 (합본) ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">03 · 인플루언서 콘텐츠 & '느좋남' 키워드 바이럴</div>
   <div class="card">
-    <div class="card-t">느좋남 바이럴 영상</div>
-    <div class="video-meta">
-      <span>매체에서 인플과 함께 만든 바이럴 + 인플이 자체 채널에 올린 바이럴</span>
-      <span class="video-legend"><span class="dot meme"></span>바이럴</span>
+    <div class="card-t">인플루언서 콘텐츠 &amp; '느좋남' 키워드 바이럴</div>
+
+    <!-- 구분선 1: 바이럴 영역 헤더 -->
+    <div class="infl-divider"><span class="infl-divider-label">▼ 느좋남 키워드 컨텐츠 노출 및 바이럴 진행</span></div>
+
+    <!-- Row 1: '느좋남' 키워드 바이럴 5개 -->
+    <div class="infl-grid">
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/01-viral.jpg" alt="바이럴 01" loading="lazy"><span class="infl-badge">Viral</span></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/02-viral.jpg" alt="바이럴 02" loading="lazy"><span class="infl-badge">Viral</span></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/03-viral.jpg" alt="바이럴 03" loading="lazy"><span class="infl-badge">Viral</span></figure>
+      <figure class="infl-card"><video src="assets/tab2-인플콘텐츠-합본/04-viral.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="infl-badge">Viral</span></figure>
+      <figure class="infl-card"><video src="assets/tab2-인플콘텐츠-합본/05-viral.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="infl-badge">Viral</span></figure>
     </div>
-    <div class="video-grid cols-4">
-      <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/패스트페이퍼 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">(1) 패스트페이퍼 · 느좋남 인터뷰</div></figure>
-      <figure class="video-card"><img src="assets/tab2-느좋남-바이럴영상/02-active-wellness-event.jpg" alt="Active Wellness 이벤트"><span class="video-badge meme">Viral</span><div class="video-caption">(2) 광고 · Active Wellness 이벤트</div></figure>
-      <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/WWD 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">(3) WWD · 느좋남 인터뷰</div></figure>
-      <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/뉴소스 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">(4) 뉴소스 · 느좋남 인터뷰</div></figure>
-      <figure class="video-card"><img src="assets/tab2-느좋남-바이럴영상/05-running-look.jpg" alt="러닝복 컨텐츠"><span class="video-badge meme">Viral</span><div class="video-caption">(5) 광고 · 러닝복 컨텐츠</div></figure>
-      <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/데패뉴 느좋남 바이럴.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">(6) 데패뉴 · 느좋남 바이럴</div></figure>
-      <figure class="video-card"><img src="assets/tab2-느좋남-바이럴영상/07-mens-running-look.jpg" alt="느낌 좋은 내남자 러닝룩"><span class="video-badge meme">Viral</span><div class="video-caption">(7) 광고 · 느낌 좋은 내남자 러닝룩</div></figure>
-      <figure class="video-card"><video src="assets/tab2-느좋남-바이럴영상/아이즈 느좋남 인터뷰.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="video-badge meme">Viral</span><div class="video-caption">(8) 아이즈 · 느좋남 인터뷰</div></figure>
+
+    <!-- 구분선 2: 인플 콘텐츠 영역 헤더 -->
+    <div class="infl-divider"><span class="infl-divider-label">▼ 인플루언서 콘텐츠 (비주얼 감도 좋은 남녀 혼합)</span></div>
+
+    <!-- Rows 2~5: 인플 콘텐츠 20개 (5×4) -->
+    <div class="infl-grid">
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/06-yolohan0.jpg" alt="yolohan0" loading="lazy"><div class="infl-cap">@yolohan0</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/07-nakktaa.jpg" alt="nakktaa_" loading="lazy"><div class="infl-cap">@nakktaa_</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/08-h.y8en.jpg" alt="h.y8en" loading="lazy"><div class="infl-cap">@h.y8en</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/09-joejeonghyeon.jpg" alt="joejeonghyeon" loading="lazy"><div class="infl-cap">@joejeonghyeon</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/10-h.y8en.jpg" alt="h.y8en" loading="lazy"><div class="infl-cap">@h.y8en</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/11-joejeonghyeon.jpg" alt="joejeonghyeon" loading="lazy"><div class="infl-cap">@joejeonghyeon</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/12-nakktaa.jpg" alt="nakktaa_" loading="lazy"><div class="infl-cap">@nakktaa_</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/13-tmdwxs.jpg" alt="tmdwxs" loading="lazy"><div class="infl-cap">@tmdwxs</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/14-h.y8en.jpg" alt="h.y8en" loading="lazy"><div class="infl-cap">@h.y8en</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/15-tmdwxs.jpg" alt="tmdwxs" loading="lazy"><div class="infl-cap">@tmdwxs</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/16-unakyom.jpg" alt="unakyom" loading="lazy"><div class="infl-cap">@unakyom</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/17-gippeumjoychoi.jpg" alt="gippeumjoychoi" loading="lazy"><div class="infl-cap">@gippeumjoychoi</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/18-2pplee.jpg" alt="2pplee" loading="lazy"><div class="infl-cap">@2pplee</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/19-chae.are.jpg" alt="chae.are" loading="lazy"><div class="infl-cap">@chae.are</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/20-khh1995a.jpg" alt="khh1995_a" loading="lazy"><div class="infl-cap">@khh1995_a</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/21-jeooongmirae.jpg" alt="jeooongmirae" loading="lazy"><div class="infl-cap">@jeooongmirae</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/22-avely.jpg" alt="avely_" loading="lazy"><div class="infl-cap">@avely_</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/23-jihyuunn.jpg" alt="ji_hyuunn" loading="lazy"><div class="infl-cap">@ji_hyuunn</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/24-khh1995a.jpg" alt="khh1995_a" loading="lazy"><div class="infl-cap">@khh1995_a</div></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/25-chaechaeunni.jpg" alt="chaechae_unni" loading="lazy"><div class="infl-cap">@chaechae_unni</div></figure>
     </div>
   </div>
 
 
-  <!-- ━━━ 04 · 인플루언서 콘텐츠 (비주얼 감도 좋은 남녀 혼합 노출) ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec">04 · 인플루언서 콘텐츠 (비주얼 감도 좋은 남녀 혼합 노출)</div>
-  <div class="card">
-    <div class="card-t">인플루언서 콘텐츠 (비주얼 감도 좋은 남녀 혼합 노출)</div>
-    <div class="thumb-meta">
-      <span>행사 초청 + 콘텐츠 확산 채널 · 윗줄 남성 5 / 아랫줄 여성 5</span>
-    </div>
-    <div class="thumb-grid">
-      <!-- 윗줄: 남성 5 -->
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/01-yolohan0.jpg" alt="yolohan0" loading="lazy"><figcaption>@yolohan0</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/02-ruripark.jpg" alt="ruripark" loading="lazy"><figcaption>@ruripark</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/03-nakktaa-a.jpg" alt="nakktaa" loading="lazy"><figcaption>@nakktaa_</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/04-hongjun.k.jpg" alt="hongjun.k" loading="lazy"><figcaption>@hongjun.k</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/05-nakktaa-b.jpg" alt="nakktaa 2" loading="lazy"><figcaption>@nakktaa_</figcaption></figure>
-      <!-- 아랫줄: 여성 5 -->
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/06-chae.are.jpg" alt="chae.are" loading="lazy"><figcaption>@chae.are</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/07-2pplee.jpg" alt="2pplee" loading="lazy"><figcaption>@2pplee</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/08-unakyom.jpg" alt="unakyom" loading="lazy"><figcaption>@unakyom</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/09-gippeumjoychoi.jpg" alt="gippeumjoychoi" loading="lazy"><figcaption>@gippeumjoychoi</figcaption></figure>
-      <figure class="thumb-card"><img src="assets/tab2-인플-대표이미지/10-avely.jpg" alt="avely" loading="lazy"><figcaption>@avely_</figcaption></figure>
-    </div>
-  </div>
-
-
-  <!-- ━━━ 05 · 인플루언서 성과 (V15 베이스라인 + 5월 증분) ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec">05 · 인플루언서 성과 (V15 베이스라인 + 5월 증분)</div>
+  <!-- ━━━ 04 · 인플루언서 성과 (V15 베이스라인 + 5월 증분) ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">04 · 인플루언서 성과 (V15 베이스라인 + 5월 증분)</div>
   <div class="card">
     <div class="card-t">인플루언서 성과 (V15 베이스라인 + 5월 증분)</div>
     <div class="kpi4" style="margin-bottom:14px">
@@ -388,8 +401,8 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
 
-  <!-- ━━━ 06 · 브랜드 버즈 종합 ━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec">06 · 브랜드 버즈 종합 — Phase 2 무드 베드 완성</div>
+  <!-- ━━━ 05 · 브랜드 버즈 종합 ━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">05 · 브랜드 버즈 종합 — Phase 2 무드 베드 완성</div>
 
   <!-- AI CONCLUSION 카드 -->
   <div style="background:linear-gradient(135deg,#0D2230 0%,#18315E 40%,#3AA4CD 100%);border-radius:20px;padding:44px 48px;margin:0 0 16px;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(13,34,48,0.4);">
@@ -435,8 +448,8 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
 
-  <!-- ━━━ 07 · 실집행 결과 · 4 후킹 모두 유효 검증 (시각화) ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec">07 · 실집행 결과 · 4가지 후킹 모두 유효 검증</div>
+  <!-- ━━━ 06 · 실집행 결과 · 4 후킹 모두 유효 검증 (시각화) ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="sec">06 · 실집행 결과 · 4가지 후킹 모두 유효 검증</div>
   <div class="kpi4" style="margin-bottom:8px;">
     <div class="kpi" style="border-top:3px solid var(--s4);">
       <div class="kl" style="display:flex;align-items:center;gap:6px;"><span style="font-size:14px;">💧</span> ACTIVE WELLNESS 무드</div>
