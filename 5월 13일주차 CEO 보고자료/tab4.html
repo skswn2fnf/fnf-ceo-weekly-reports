@@ -237,22 +237,28 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .ai-conclusion-body b.g { color: #5CDBA4; font-weight: 700; }
 .ai-conclusion-body b.a { color: #FFD08A; font-weight: 700; }
 .ai-conclusion-body b.b { color: #A8D8EE; font-weight: 700; }
-.ai-conclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 1000px; margin: 0 auto; }
-.ai-conclusion-cell { border-radius: 14px; padding: 18px 20px; backdrop-filter: blur(4px); text-align: left; }
-.ai-conclusion-cell.green { background: rgba(46,170,120,0.18); border: 1px solid rgba(46,170,120,0.45); }
-.ai-conclusion-cell.amber { background: rgba(212,136,42,0.22); border: 1px solid rgba(212,136,42,0.55); }
+.ai-conclusion-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 1100px; margin: 0 auto; }
+.ai-conclusion-flow { display: flex; align-items: center; justify-content: center; gap: 10px; max-width: 880px; margin: 0 auto 20px; flex-wrap: wrap; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #A8D8EE; }
+.ai-conclusion-flow span.step { padding: 4px 12px; background: rgba(168,216,238,0.12); border: 1px solid rgba(168,216,238,0.35); border-radius: 20px; }
+.ai-conclusion-flow span.arrow { color: rgba(168,216,238,0.6); font-size: 14px; }
+.ai-conclusion-cell { border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(4px); text-align: left; }
 .ai-conclusion-cell.blue { background: rgba(107,188,222,0.22); border: 1px solid rgba(107,188,222,0.55); }
+.ai-conclusion-cell.amber { background: rgba(212,136,42,0.22); border: 1px solid rgba(212,136,42,0.55); }
+.ai-conclusion-cell.green { background: rgba(46,170,120,0.18); border: 1px solid rgba(46,170,120,0.45); }
+.ai-conclusion-cell.purple { background: rgba(167,139,250,0.22); border: 1px solid rgba(167,139,250,0.50); }
 .ai-conclusion-cell-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
-.ai-conclusion-cell.green .ai-conclusion-cell-tag { color: #7EE2B2; }
-.ai-conclusion-cell.amber .ai-conclusion-cell-tag { color: #FFD08A; }
 .ai-conclusion-cell.blue .ai-conclusion-cell-tag { color: #A8D8EE; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-tag { color: #FFD08A; }
+.ai-conclusion-cell.green .ai-conclusion-cell-tag { color: #7EE2B2; }
+.ai-conclusion-cell.purple .ai-conclusion-cell-tag { color: #C8B8FF; }
 .ai-conclusion-cell-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.4; }
 .ai-conclusion-cell-desc { font-size: 12px; line-height: 1.6; }
-.ai-conclusion-cell.green .ai-conclusion-cell-desc { color: #B8E8D0; }
-.ai-conclusion-cell.amber .ai-conclusion-cell-desc { color: #FEEDC9; }
 .ai-conclusion-cell.blue .ai-conclusion-cell-desc { color: #D6EEF9; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-desc { color: #FEEDC9; }
+.ai-conclusion-cell.green .ai-conclusion-cell-desc { color: #B8E8D0; }
+.ai-conclusion-cell.purple .ai-conclusion-cell-desc { color: #E0D6FF; }
 @media (max-width: 1100px) {
-  .ai-conclusion-grid { grid-template-columns: 1fr; }
+  .ai-conclusion-grid { grid-template-columns: 1fr 1fr; }
   .ai-conclusion-title { font-size: 22px; }
   .ai-conclusion { padding: 28px 24px; }
 }
@@ -643,24 +649,35 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         AI는 Phase 3의 승부 공식을<br>
         <span class="hl">「AI 추천 메가 인플 × 메인·서브 상품 × 풀퍼널 매출 가속」</span>으로 정의했습니다
       </div>
+      <div class="ai-conclusion-flow">
+        <span class="step">① AI 트렌드</span><span class="arrow">→</span>
+        <span class="step">② 우리 전략</span><span class="arrow">→</span>
+        <span class="step">③ AI 유효 검증</span><span class="arrow">→</span>
+        <span class="step">④ AI 추후 제안</span>
+      </div>
       <p class="ai-conclusion-body">
-        1차 사이클 검증(<b class="g">+266% · ▲14단계</b>) 위에, <b class="a">AI 메가 인플 매칭(슈즈 전환력·제휴몰 빈도·PPL 화제도 3축)</b>으로 셀럽 PPL 3인 선정과 <b class="b">AI 상품 선정(생산 38.1억 + 2030 여성 타깃)</b>으로 메인=웨이브 제인 / 서브=웨이브 스트랩 우선순위 결정. 컨텐츠 노출 타임라인에 따라 5월 3주차 + 6월 2주차 매출 피크 2회 달성 목표.
+        V15에서 진단된 <b class="b">화보 이미지만으로는 구매 전환 미흡 + 매가 인플 PPL·제휴몰 연계 필요</b>를 베이스로, 이번 Phase 3는 <b class="a">V15 로드맵(5/7 닝닝 SU 2차·5/12 메가 인플·5/19 제휴몰)</b>을 실행. <b class="g">앵커×부스터=실판매 공식이 1차 사이클(+266%·▲14단계)로 입증</b>됨 → <b style="color:#C8B8FF;">26FW에도 풀퍼널 플레이북 표준화</b>로 확장 권장.
       </p>
       <div class="ai-conclusion-grid">
-        <div class="ai-conclusion-cell green">
-          <div class="ai-conclusion-cell-tag">VALIDATED KEYWORD</div>
-          <div class="ai-conclusion-cell-title">AI 매가 인플 PPL + 매출 전환력</div>
-          <div class="ai-conclusion-cell-desc">3인 매칭 (민영·이유정·박현지) · FLW 36~55만 · 슈즈 PPL 화제</div>
+        <div class="ai-conclusion-cell blue">
+          <div class="ai-conclusion-cell-tag">① AI 트렌드 분석</div>
+          <div class="ai-conclusion-cell-title">화보→매출 갭 진단 + PPL 필요성</div>
+          <div class="ai-conclusion-cell-desc">V15: '고윤정 신발' 최대 검색량 / 화보 이미지만으로 구매 전환 미흡 / 매가 인플 PPL·제휴몰 연계 필요</div>
         </div>
         <div class="ai-conclusion-cell amber">
-          <div class="ai-conclusion-cell-tag">VALIDATED STRATEGY</div>
-          <div class="ai-conclusion-cell-title">AI 상품 선정 + SNS 친화 다방면 배포</div>
-          <div class="ai-conclusion-cell-desc">후기형 쇼츠 + 라이프스타일 이미지 8장 · 매출 피크 2회 설계</div>
+          <div class="ai-conclusion-cell-tag">② 우리 진행 전략</div>
+          <div class="ai-conclusion-cell-title">V15 로드맵 실행 + AI 추천 매칭</div>
+          <div class="ai-conclusion-cell-desc">5/7 닝닝 2차 · 5/12 메가 인플 PPL · 5/19 제휴몰 + AI 매가 인플 3인(민영·이유정·박현지) + 메인/서브 상품 선정</div>
         </div>
-        <div class="ai-conclusion-cell blue">
-          <div class="ai-conclusion-cell-tag">AI NEXT</div>
-          <div class="ai-conclusion-cell-title">풀퍼널 플레이북의 26FW 자동화</div>
-          <div class="ai-conclusion-cell-desc">앵커(닝닝)→화제성(셀럽)→매출(상품) 3단 사이클 표준화</div>
+        <div class="ai-conclusion-cell green">
+          <div class="ai-conclusion-cell-tag">③ AI 유효 검증</div>
+          <div class="ai-conclusion-cell-title">앵커×부스터=실판매 공식 입증</div>
+          <div class="ai-conclusion-cell-desc">1차 사이클 YoY +266% · 4,158qty · 운동화 3위(▲14단계) — 화제성→확산→매출 풀퍼널 구조 작동</div>
+        </div>
+        <div class="ai-conclusion-cell purple">
+          <div class="ai-conclusion-cell-tag">④ AI 추후 제안</div>
+          <div class="ai-conclusion-cell-title">26FW 풀퍼널 플레이북 표준화</div>
+          <div class="ai-conclusion-cell-desc">앵커(닝닝)→화제성(셀럽 PPL)→매출(상품×제휴몰) 3단 사이클 자동화 + 시즌별 매출 피크 2회 표준 설계</div>
         </div>
       </div>
     </div>
