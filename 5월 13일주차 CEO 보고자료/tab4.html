@@ -35,6 +35,34 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .h3c-b { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.65; }
 .h3c-b b { color: #fff; font-weight: 600; }
 
+/* ━━━ HERO V2 — 키워드 중심 구조 (메가 키워드 → 메타 칩 → CORE PROPOSITION) ━━━ */
+.hero-badge-wrap { text-align: center; margin-bottom: 20px; }
+.hero-badge { display: inline-block; padding: 6px 18px; background: linear-gradient(90deg, rgba(168,216,238,0.20), rgba(212,136,42,0.20)); border: 1px solid rgba(168,216,238,0.45); border-radius: 30px; font-size: 11px; font-weight: 800; letter-spacing: 0.20em; color: #fff; text-transform: uppercase; }
+.hero-mega-wrap { text-align: center; margin-bottom: 26px; position: relative; z-index: 1; }
+.hero-mega-eye { font-size: 12px; font-weight: 800; letter-spacing: 0.18em; color: #A8D8EE; margin-bottom: 10px; text-transform: uppercase; }
+.hero-mega { font-size: 54px; font-weight: 900; letter-spacing: -0.03em; background: linear-gradient(90deg, #5CDBA4 0%, #A8D8EE 50%, #FFD08A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; margin: 0 0 12px; }
+.hero-mega-sub { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.80); letter-spacing: 0.01em; line-height: 1.6; max-width: 760px; margin: 0 auto; }
+.hero-mega-sub b { color: #fff; font-weight: 700; }
+.hero-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px; position: relative; z-index: 1; }
+.hero-chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 24px; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.92); backdrop-filter: blur(6px); white-space: nowrap; }
+.hero-chip b { color: #fff; font-weight: 800; margin-left: 2px; }
+.hero-chip-icon { font-size: 14px; }
+.hero-core { background: rgba(13,34,48,0.55); border: 1px solid rgba(168,216,238,0.28); border-radius: 18px; padding: 28px 36px; text-align: center; position: relative; backdrop-filter: blur(6px); }
+.hero-core-deco { display: block; font-size: 10px; color: rgba(168,216,238,0.40); letter-spacing: 0.6em; text-align: center; }
+.hero-core-deco.top { margin-bottom: 14px; }
+.hero-core-deco.bot { margin-top: 14px; }
+.hero-core-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; color: #FFD08A; margin-bottom: 16px; text-transform: uppercase; }
+.hero-core-msg { font-size: 17px; font-weight: 500; color: rgba(255,255,255,0.92); line-height: 1.85; }
+.hero-core-msg b { font-weight: 800; color: #fff; }
+.hero-core-msg b.hl { background: linear-gradient(90deg, #5CDBA4, #A8D8EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.hero-core-msg b.hl-a { background: linear-gradient(90deg, #FFD08A, #FF9C5C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+
+@media (max-width: 900px) {
+  .hero-mega { font-size: 38px; }
+  .hero-core { padding: 22px 20px; }
+  .hero-core-msg { font-size: 15px; line-height: 1.8; }
+}
+
 .sec { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); margin: 36px 0 16px; display: flex; align-items: center; gap: 10px; }
 .sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); }
 
@@ -272,31 +300,34 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 <body>
 <main class="main">
 
-  <!-- ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- ━━━ HERO V2 — 키워드 중심 구조 ━━━━━━━━━━━━━━━━━━━━━ -->
   <div class="hero">
-    <div class="hero-eye">PHASE 3 · 3중 앵커 화제도 → 매출 전환 가속 · AI 검증 풀퍼널 공식</div>
-    <div class="hero-title">닝닝 1차 → 변우석 → 닝닝 2차로 점화된 화제도를,<br>AI가 검증한 풀퍼널 셀링 공식으로 즉시 매출 전환 가속합니다</div>
-    <div class="hero-body">
-      <b>1차 닝닝(856만 IMP · AI Confidence 96%)</b> + <b>변우석 행사(액티브 웰니스 아젠다 검증)</b> + <b>닝닝 2차(5/7 SU 공개)</b>의 3중 앵커 stacking이 만든 여성 2030 액티브·웰니스 화제도를 즉시 매출로 환산 —
-      <b>5/12 메가 인플 PPL(닝닝 셀링파워 인플 3인)</b> → <b>5/19 웨이브 제인 제휴몰 셀링</b> → <b>5/19 + 6월 2주 매출 피크 2회</b>로 연결되는 풀퍼널 공식이 가동됩니다.
-      1차 사이클 베이스(<b>YoY +266% · 4,158qty · 운동화 3위</b>)는 V15에서 검증된 <b>「앵커 × 부스터 = 실판매」</b> AI 공식의 실증치 — 2차 사이클은 이 베이스 위에 3중 앵커 화제도를 얹어 <b>재현·초과</b>를 노립니다.
+    <div class="hero-badge-wrap"><span class="hero-badge">✦ PHASE 3 · 웨이브제인 셀링 ✦</span></div>
+
+    <div class="hero-mega-wrap">
+      <div class="hero-mega-eye">🤖 AI 검증 풀퍼널 공식 가동</div>
+      <h1 class="hero-mega">3중 앵커 → 매출 가속</h1>
+      <div class="hero-mega-sub">화제도 → PPL → 매출 — V15 검증 <b>「앵커 × 부스터 = 실판매」</b> 공식 즉시 실행</div>
     </div>
-    <div class="h3">
-      <div class="h3c">
-        <div class="h3c-icon">🎯</div>
-        <div class="h3c-t">3중 앵커 Stacking (화제도 누적)</div>
-        <div class="h3c-b">1차 닝닝(856만 IMP) + 변우석 + 2차 닝닝(5/7) → 셀링 진입(5/19) 시점 화제도 최대치</div>
+
+    <div class="hero-chips">
+      <span class="hero-chip"><span class="hero-chip-icon">🎯</span>3중 앵커 stacking</span>
+      <span class="hero-chip"><span class="hero-chip-icon">📅</span>5/12 메가 인플 PPL</span>
+      <span class="hero-chip"><span class="hero-chip-icon">🛒</span>5/19 제휴몰 셀링</span>
+      <span class="hero-chip"><span class="hero-chip-icon">🏁</span>매출 피크 <b>2회 (5/19 + 6월 2주)</b></span>
+      <span class="hero-chip"><span class="hero-chip-icon">💰</span>1차 베이스 YoY <b>+266%</b></span>
+    </div>
+
+    <div class="hero-core">
+      <div class="hero-core-deco top">✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦</div>
+      <div class="hero-core-tag">✦ CORE STRATEGIC PROPOSITION ✦</div>
+      <div class="hero-core-msg">
+        닝닝 1차 → 변우석 → 닝닝 2차로 점화된 <b class="hl">3중 앵커 화제도</b>를<br>
+        AI가 검증한 <b class="hl-a">풀퍼널 셀링 공식</b>으로 즉시 매출 전환 가속 —<br>
+        <b>5/12 메가 인플 PPL → 5/19 제휴몰 셀링 → 매출 피크 2회</b>로 환산하고<br>
+        <b class="hl">V15 검증 웨이브 제인 YoY +266% 재현·초과</b>가 Phase 3 핵심 KPI
       </div>
-      <div class="h3c">
-        <div class="h3c-icon">🤖</div>
-        <div class="h3c-t">AI 검증 풀퍼널 공식</div>
-        <div class="h3c-b">화제성(앵커) → PPL(메가 인플 3인) → 매출(제휴몰) — V15에서 「앵커×부스터=실판매」 실증된 3단 전환 구조</div>
-      </div>
-      <div class="h3c">
-        <div class="h3c-icon">💰</div>
-        <div class="h3c-t">1차 사이클 베이스라인 (재현·초과 목표)</div>
-        <div class="h3c-b"><b>3.82억원</b> · <b>4,158 qty</b> · 운동화 <b>3위(▲14)</b> — YoY +266%·+260% (V15 실측)</div>
-      </div>
+      <div class="hero-core-deco bot">✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦</div>
     </div>
   </div>
 
