@@ -177,6 +177,39 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .thumb-legend .dot.normal { background: var(--white); border-color: var(--bdr); }
 
 @media (max-width: 1100px) { .kpi4, .h3, .img-grid, .img-grid.cols-3, .ai-grid { grid-template-columns: 1fr 1fr; } .compare { grid-template-columns: 1fr; } .ai-flow { grid-template-columns: 1fr; gap: 12px; } .ai-flow-arrow { transform: rotate(90deg); padding: 4px 0; } .thumb-grid { grid-template-columns: repeat(3, 1fr); } .main { padding: 20px; } }
+
+
+/* AI-DRIVEN CONCLUSION (Phase 결론 카드 — V15 패턴 응용) */
+.ai-conclusion { background: linear-gradient(135deg, #0D2230 0%, #163A50 45%, #1A7FAA 100%); border-radius: 20px; padding: 38px 42px; margin: 36px 0 12px; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(13,34,48,0.30); }
+.ai-conclusion::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(107,188,222,0.28), transparent 70%); pointer-events: none; }
+.ai-conclusion::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(46,170,120,0.20), transparent 70%); pointer-events: none; }
+.ai-conclusion-inner { position: relative; z-index: 2; text-align: center; }
+.ai-conclusion-tag { display: inline-block; background: rgba(255,208,138,0.22); color: #FFD08A; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; padding: 6px 18px; border-radius: 24px; border: 1px solid rgba(255,208,138,0.5); text-transform: uppercase; margin-bottom: 18px; }
+.ai-conclusion-title { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 14px; line-height: 1.35; letter-spacing: -0.02em; }
+.ai-conclusion-title .hl { background: linear-gradient(90deg, #5CDBA4, #A8D8EE, #FFD08A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.ai-conclusion-body { font-size: 14px; color: #D6EEF9; max-width: 920px; margin: 0 auto 24px; line-height: 1.85; }
+.ai-conclusion-body b.g { color: #5CDBA4; font-weight: 700; }
+.ai-conclusion-body b.a { color: #FFD08A; font-weight: 700; }
+.ai-conclusion-body b.b { color: #A8D8EE; font-weight: 700; }
+.ai-conclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 1000px; margin: 0 auto; }
+.ai-conclusion-cell { border-radius: 14px; padding: 18px 20px; backdrop-filter: blur(4px); text-align: left; }
+.ai-conclusion-cell.green { background: rgba(46,170,120,0.18); border: 1px solid rgba(46,170,120,0.45); }
+.ai-conclusion-cell.amber { background: rgba(212,136,42,0.22); border: 1px solid rgba(212,136,42,0.55); }
+.ai-conclusion-cell.blue { background: rgba(107,188,222,0.22); border: 1px solid rgba(107,188,222,0.55); }
+.ai-conclusion-cell-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.ai-conclusion-cell.green .ai-conclusion-cell-tag { color: #7EE2B2; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-tag { color: #FFD08A; }
+.ai-conclusion-cell.blue .ai-conclusion-cell-tag { color: #A8D8EE; }
+.ai-conclusion-cell-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+.ai-conclusion-cell-desc { font-size: 12px; line-height: 1.6; }
+.ai-conclusion-cell.green .ai-conclusion-cell-desc { color: #B8E8D0; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-desc { color: #FEEDC9; }
+.ai-conclusion-cell.blue .ai-conclusion-cell-desc { color: #D6EEF9; }
+@media (max-width: 1100px) {
+  .ai-conclusion-grid { grid-template-columns: 1fr; }
+  .ai-conclusion-title { font-size: 22px; }
+  .ai-conclusion { padding: 28px 24px; }
+}
 </style>
 </head>
 <body>
@@ -404,6 +437,38 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     <div class="ins-g"><b>긍정:</b> 1차 릴리즈에서 닝닝 앵커의 <b>실판매 증빙</b>(웨이브제인 YoY +266%)이 V15에서 검증됨. 2차도 동일 메커니즘 기대.</div>
     <div class="ins-a"><b>주의:</b> 2차 릴리즈 측정 결과가 1차보다 낮을 경우, 닝닝 앵커의 <b>마모(saturation)</b>를 시그널로 해석해 다음 사이클 전략 재설계 필요.</div>
     <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span> — 화제성 → 무드 재집중 → 매출 전환 사이의 시간 갭이 길어지면 매출 전환율 저하 우려.</div>
+  </div>
+
+
+  <!-- ━━━ AI-DRIVEN CONCLUSION ━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="ai-conclusion">
+    <div class="ai-conclusion-inner">
+      <div class="ai-conclusion-tag">⚡ AI-DRIVEN CONCLUSION</div>
+      <div class="ai-conclusion-title">
+        AI는 Phase 2의 승부 공식을<br>
+        <span class="hl">「★ 레모네이드 × ◆ 액티브·웰니스 × ★ 우선순위 10개 매체」</span>로 정의했습니다
+      </div>
+      <p class="ai-conclusion-body">
+        닝닝 1차 앵커 위에 <b class="g">AI 트렌드 분석(★ 레모네이드 9.1점 통과)</b>과 <b class="a">브랜드 방향성(◆ 액티브·웰니스)</b>을 결합한 <b>3-way Embedding 콘셉트</b>로, <b class="b">★ 우선순위 10개 매체</b>와 닝닝 착장 메인 상품 누끼컷을 통해 다채널 동시 확산. 1차 사이클(웨이브제인 +266% 검증) 위에 2차 사이클을 띄우는 무드 베드 역할.
+      </p>
+      <div class="ai-conclusion-grid">
+        <div class="ai-conclusion-cell green">
+          <div class="ai-conclusion-cell-tag">VALIDATED KEYWORD</div>
+          <div class="ai-conclusion-cell-title">★ 레모네이드 + ◆ 액티브·웰니스</div>
+          <div class="ai-conclusion-cell-desc">종합 9.1 / 10 통과 · 4차원 평가(트렌드·브랜드·시즌·매체) 매칭</div>
+        </div>
+        <div class="ai-conclusion-cell amber">
+          <div class="ai-conclusion-cell-tag">VALIDATED STRATEGY</div>
+          <div class="ai-conclusion-cell-title">★ 10개 매체 집중 + 상품 누끼컷</div>
+          <div class="ai-conclusion-cell-desc">다채널 동시 노출 · 1차 효과 위 2차 가속 무드 베드</div>
+        </div>
+        <div class="ai-conclusion-cell blue">
+          <div class="ai-conclusion-cell-tag">AI NEXT</div>
+          <div class="ai-conclusion-cell-title">3-way 콘셉트의 26FW 자동 확장</div>
+          <div class="ai-conclusion-cell-desc">시즌별 트렌드 키워드 자동 교체 + 매체 톤 차별화 자동화</div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </main>
