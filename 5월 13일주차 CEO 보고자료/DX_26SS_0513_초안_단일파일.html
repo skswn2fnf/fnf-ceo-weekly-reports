@@ -842,8 +842,8 @@ body { min-height: 100vh; }
       <!-- STEP 1: AI 크롤링 (키워드 풀) -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 01 · AI CRAWL</div>
-        <div class="ai-step-title">닝닝 관련 + 브랜드 방향성 키워드 크롤링</div>
-        <div class="ai-step-desc">트렌드 키워드(닝닝 활동) + 브랜드 방향성 키워드(액티브·웰니스) 동시 수집 → 교집합 도출</div>
+        <div class="ai-step-title">브랜드 핵심 + 트렌드 부가 키워드 크롤링</div>
+        <div class="ai-step-desc">★ 브랜드 메인 키워드(액티브·웰니스)와 ◆ 부가 트렌드 키워드(레모네이드 외) 동시 수집 → 위계별 분류</div>
         <div class="crawl-meta">
           <span class="crawl-meta-lbl">데이터 소스</span><span class="crawl-meta-val">Instagram · YouTube Shorts · X · 커뮤니티</span>
           <span class="crawl-meta-lbl">분석 기간</span><span class="crawl-meta-val">최근 30일 (4/13~5/13)</span>
@@ -851,9 +851,9 @@ body { min-height: 100vh; }
           <span class="crawl-meta-lbl">랭킹 점수</span><span class="crawl-meta-val">멘션 빈도 × 감성 점수 × 트렌드 가속도</span>
         </div>
         <div class="keyword-pool">
-          <span class="keyword highlight">레모네이드<span class="keyword-metric">12.4K</span></span>
-          <span class="keyword brand">액티브<span class="keyword-metric">8.7K</span></span>
-          <span class="keyword brand">웰니스<span class="keyword-metric">6.2K</span></span>
+          <span class="keyword highlight">액티브<span class="keyword-metric">8.7K</span></span>
+          <span class="keyword highlight">웰니스<span class="keyword-metric">6.2K</span></span>
+          <span class="keyword brand">레모네이드<span class="keyword-metric">12.4K</span></span>
           <span class="keyword">에스파 컴백<span class="keyword-metric">18.9K</span></span>
           <span class="keyword">카리나<span class="keyword-metric">22.5K</span></span>
           <span class="keyword">Y2K<span class="keyword-metric">11.6K</span></span>
@@ -864,7 +864,7 @@ body { min-height: 100vh; }
           <span class="keyword">시티팝<span class="keyword-metric">5.4K</span></span>
           <span class="keyword">KWANGYA<span class="keyword-metric">4.8K</span></span>
         </div>
-        <div class="keyword-note">★ 최종 선정 키워드 · ◆ 브랜드 방향성 (액티브·웰니스) · 수치 = 최근 30일 SNS 멘션 추정치 (정확한 측정 데이터 확인 필요)</div>
+        <div class="keyword-note">★ 브랜드 메인 키워드 (액티브·웰니스 · 브랜드 핵심 톤) · ◆ 부가 트렌드 키워드 (레모네이드 · 바이럴 boost) · 수치 = 최근 30일 SNS 멘션 추정치 (정확한 측정 데이터 확인 필요)</div>
       </div>
 
       <div class="ai-flow-arrow">→</div>
@@ -872,25 +872,31 @@ body { min-height: 100vh; }
       <!-- STEP 2: 선정 -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 02 · SELECTED</div>
-        <div class="ai-step-title">키워드 선정 (4차원 평가)</div>
-        <div class="ai-step-desc">4개 평가 차원 가중합 점수로 후보 키워드 자동 랭킹 → Top 1 선정</div>
+        <div class="ai-step-title">메인 + 부가 키워드 선정</div>
+        <div class="ai-step-desc">브랜드 적합도 최우선으로 ★ 메인 키워드 선정, 트렌드 가속도 기반 ◆ 부가 키워드 매칭 (바이럴 boost용)</div>
         <div class="crawl-meta">
-          <span class="crawl-meta-lbl">평가 차원</span><span class="crawl-meta-val">트렌드 가속도 · 브랜드 적합도 · 시즌 매칭도 · 매체 친화도</span>
-          <span class="crawl-meta-lbl">가중치</span><span class="crawl-meta-val">0.30 / 0.30 / 0.20 / 0.20</span>
-          <span class="crawl-meta-lbl">필터링</span><span class="crawl-meta-val">가중합 ≥ 8.0 통과 → Top 1 선정 (단일 키워드)</span>
+          <span class="crawl-meta-lbl">메인 기준</span><span class="crawl-meta-val">브랜드 적합도 + 시즌 매칭도 우선 (가중치 0.40 / 0.30)</span>
+          <span class="crawl-meta-lbl">부가 기준</span><span class="crawl-meta-val">트렌드 가속도 + 바이럴 boost 효과 (가중치 0.40 / 0.30)</span>
+          <span class="crawl-meta-lbl">위계</span><span class="crawl-meta-val">★ 메인 (브랜드 톤 결정) → ◆ 부가 (바이럴 가속 보조)</span>
         </div>
         <div class="ai-selected">
-          <div class="ai-selected-cluster">에스파 컴백 군집</div>
+          <div class="ai-selected-cluster" style="background:var(--amb-bg);color:var(--amb-t);">★ MAIN · 브랜드 핵심 톤</div>
           <div class="ai-selected-arrow">↓</div>
-          <div class="ai-selected-keyword">레모네이드</div>
-          <div class="ai-selected-rationale">여름 청량 무드 + ◆ 액티브 웰니스 톤 자연 매칭</div>
+          <div class="ai-selected-keyword">액티브 웰니스</div>
+          <div class="ai-selected-rationale">DX 26SS 브랜드 핵심 메시지 · 닝닝 2차 무드 베드의 톤 결정</div>
           <div class="score-grid">
-            <div class="score-row"><span class="score-lbl">트렌드 가속도</span><div class="score-bar"><span style="width:92%"></span></div><span class="score-val">9.2</span></div>
-            <div class="score-row"><span class="score-lbl">브랜드 적합도</span><div class="score-bar"><span style="width:88%"></span></div><span class="score-val">8.8</span></div>
-            <div class="score-row"><span class="score-lbl">시즌 매칭도</span><div class="score-bar"><span style="width:95%"></span></div><span class="score-val">9.5</span></div>
-            <div class="score-row"><span class="score-lbl">매체 친화도</span><div class="score-bar"><span style="width:87%"></span></div><span class="score-val">8.7</span></div>
+            <div class="score-row"><span class="score-lbl">브랜드 적합도</span><div class="score-bar"><span style="width:98%"></span></div><span class="score-val">9.8</span></div>
+            <div class="score-row"><span class="score-lbl">시즌 매칭도</span><div class="score-bar"><span style="width:90%"></span></div><span class="score-val">9.0</span></div>
+            <div class="score-row"><span class="score-lbl">매체 친화도</span><div class="score-bar"><span style="width:92%"></span></div><span class="score-val">9.2</span></div>
+            <div class="score-row"><span class="score-lbl">트렌드 가속도</span><div class="score-bar"><span style="width:87%"></span></div><span class="score-val">8.7</span></div>
           </div>
-          <div class="ai-selected-total">종합 점수 9.1 / 10 · Top 1 통과</div>
+          <div class="ai-selected-total">종합 9.4 / 10 · 메인 채택</div>
+        </div>
+        <div class="ai-selected" style="margin-top:10px; border:1px solid rgba(123,104,212,0.30); background:var(--lav-bg);">
+          <div class="ai-selected-cluster" style="background:var(--white);color:var(--lav);">◆ SUPPORT · 트렌드 부가 boost</div>
+          <div class="ai-selected-arrow" style="color:var(--lav);">↓</div>
+          <div class="ai-selected-keyword" style="color:var(--lav); font-size:18px;">레모네이드 <span style="font-size:11px;font-weight:600;opacity:0.75;">(에스파 컴백 군집)</span></div>
+          <div class="ai-selected-rationale">트렌드 가속도 9.2 · SNS 멘션 12.4K — 메인 톤에 <b>바이럴 boost</b> 추가 layer</div>
         </div>
       </div>
 
@@ -899,24 +905,26 @@ body { min-height: 100vh; }
       <!-- STEP 3: 결합 -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 03 · COMBINED</div>
-        <div class="ai-step-title">AI 콘셉트 결합 (3-way Embedding)</div>
-        <div class="ai-step-desc">선정 키워드 × 브랜드 방향성 × 시즌 무드를 AI 임베딩 유사도로 결합 → 콘셉트 도출</div>
+        <div class="ai-step-title">메인 톤 × 시즌 + 부가 boost</div>
+        <div class="ai-step-desc">★ 메인(브랜드 톤) × 시즌 무드로 골격 도출 → ◆ 부가 트렌드 keyword를 바이럴 layer로 결합</div>
         <div class="crawl-meta">
-          <span class="crawl-meta-lbl">결합 방법</span><span class="crawl-meta-val">키워드 임베딩 유사도 + 무드보드 매칭 + 컬러 팔레트 추출</span>
-          <span class="crawl-meta-lbl">팔레트</span><span class="crawl-meta-val">Lemon Yellow · Mint · Coral · Cream</span>
-          <span class="crawl-meta-lbl">톤 키워드</span><span class="crawl-meta-val">청량감 · 비타민 · 페미닌 · 액티브</span>
+          <span class="crawl-meta-lbl">결합 방법</span><span class="crawl-meta-val">메인 임베딩 골격 + 부가 트렌드 layer + 무드보드 매칭</span>
+          <span class="crawl-meta-lbl">메인 팔레트</span><span class="crawl-meta-val">Mint · Coral · Cream (액티브 웰니스 톤)</span>
+          <span class="crawl-meta-lbl">부가 톤</span><span class="crawl-meta-val">Lemon Yellow accent (레모네이드 바이럴 boost)</span>
         </div>
         <div class="ai-combine">
-          <div class="ai-combine-a">레모네이드</div>
+          <div class="ai-combine-a" style="font-size:16px;padding:8px 14px;">★ 액티브 웰니스</div>
           <div class="ai-combine-x">×</div>
-          <div class="ai-combine-b">액티브 웰니스 + 여름 무드</div>
+          <div class="ai-combine-b">여름 무드</div>
         </div>
+        <div style="text-align:center;font-size:18px;color:var(--t4);margin:6px 0;">+</div>
+        <div style="text-align:center;padding:8px 14px;background:var(--lav-bg);border:1px solid rgba(123,104,212,0.30);border-radius:6px;font-size:13px;font-weight:700;color:var(--lav);">◆ 레모네이드 (바이럴 boost layer)</div>
         <div class="score-grid">
-          <div class="score-row"><span class="score-lbl">브랜드 일관성</span><div class="score-bar brand"><span style="width:92%"></span></div><span class="score-val">92%</span></div>
-          <div class="score-row"><span class="score-lbl">시즌 적합도</span><div class="score-bar brand"><span style="width:88%"></span></div><span class="score-val">88%</span></div>
-          <div class="score-row"><span class="score-lbl">매체 호환성</span><div class="score-bar brand"><span style="width:90%"></span></div><span class="score-val">90%</span></div>
+          <div class="score-row"><span class="score-lbl">브랜드 일관성</span><div class="score-bar"><span style="width:95%"></span></div><span class="score-val">95%</span></div>
+          <div class="score-row"><span class="score-lbl">시즌 적합도</span><div class="score-bar"><span style="width:90%"></span></div><span class="score-val">90%</span></div>
+          <div class="score-row"><span class="score-lbl">바이럴 boost</span><div class="score-bar brand"><span style="width:88%"></span></div><span class="score-val">88%</span></div>
         </div>
-        <div class="combine-result">검증 통과 · 3-way 결합 콘셉트 채택</div>
+        <div class="combine-result">검증 통과 · 메인 골격 + 부가 boost 콘셉트 채택</div>
       </div>
     </div>
 
@@ -926,7 +934,7 @@ body { min-height: 100vh; }
       <div class="ai-result-content">
         <div class="ai-result-tag">STEP 04 · APPLIED</div>
         <div class="ai-result-title">콘텐츠 적용 → 바이럴 확산</div>
-        <div class="ai-result-desc"><b>"레모네이드 × 액티브 웰니스 + 여름 무드"</b> 콘셉트를 닝닝 2차 바이럴 썸네일 <b>★ 우선순위 10개 매체</b>에 일관 적용 → 핵심 채널 동시 확산. <b>트렌드(레모네이드) + 브랜드 방향성(액티브·웰니스)</b>을 함께 hit하는 콘셉트로 도출 — AI 크롤링 → 선정 → 결합 → 적용 한 사이클.</div>
+        <div class="ai-result-desc"><b>"★ 액티브 웰니스 × 여름 무드 + ◆ 레모네이드 boost"</b> 콘셉트를 닝닝 2차 바이럴 썸네일 <b>★ 우선순위 10개 매체</b>에 일관 적용 → 핵심 채널 동시 확산. <b>브랜드 메인 톤(액티브·웰니스)</b>이 골격을 잡고, <b>레모네이드 트렌드</b>를 바이럴 boost layer로 추가 — AI 크롤링 → 메인/부가 선정 → 위계 결합 → 적용 한 사이클.</div>
       </div>
     </div>
   </div>
@@ -945,26 +953,26 @@ body { min-height: 100vh; }
       <div class="ai-conclusion-tag">⚡ AI-DRIVEN CONCLUSION</div>
       <div class="ai-conclusion-title">
         AI는 Phase 2의 승부 공식을<br>
-        <span class="hl">「★ 레모네이드 × ◆ 액티브·웰니스 × ★ 우선순위 10개 매체」</span>로 정의했습니다
+        <span class="hl">「★ 액티브·웰니스 (메인) × 여름 무드 + ◆ 레모네이드 부가」</span>로 정의했습니다
       </div>
       <p class="ai-conclusion-body">
-        닝닝 1차 앵커 위에 <b class="g">AI 트렌드 분석(★ 레모네이드 9.1점 통과)</b>과 <b class="a">브랜드 방향성(◆ 액티브·웰니스)</b>을 결합한 <b>3-way Embedding 콘셉트</b>로, <b class="b">★ 우선순위 10개 매체</b>와 닝닝 착장 메인 상품 누끼컷을 통해 다채널 동시 확산. 1차 사이클(웨이브제인 +266% 검증) 위에 2차 사이클을 띄우는 무드 베드 역할.
+        닝닝 1차 앵커 위에 <b class="g">★ 액티브·웰니스 (브랜드 메인 톤 9.4점)</b>이 골격을 잡고, <b class="a">◆ 레모네이드 (트렌드 가속도 9.2 · 바이럴 boost)</b>을 부가 layer로 결합한 <b>메인+부가 콘셉트</b>로, <b class="b">★ 우선순위 10개 매체</b>와 닝닝 착장 메인 상품 누끼컷을 통해 다채널 동시 확산. 1차 사이클(웨이브제인 +266% 검증) 위에 2차 사이클을 띄우는 무드 베드 역할.
       </p>
       <div class="ai-conclusion-grid">
         <div class="ai-conclusion-cell green">
-          <div class="ai-conclusion-cell-tag">VALIDATED KEYWORD</div>
-          <div class="ai-conclusion-cell-title">★ 레모네이드 + ◆ 액티브·웰니스</div>
-          <div class="ai-conclusion-cell-desc">종합 9.1 / 10 통과 · 4차원 평가(트렌드·브랜드·시즌·매체) 매칭</div>
+          <div class="ai-conclusion-cell-tag">VALIDATED MAIN</div>
+          <div class="ai-conclusion-cell-title">★ 액티브·웰니스 (브랜드 핵심 톤)</div>
+          <div class="ai-conclusion-cell-desc">종합 9.4 / 10 · 브랜드 적합도 9.8 우선 · 메인 골격 결정</div>
         </div>
         <div class="ai-conclusion-cell amber">
-          <div class="ai-conclusion-cell-tag">VALIDATED STRATEGY</div>
-          <div class="ai-conclusion-cell-title">★ 10개 매체 집중 + 상품 누끼컷</div>
-          <div class="ai-conclusion-cell-desc">다채널 동시 노출 · 1차 효과 위 2차 가속 무드 베드</div>
+          <div class="ai-conclusion-cell-tag">VALIDATED BOOST</div>
+          <div class="ai-conclusion-cell-title">◆ 레모네이드 (트렌드 부가 layer)</div>
+          <div class="ai-conclusion-cell-desc">트렌드 가속도 9.2 · 멘션 12.4K · 바이럴 boost 효과 88%</div>
         </div>
         <div class="ai-conclusion-cell blue">
           <div class="ai-conclusion-cell-tag">AI NEXT</div>
-          <div class="ai-conclusion-cell-title">3-way 콘셉트의 26FW 자동 확장</div>
-          <div class="ai-conclusion-cell-desc">시즌별 트렌드 키워드 자동 교체 + 매체 톤 차별화 자동화</div>
+          <div class="ai-conclusion-cell-title">메인+부가 구조의 시즌 자동 확장</div>
+          <div class="ai-conclusion-cell-desc">메인 톤(액티브 웰니스) 고정 · 부가 트렌드 시즌별 자동 교체</div>
         </div>
       </div>
     </div>
