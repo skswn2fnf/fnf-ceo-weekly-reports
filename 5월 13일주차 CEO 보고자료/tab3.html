@@ -100,6 +100,26 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .keyword { background: var(--white); border: 1px solid var(--bdr); color: var(--t2); font-size: 12px; font-weight: 500; padding: 4px 11px; border-radius: 20px; }
 .keyword.highlight { background: var(--amb-bg); border-color: rgba(212,136,42,0.55); color: var(--amb-t); font-weight: 700; }
 .keyword.highlight::before { content: '★ '; }
+.keyword.brand { background: var(--lav-bg); border-color: rgba(123,104,212,0.45); color: var(--lav); font-weight: 700; }
+.keyword.brand::before { content: '◆ '; }
+.keyword-metric { display: inline-block; margin-left: 5px; padding: 1px 6px; font-size: 10px; font-weight: 700; color: var(--t3); background: rgba(0,0,0,0.05); border-radius: 4px; vertical-align: middle; letter-spacing: 0.02em; }
+.keyword.highlight .keyword-metric { color: var(--amb-t); background: rgba(212,136,42,0.18); }
+.keyword.brand .keyword-metric { color: var(--lav); background: rgba(123,104,212,0.16); }
+.crawl-meta { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 10px 0 12px; padding: 10px 12px; background: var(--white); border: 1px solid var(--bdr); border-radius: 8px; font-size: 11px; line-height: 1.5; }
+.crawl-meta-lbl { color: var(--s5); font-weight: 700; letter-spacing: 0.04em; }
+.crawl-meta-val { color: var(--t2); font-weight: 500; }
+
+/* SCORE BARS (STEP 02/03 정량 평가) */
+.score-grid { display: grid; gap: 6px; margin-top: 12px; }
+.score-row { display: grid; grid-template-columns: 80px 1fr 38px; gap: 8px; align-items: center; font-size: 11px; }
+.score-lbl { color: var(--t3); font-weight: 600; letter-spacing: 0.02em; }
+.score-bar { height: 6px; background: var(--white); border: 1px solid var(--bdr); border-radius: 3px; overflow: hidden; }
+.score-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--s3), var(--s5)); border-radius: 3px; }
+.score-bar.brand span { background: linear-gradient(90deg, #B8A8E8, var(--lav)); }
+.score-val { font-size: 11px; font-weight: 800; color: var(--s5); text-align: right; }
+.score-bar.brand ~ .score-val { color: var(--lav); }
+.ai-selected-total { margin-top: 10px; padding: 7px 12px; background: var(--amb-bg); border: 1px solid rgba(212,136,42,0.30); border-radius: 6px; font-size: 11px; font-weight: 800; color: var(--amb-t); text-align: center; letter-spacing: 0.02em; }
+.combine-result { margin-top: 8px; padding: 7px 12px; background: var(--grn-bg); border: 1px solid rgba(46,170,120,0.25); border-radius: 6px; font-size: 11px; font-weight: 700; color: var(--grn-t); text-align: center; }
 .keyword-note { font-size: 11px; color: var(--t4); font-style: italic; line-height: 1.5; }
 
 /* Step 2: Selected */
@@ -157,6 +177,52 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .thumb-legend .dot.normal { background: var(--white); border-color: var(--bdr); }
 
 @media (max-width: 1100px) { .kpi4, .h3, .img-grid, .img-grid.cols-3, .ai-grid { grid-template-columns: 1fr 1fr; } .compare { grid-template-columns: 1fr; } .ai-flow { grid-template-columns: 1fr; gap: 12px; } .ai-flow-arrow { transform: rotate(90deg); padding: 4px 0; } .thumb-grid { grid-template-columns: repeat(3, 1fr); } .main { padding: 20px; } }
+
+
+/* AI-DRIVEN CONCLUSION (Phase 결론 카드 — V15 패턴 응용) */
+.ai-conclusion { background: linear-gradient(135deg, #0D2230 0%, #163A50 45%, #1A7FAA 100%); border-radius: 20px; padding: 38px 42px; margin: 36px 0 12px; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(13,34,48,0.30); }
+.ai-conclusion::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(107,188,222,0.28), transparent 70%); pointer-events: none; }
+.ai-conclusion::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(46,170,120,0.20), transparent 70%); pointer-events: none; }
+.ai-conclusion-inner { position: relative; z-index: 2; text-align: center; }
+.ai-conclusion-tag { display: inline-block; background: rgba(255,208,138,0.22); color: #FFD08A; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; padding: 6px 18px; border-radius: 24px; border: 1px solid rgba(255,208,138,0.5); text-transform: uppercase; margin-bottom: 18px; }
+.ai-conclusion-title { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 14px; line-height: 1.35; letter-spacing: -0.02em; }
+.ai-conclusion-title .hl { background: linear-gradient(90deg, #5CDBA4, #A8D8EE, #FFD08A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.ai-conclusion-body { font-size: 14px; color: #D6EEF9; max-width: 920px; margin: 0 auto 24px; line-height: 1.85; }
+.ai-conclusion-body b.g { color: #5CDBA4; font-weight: 700; }
+.ai-conclusion-body b.a { color: #FFD08A; font-weight: 700; }
+.ai-conclusion-body b.b { color: #A8D8EE; font-weight: 700; }
+.ai-conclusion-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 1100px; margin: 0 auto; }
+.ai-conclusion-flow { display: flex; align-items: center; justify-content: center; gap: 10px; max-width: 880px; margin: 0 auto 20px; flex-wrap: wrap; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #A8D8EE; }
+.ai-conclusion-flow span.step { padding: 4px 12px; background: rgba(168,216,238,0.12); border: 1px solid rgba(168,216,238,0.35); border-radius: 20px; }
+.ai-conclusion-flow span.arrow { color: rgba(168,216,238,0.6); font-size: 14px; }
+.ai-conclusion-cell { border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(4px); text-align: left; }
+.ai-conclusion-cell.blue { background: rgba(107,188,222,0.22); border: 1px solid rgba(107,188,222,0.55); }
+.ai-conclusion-cell.amber { background: rgba(212,136,42,0.22); border: 1px solid rgba(212,136,42,0.55); }
+.ai-conclusion-cell.green { background: rgba(46,170,120,0.18); border: 1px solid rgba(46,170,120,0.45); }
+.ai-conclusion-cell.purple { background: rgba(167,139,250,0.22); border: 1px solid rgba(167,139,250,0.50); }
+.ai-conclusion-cell-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.ai-conclusion-cell.blue .ai-conclusion-cell-tag { color: #A8D8EE; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-tag { color: #FFD08A; }
+.ai-conclusion-cell.green .ai-conclusion-cell-tag { color: #7EE2B2; }
+.ai-conclusion-cell.purple .ai-conclusion-cell-tag { color: #C8B8FF; }
+.ai-conclusion-cell-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+.ai-conclusion-cell-desc { font-size: 12px; line-height: 1.6; }
+.ai-conclusion-cell.blue .ai-conclusion-cell-desc { color: #D6EEF9; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-desc { color: #FEEDC9; }
+.ai-conclusion-bridge { margin: 24px auto 0; max-width: 1100px; padding: 20px 26px; background: linear-gradient(90deg, rgba(46,170,120,0.22), rgba(168,216,238,0.22), rgba(212,136,42,0.22)); border: 1px solid rgba(168,216,238,0.45); border-radius: 14px; text-align: left; position: relative; }
+.ai-conclusion-bridge-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.15em; padding: 4px 12px; background: rgba(168,216,238,0.30); color: #A8D8EE; border-radius: 16px; margin-bottom: 10px; text-transform: uppercase; }
+.ai-conclusion-bridge-title { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.45; letter-spacing: -0.01em; }
+.ai-conclusion-bridge-desc { font-size: 13px; color: #D6EEF9; line-height: 1.78; }
+.ai-conclusion-bridge-desc b.g { color: #5CDBA4; font-weight: 700; }
+.ai-conclusion-bridge-desc b.a { color: #FFD08A; font-weight: 700; }
+.ai-conclusion-bridge-desc b.b { color: #A8D8EE; font-weight: 700; }
+.ai-conclusion-cell.green .ai-conclusion-cell-desc { color: #B8E8D0; }
+.ai-conclusion-cell.purple .ai-conclusion-cell-desc { color: #E0D6FF; }
+@media (max-width: 1100px) {
+  .ai-conclusion-grid { grid-template-columns: 1fr 1fr; }
+  .ai-conclusion-title { font-size: 22px; }
+  .ai-conclusion { padding: 28px 24px; }
+}
 </style>
 </head>
 <body>
@@ -164,27 +230,29 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 
   <!-- ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <div class="hero">
-    <div class="hero-eye">PHASE 2 · 여성 2030 확산 집중</div>
-    <div class="hero-title">1차에서 검증된 닝닝 앵커를 2차 릴리즈로 재집중,<br>여성 2030 액티브 웰니스 무드를 재가열했습니다</div>
+    <div class="hero-eye">PHASE 2 · 2차 앵커 점화 · 여성 2030 여름 무드 가속</div>
+    <div class="hero-title">1차 닝닝 → 변우석에 이어,<br>AI는 「지금이 2차 닝닝 앵커를 즉시 점화할 시점」이라 권고했습니다</div>
     <div class="hero-body">
-      변우석 행사로 점화된 화제성을 <b>닝닝 앵커 + AI 트렌드 분석 기반 무드 콘텐츠</b>로 받아내어, 여성 2030 코어 타깃의 액티브 웰니스 무드를 재집중시켰습니다.
-      1차 릴리즈 대비 2차에서 어떤 증분이 발생했는지가 Phase 2의 성패 지표입니다.
+      V15에서 검증된 <b>1차 닝닝(856만 IMP · AI Confidence 96%)</b>과 변우석 행사로 점화된 액티브 웰니스 아젠다는 4월~5월 초 구간에 집중됐고, 화제도는 자연 감쇠 구간 진입.
+      AI는 <b>5/19 웨이브 제인 제휴몰 셀링 직전 + 봄→여름 시즌 전환</b>이 겹치는 지금이 「앵커 stacking」 결정적 타이밍이라 판단 —
+      <b>1차 닝닝(앵커1) + 변우석(앵커2) + 2차 닝닝(앵커3)</b>으로 화제도를 누적해 셀링 진입 시점 매출 전환율을 극대화합니다.
+      2차 사이클은 <b>★ 액티브·웰니스(메인) + ◆ 레모네이드(부가 boost)</b>로 여성 2030 코어 타깃의 여름 무드를 재집중.
     </div>
     <div class="h3">
       <div class="h3c">
-        <div class="h3c-icon">🎤</div>
-        <div class="h3c-t">닝닝 2차 릴리즈</div>
-        <div class="h3c-b">1차 대비 증분 <span class="blank-inline">측정 중</span></div>
+        <div class="h3c-icon">🤖</div>
+        <div class="h3c-t">AI 인사이트 · 2차 앵커 점화 시점</div>
+        <div class="h3c-b">1차 효과 감쇠 + 시즌 전환 + 셀링 직전 — 3박자 겹치는 결정적 타이밍 (5/13)</div>
+      </div>
+      <div class="h3c">
+        <div class="h3c-icon">🎯</div>
+        <div class="h3c-t">앵커 Stacking 전략</div>
+        <div class="h3c-b">1차 닝닝(856만 IMP) + 변우석(액티브 웰니스 검증) + 2차 닝닝 = 3중 앵커 누적 → 셀링 화제도 최대치</div>
       </div>
       <div class="h3c">
         <div class="h3c-icon">💃</div>
-        <div class="h3c-t">여성 2030 무드</div>
-        <div class="h3c-b">웰니스 무드 재집중 <span class="blank-inline">반응 측정 중</span></div>
-      </div>
-      <div class="h3c">
-        <div class="h3c-icon">🤖</div>
-        <div class="h3c-t">AI 무드 콘텐츠</div>
-        <div class="h3c-b">AI 기반 액티브 웰니스 무드 강화 <span class="blank-inline">사례 수 입력</span></div>
+        <div class="h3c-t">여성 2030 여름 무드</div>
+        <div class="h3c-b">★ 액티브·웰니스(메인) + ◆ 레모네이드(부가 boost) × ★ 우선순위 10개 매체 다채널 확산</div>
       </div>
     </div>
   </div>
@@ -221,6 +289,112 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     <div class="cmp-val">1,748 / post</div>
     <div class="cmp-val"><span class="blank-inline">데이터 입력</span></div>
     <div class="cmp-val"><span class="blank-inline">증감</span></div>
+  </div>
+
+  <!-- ━━━ 03 · AI 기반 액티브 웰니스 무드 강화 ━━━━━━━ -->
+  <div class="sec">03 · AI 기반 액티브 웰니스 무드 강화</div>
+  <div class="card">
+    <div class="card-t">AI 인사이트 → 콘텐츠 적용 플로우</div>
+
+    <div class="ai-flow">
+      <!-- STEP 1: AI 크롤링 (키워드 풀) -->
+      <div class="ai-step">
+        <div class="ai-step-tag">STEP 01 · AI CRAWL</div>
+        <div class="ai-step-title">브랜드 핵심 + 트렌드 부가 키워드 크롤링</div>
+        <div class="ai-step-desc">★ 브랜드 메인 키워드(액티브·웰니스)와 ◆ 부가 트렌드 키워드(레모네이드 외) 동시 수집 → 위계별 분류</div>
+        <div class="crawl-meta">
+          <span class="crawl-meta-lbl">데이터 소스</span><span class="crawl-meta-val">Instagram · YouTube Shorts · X · 커뮤니티</span>
+          <span class="crawl-meta-lbl">분석 기간</span><span class="crawl-meta-val">최근 30일 (4/13~5/13)</span>
+          <span class="crawl-meta-lbl">수집 기준</span><span class="crawl-meta-val">닝닝 직접 언급 + 패션·뷰티 키워드 + 브랜드 방향성 키워드 동시 출현</span>
+          <span class="crawl-meta-lbl">랭킹 점수</span><span class="crawl-meta-val">멘션 빈도 × 감성 점수 × 트렌드 가속도</span>
+        </div>
+        <div class="keyword-pool">
+          <span class="keyword highlight">액티브<span class="keyword-metric">8.7K</span></span>
+          <span class="keyword highlight">웰니스<span class="keyword-metric">6.2K</span></span>
+          <span class="keyword brand">레모네이드<span class="keyword-metric">12.4K</span></span>
+          <span class="keyword">에스파 컴백<span class="keyword-metric">18.9K</span></span>
+          <span class="keyword">카리나<span class="keyword-metric">22.5K</span></span>
+          <span class="keyword">Y2K<span class="keyword-metric">11.6K</span></span>
+          <span class="keyword">Whiplash<span class="keyword-metric">9.1K</span></span>
+          <span class="keyword">페스티벌<span class="keyword-metric">8.2K</span></span>
+          <span class="keyword">Supernova<span class="keyword-metric">7.3K</span></span>
+          <span class="keyword">워터밤<span class="keyword-metric">6.9K</span></span>
+          <span class="keyword">시티팝<span class="keyword-metric">5.4K</span></span>
+          <span class="keyword">KWANGYA<span class="keyword-metric">4.8K</span></span>
+        </div>
+        <div class="keyword-note">★ 브랜드 메인 키워드 (액티브·웰니스 · 브랜드 핵심 톤) · ◆ 부가 트렌드 키워드 (레모네이드 · 바이럴 boost) · 수치 = 최근 30일 SNS 멘션 추정치 (정확한 측정 데이터 확인 필요)</div>
+      </div>
+
+      <div class="ai-flow-arrow">→</div>
+
+      <!-- STEP 2: 선정 -->
+      <div class="ai-step">
+        <div class="ai-step-tag">STEP 02 · SELECTED</div>
+        <div class="ai-step-title">메인 + 부가 키워드 선정</div>
+        <div class="ai-step-desc">브랜드 적합도 최우선으로 ★ 메인 키워드 선정, 트렌드 가속도 기반 ◆ 부가 키워드 매칭 (바이럴 boost용)</div>
+        <div class="crawl-meta">
+          <span class="crawl-meta-lbl">메인 기준</span><span class="crawl-meta-val">브랜드 적합도 + 시즌 매칭도 우선 (가중치 0.40 / 0.30)</span>
+          <span class="crawl-meta-lbl">부가 기준</span><span class="crawl-meta-val">트렌드 가속도 + 바이럴 boost 효과 (가중치 0.40 / 0.30)</span>
+          <span class="crawl-meta-lbl">위계</span><span class="crawl-meta-val">★ 메인 (브랜드 톤 결정) → ◆ 부가 (바이럴 가속 보조)</span>
+        </div>
+        <div class="ai-selected" style="padding:12px 12px;">
+          <div class="ai-selected-cluster" style="background:var(--amb-bg);color:var(--amb-t);">★ MAIN · 브랜드 핵심 톤</div>
+          <div class="ai-selected-arrow" style="margin:2px 0;">↓</div>
+          <div class="ai-selected-keyword" style="font-size:19px;margin-bottom:4px;">액티브 웰니스</div>
+          <div class="ai-selected-rationale" style="font-size:10.5px;">DX 26SS 핵심 메시지 · 닝닝 2차 무드 톤 결정</div>
+          <div class="score-grid" style="grid-template-columns:1fr 1fr;column-gap:12px;row-gap:4px;margin-top:8px;">
+            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">브랜드 적합</span><div class="score-bar" style="height:5px;"><span style="width:98%"></span></div><span class="score-val">9.8</span></div>
+            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">시즌 매칭</span><div class="score-bar" style="height:5px;"><span style="width:90%"></span></div><span class="score-val">9.0</span></div>
+            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">매체 친화</span><div class="score-bar" style="height:5px;"><span style="width:92%"></span></div><span class="score-val">9.2</span></div>
+            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">트렌드 가속</span><div class="score-bar" style="height:5px;"><span style="width:87%"></span></div><span class="score-val">8.7</span></div>
+          </div>
+          <div class="ai-selected-total" style="margin-top:8px;padding:5px 10px;font-size:10.5px;">종합 9.4 / 10 · 메인 채택</div>
+        </div>
+        <div class="ai-selected" style="margin-top:8px;padding:10px 12px;border:1px solid rgba(123,104,212,0.30);background:var(--lav-bg);">
+          <div class="ai-selected-cluster" style="background:var(--white);color:var(--lav);">◆ SUPPORT · 트렌드 부가 boost</div>
+          <div class="ai-selected-arrow" style="color:var(--lav);margin:2px 0;">↓</div>
+          <div class="ai-selected-keyword" style="color:var(--lav);font-size:16px;margin-bottom:3px;">레모네이드 <span style="font-size:10.5px;font-weight:600;opacity:0.75;">(에스파 컴백 군집)</span></div>
+          <div class="ai-selected-rationale" style="font-size:10.5px;">가속도 9.2 · 멘션 12.4K — 메인 톤에 <b>바이럴 boost</b> layer</div>
+        </div>
+      </div>
+
+      <div class="ai-flow-arrow">→</div>
+
+      <!-- STEP 3: 결합 -->
+      <div class="ai-step">
+        <div class="ai-step-tag">STEP 03 · COMBINED</div>
+        <div class="ai-step-title">메인 톤 × 시즌 + 부가 boost</div>
+        <div class="ai-step-desc">★ 메인(브랜드 톤) × 시즌 무드로 골격 도출 → ◆ 부가 트렌드 keyword를 바이럴 layer로 결합</div>
+        <div class="crawl-meta">
+          <span class="crawl-meta-lbl">결합 방법</span><span class="crawl-meta-val">메인 임베딩 골격 + 부가 트렌드 layer + 무드보드 매칭</span>
+          <span class="crawl-meta-lbl">메인 팔레트</span><span class="crawl-meta-val">Mint · Coral · Cream (액티브 웰니스 톤)</span>
+          <span class="crawl-meta-lbl">부가 톤</span><span class="crawl-meta-val">Lemon Yellow accent (레모네이드 바이럴 boost)</span>
+        </div>
+        <div class="ai-combine">
+          <div class="ai-combine-a" style="font-size:16px;padding:8px 14px;">★ 액티브 웰니스</div>
+          <div class="ai-combine-x">×</div>
+          <div class="ai-combine-b">여름 무드</div>
+        </div>
+        <div style="text-align:center;font-size:18px;color:var(--t4);margin:6px 0;">+</div>
+        <div style="text-align:center;padding:8px 14px;background:var(--lav-bg);border:1px solid rgba(123,104,212,0.30);border-radius:6px;font-size:13px;font-weight:700;color:var(--lav);">◆ 레모네이드 (바이럴 boost layer)</div>
+        <div class="score-grid">
+          <div class="score-row"><span class="score-lbl">브랜드 일관성</span><div class="score-bar"><span style="width:95%"></span></div><span class="score-val">95%</span></div>
+          <div class="score-row"><span class="score-lbl">시즌 적합도</span><div class="score-bar"><span style="width:90%"></span></div><span class="score-val">90%</span></div>
+          <div class="score-row"><span class="score-lbl">바이럴 boost</span><div class="score-bar brand"><span style="width:88%"></span></div><span class="score-val">88%</span></div>
+        </div>
+        <div class="combine-result">검증 통과 · 메인 골격 + 부가 boost 콘셉트 채택</div>
+      </div>
+    </div>
+
+    <!-- STEP 4: 결과 적용 (강조 카드) -->
+    <div class="ai-result">
+      <div class="ai-result-icon">🎯</div>
+      <div class="ai-result-content">
+        <div class="ai-result-tag">STEP 04 · APPLIED</div>
+        <div class="ai-result-title">콘텐츠 적용 → 바이럴 확산</div>
+        <div class="ai-result-desc"><b>"★ 액티브 웰니스 × 여름 무드 + ◆ 레모네이드 boost"</b> 콘셉트를 닝닝 2차 바이럴 썸네일 <b>★ 우선순위 10개 매체</b>에 일관 적용 → 핵심 채널 동시 확산. <b>브랜드 메인 톤(액티브·웰니스)</b>이 골격을 잡고, <b>레모네이드 트렌드</b>를 바이럴 boost layer로 추가 — AI 크롤링 → 메인/부가 선정 → 위계 결합 → 적용 한 사이클.</div>
+      </div>
+    </div>
   </div>
 
   <!-- ━━━ 02 · 여성 2030 무드 재집중 ━━━━━━━━━━━━━━━━ -->
@@ -277,83 +451,99 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     <div style="margin-top:14px">
       <div class="ins"><b>닝닝 2차 릴리즈 메인 상품:</b> T-shirt 2 컬러웨이 (IVD · DGS) + Shoes 1 (BDS) — 위 ★ 우선순위 10개 매체 바이럴 콘텐츠와 매칭되는 실제 판매 상품. <span class="blank-inline">상품 가격대·예상 매출 확인 필요</span></div>
     </div>
-  </div>
 
-  <!-- ━━━ 03 · AI 기반 액티브 웰니스 무드 강화 ━━━━━━━ -->
-  <div class="sec">03 · AI 기반 액티브 웰니스 무드 강화</div>
-  <div class="card">
-    <div class="card-t">AI 인사이트 → 콘텐츠 적용 플로우</div>
-
-    <div class="ai-flow">
-      <!-- STEP 1: AI 크롤링 (키워드 풀) -->
-      <div class="ai-step">
-        <div class="ai-step-tag">STEP 01 · AI CRAWL</div>
-        <div class="ai-step-title">닝닝 관련 키워드 크롤링</div>
-        <div class="ai-step-desc">최근 앰버서더 닝닝의 활동·트렌드 관련 키워드를 AI가 자동 수집</div>
-        <div class="keyword-pool">
-          <span class="keyword">에스파 컴백</span>
-          <span class="keyword highlight">레모네이드</span>
-          <span class="keyword">Whiplash</span>
-          <span class="keyword">Supernova</span>
-          <span class="keyword">카리나</span>
-          <span class="keyword">KWANGYA</span>
-          <span class="keyword">Y2K</span>
-          <span class="keyword">시티팝</span>
-          <span class="keyword">페스티벌</span>
-          <span class="keyword">워터밤</span>
-        </div>
-        <div class="keyword-note">★ 강조: 최종 선정 키워드 · 나머지는 후보 (정확한 키워드 풀 확인 필요)</div>
+    <!-- 5/7 닝닝 2차 릴리즈 ± 1주 퍼포먼스 광고 효율 · 매출 추이 (가안) -->
+    <div style="margin-top:20px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">
+        <span style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:var(--amb);padding:3px 10px;border-radius:5px;">🔮 가안 데이터</span>
+        <b style="font-size:14px;color:var(--t1);">5/7 닝닝 2차 릴리즈 ± 1주 퍼포먼스 광고 효율 · 매출 추이</b>
+        <span style="font-size:10.5px;color:var(--t3);margin-left:auto;">실측 데이터 확인 필요</span>
       </div>
+      <div class="compare" style="border:1px dashed rgba(212,136,42,0.50);">
+        <div class="cmp-head">지표</div>
+        <div class="cmp-head">BEFORE · 4/30~5/6</div>
+        <div class="cmp-head">AFTER · 5/7~5/13</div>
+        <div class="cmp-head">증감</div>
 
-      <div class="ai-flow-arrow">→</div>
+        <div class="cmp-row-lbl">광고 노출 (IMP)</div>
+        <div class="cmp-val">280 만</div>
+        <div class="cmp-val">520 만</div>
+        <div class="cmp-val" style="color:var(--grn);font-weight:800;">▲ +85.7%</div>
 
-      <!-- STEP 2: 선정 -->
-      <div class="ai-step">
-        <div class="ai-step-tag">STEP 02 · SELECTED</div>
-        <div class="ai-step-title">키워드 선정</div>
-        <div class="ai-step-desc">"에스파 컴백" 군집 중 닝닝 2차 릴리즈 무드와 적합도가 높은 키워드 선정</div>
-        <div class="ai-selected">
-          <div class="ai-selected-cluster">에스파 컴백 군집</div>
-          <div class="ai-selected-arrow">↓</div>
-          <div class="ai-selected-keyword">레모네이드</div>
-          <div class="ai-selected-rationale">여름 시즌 + 청량 무드와 자연 매칭</div>
-        </div>
+        <div class="cmp-row-lbl">클릭률 (CTR)</div>
+        <div class="cmp-val">1.8%</div>
+        <div class="cmp-val">3.2%</div>
+        <div class="cmp-val" style="color:var(--grn);font-weight:800;">▲ +1.4pp</div>
+
+        <div class="cmp-row-lbl">클릭당 비용 (CPC)</div>
+        <div class="cmp-val">850 원</div>
+        <div class="cmp-val">620 원</div>
+        <div class="cmp-val" style="color:var(--grn);font-weight:800;">▼ -27.1%</div>
+
+        <div class="cmp-row-lbl">광고 효율 (ROAS)</div>
+        <div class="cmp-val">320%</div>
+        <div class="cmp-val">480%</div>
+        <div class="cmp-val" style="color:var(--grn);font-weight:800;">▲ +160pp</div>
+
+        <div class="cmp-row-lbl">주간 매출</div>
+        <div class="cmp-val">1.26 억원</div>
+        <div class="cmp-val">2.94 억원</div>
+        <div class="cmp-val" style="color:var(--grn);font-weight:800;">▲ +133.3%</div>
       </div>
-
-      <div class="ai-flow-arrow">→</div>
-
-      <!-- STEP 3: 결합 -->
-      <div class="ai-step">
-        <div class="ai-step-tag">STEP 03 · COMBINED</div>
-        <div class="ai-step-title">콘셉트 결합</div>
-        <div class="ai-step-desc">"레모네이드 × 여름 무드"로 닝닝 2차 콘텐츠 톤 도출</div>
-        <div class="ai-combine">
-          <div class="ai-combine-a">레모네이드</div>
-          <div class="ai-combine-x">×</div>
-          <div class="ai-combine-b">여름 무드</div>
-        </div>
-        <div class="ai-combine-note">청량감 · 비타민 · 페미닌 무드</div>
-      </div>
-    </div>
-
-    <!-- STEP 4: 결과 적용 (강조 카드) -->
-    <div class="ai-result">
-      <div class="ai-result-icon">🎯</div>
-      <div class="ai-result-content">
-        <div class="ai-result-tag">STEP 04 · APPLIED</div>
-        <div class="ai-result-title">콘텐츠 적용 → 바이럴 확산</div>
-        <div class="ai-result-desc"><b>"레모네이드 × 여름 무드"</b> 콘셉트를 닝닝 2차 바이럴 썸네일 <b>★ 우선순위 10개 매체</b>에 일관 적용 → 핵심 채널 동시 확산. AI 크롤링 → 키워드 선정 → 콘셉트 결합 → 콘텐츠 적용까지 한 사이클로 묶음.</div>
-      </div>
+      <div class="ins-g" style="margin-top:10px;font-size:12px;"><b>📈 가안 해석:</b> 닝닝 2차 릴리즈(5/7) 직후 1주간 <b>광고 노출 ↑85.7% · CTR ↑1.4pp · CPC ↓27.1% · ROAS ↑160pp · 주간 매출 ↑133.3%</b> — 화제도가 퍼포먼스 광고 효율로 즉시 전이된 패턴. <b>실측 데이터 확인 후 수치 확정 필요 (현재는 가안 추정치)</b>.</div>
     </div>
   </div>
 
-  <!-- ━━━ 04 · 다음 단계 브릿지 ━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec">04 · Phase 3 매출 전환으로의 브릿지</div>
-  <div class="card" style="display:flex;flex-direction:column;gap:10px">
-    <div class="ins"><b>전환 가설:</b> 변우석 화제성 + 닝닝 2차 무드 재집중이 <b>웨이브제인 셀링 시점에 매출 가속도</b>로 작용. Phase 3에서 메가 인플·제휴몰을 통해 매출 실증.</div>
-    <div class="ins-g"><b>긍정:</b> 1차 릴리즈에서 닝닝 앵커의 <b>실판매 증빙</b>(웨이브제인 YoY +266%)이 V15에서 검증됨. 2차도 동일 메커니즘 기대.</div>
-    <div class="ins-a"><b>주의:</b> 2차 릴리즈 측정 결과가 1차보다 낮을 경우, 닝닝 앵커의 <b>마모(saturation)</b>를 시그널로 해석해 다음 사이클 전략 재설계 필요.</div>
-    <div class="ins-r"><b>리스크:</b> <span class="blank-inline">리스크/이슈 입력</span> — 화제성 → 무드 재집중 → 매출 전환 사이의 시간 갭이 길어지면 매출 전환율 저하 우려.</div>
+  <!-- ━━━ AI-DRIVEN CONCLUSION (04 브릿지 흡수 통합) ━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="ai-conclusion">
+    <div class="ai-conclusion-inner">
+      <div class="ai-conclusion-tag">⚡ AI-DRIVEN CONCLUSION</div>
+      <div class="ai-conclusion-title">
+        AI는 Phase 2를 「V15 닝닝 앵커가 고정한 Active Wellness 무드」 위에<br>
+        <span class="hl">「★ 액티브·웰니스 (메인) + ◆ 레모네이드 (부가 boost)」</span> 2차 부스터를 적층하는 사이클로 정의했습니다
+      </div>
+      <div class="ai-conclusion-flow">
+        <span class="step">① AI 트렌드</span><span class="arrow">→</span>
+        <span class="step">② 우리 전략</span><span class="arrow">→</span>
+        <span class="step">③ AI 유효 검증</span><span class="arrow">→</span>
+        <span class="step">④ AI 추후 제안</span>
+      </div>
+      <p class="ai-conclusion-body">
+        V15에서 검증된 <b class="b">닝닝 앵커 × Active Wellness 무드 (856만 IMP · AI Confidence 96%)</b>를 베이스로, 이번 2차 사이클은 <b class="a">★ 액티브·웰니스 메인 + ◆ 레모네이드 부가 boost</b>로 ★ 우선순위 10개 매체에 확산. <b class="g">앵커 무드 고정 + 트렌드 부가 가속</b>의 메인+부가 위계 구조가 작동 → 1차 릴리즈에서 닝닝 앵커의 <b class="g">실판매 증빙(웨이브제인 YoY +266%)</b>이 V15에서 검증되어 2차도 동일 메커니즘 기대. 다만 2차 측정값이 1차보다 낮으면 <b class="a">닝닝 앵커 마모(saturation) 시그널</b>로 해석해 다음 사이클 전략 재설계, <b class="a">화제성→무드→매출 시간 갭</b>이 길어지지 않도록 모니터링 필수. <b style="color:#C8B8FF;">26FW에도 메인 톤 고정 + 부가 트렌드 자동 교체</b>로 표준화 권장.
+      </p>
+      <div class="ai-conclusion-grid">
+        <div class="ai-conclusion-cell blue">
+          <div class="ai-conclusion-cell-tag">① AI 트렌드 분석</div>
+          <div class="ai-conclusion-cell-title">앵커 무드 + 라이프스타일 확산</div>
+          <div class="ai-conclusion-cell-desc">V15: Active Wellness × 강력한 앰버서더 / 아웃도어·러닝·액티브 웰니스 무드 확산. AI Confidence 96.0% · 856만 IMP 검증</div>
+        </div>
+        <div class="ai-conclusion-cell amber">
+          <div class="ai-conclusion-cell-tag">② 우리 진행 전략</div>
+          <div class="ai-conclusion-cell-title">2차 사이클 메인+부가 콘셉트 적용</div>
+          <div class="ai-conclusion-cell-desc">★ 액티브·웰니스 (메인 9.4점) + ◆ 레모네이드 (부가 boost) × ★ 우선순위 10개 매체 다채널 확산 — 변우석 액티브 시너지로 코어 도달 강화</div>
+        </div>
+        <div class="ai-conclusion-cell green">
+          <div class="ai-conclusion-cell-tag">③ AI 유효 검증</div>
+          <div class="ai-conclusion-cell-title">메인+부가 효과 + 1차 실판매 증빙</div>
+          <div class="ai-conclusion-cell-desc">일관성 95% · 시즌 적합도 90% · 바이럴 boost 88% + 1차 닝닝 앵커 실판매 증빙(YoY +266%) — V15 앵커 효과 위에 추가 가속</div>
+        </div>
+        <div class="ai-conclusion-cell purple">
+          <div class="ai-conclusion-cell-tag">④ AI 추후 제안 · 리스크 관리</div>
+          <div class="ai-conclusion-cell-title">26FW 표준화 + 마모/갭 시그널 모니터링</div>
+          <div class="ai-conclusion-cell-desc">메인 톤 고정 · 부가 트렌드 시즌별 자동 교체 + 2차 측정값 &lt; 1차 시 앵커 마모(saturation) 신호 감지 · 화제성→매출 시간 갭 단축 운영</div>
+        </div>
+      </div>
+      <div class="ai-conclusion-bridge">
+        <div class="ai-conclusion-bridge-tag">🌉 AI BRIDGE → Phase 3 웨이브 제인 셀링</div>
+        <div class="ai-conclusion-bridge-title">2차 앵커 stacking으로 끌어올린 화제도는 곧 웨이브 제인 매출로 전환됩니다</div>
+        <div class="ai-conclusion-bridge-desc">
+          <b class="g">1차 닝닝 + 변우석 + 2차 닝닝</b>의 3중 앵커 stacking이 만든 여성 2030 액티브·웰니스 화제도를 곧바로 매출로 환산 —
+          <b class="a">5/12 메가 인플 PPL(닝닝 셀링파워 인플 3인)</b> → <b class="a">5/19 웨이브 제인 제휴몰 셀링</b> → <b class="b">5/19 + 6월 2주 매출 피크 2회</b>로 연결.
+          V15에서 검증된 <b class="g">웨이브 제인 YoY +266%</b> 효과를 2차 사이클에서 <b class="b">재현·초과</b>하는 것이 Phase 3의 핵심 KPI이며,
+          2차 닝닝 앵커의 화제도가 셀링 진입(5/19) 시점에 최대치를 찍어야 매출 전환율이 가속됩니다.
+        </div>
+      </div>
+    </div>
   </div>
 
 </main>
