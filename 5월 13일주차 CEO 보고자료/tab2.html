@@ -98,9 +98,10 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .infl-card img, .infl-card video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; background: #000; }
 .infl-badge { position: absolute; top: 8px; left: 8px; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 5px; color: #fff; background: rgba(212,136,42,0.92); letter-spacing: .08em; text-transform: uppercase; backdrop-filter: blur(3px); }
 .infl-cap { position: absolute; bottom: 0; left: 0; right: 0; padding: 18px 8px 7px; background: linear-gradient(transparent, rgba(0,0,0,0.78)); color: #fff; font-size: 10.5px; font-weight: 600; text-align: center; letter-spacing: -0.005em; }
-.infl-divider { display: flex; align-items: center; gap: 12px; margin: 14px 0 12px; }
+.infl-divider { display: flex; align-items: center; gap: 14px; margin: 18px 0 14px; }
+.infl-divider:first-of-type { margin-top: 4px; }
 .infl-divider::before, .infl-divider::after { content: ''; flex: 1; height: 1px; background: var(--bdr2); }
-.infl-divider-label { font-size: 11px; font-weight: 700; color: var(--t3); letter-spacing: .14em; text-transform: uppercase; }
+.infl-divider-label { font-size: 15px; font-weight: 800; color: var(--t1); letter-spacing: -0.005em; }
 .video-card { background: #1a1a1a; border-radius: 14px; overflow: hidden; position: relative; aspect-ratio: 9/16; box-shadow: 0 4px 16px rgba(0,0,0,.15); transition: transform 0.2s, box-shadow 0.2s; }
 .video-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.22); }
 .video-card video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
@@ -325,16 +326,19 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   <div class="card">
     <div class="card-t">인플루언서 콘텐츠 &amp; '느좋남' 키워드 바이럴</div>
 
+    <!-- 구분선 1: 바이럴 영역 헤더 -->
+    <div class="infl-divider"><span class="infl-divider-label">▼ 느좋남 키워드 컨텐츠 노출 및 바이럴 진행</span></div>
+
     <!-- Row 1: '느좋남' 키워드 바이럴 5개 -->
     <div class="infl-grid">
       <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/01-viral.jpg" alt="바이럴 01" loading="lazy"><span class="infl-badge">Viral</span></figure>
       <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/02-viral.jpg" alt="바이럴 02" loading="lazy"><span class="infl-badge">Viral</span></figure>
-      <figure class="infl-card"><video src="assets/tab2-인플콘텐츠-합본/03-viral.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="infl-badge">Viral</span></figure>
-      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/04-viral.jpg" alt="바이럴 04" loading="lazy"><span class="infl-badge">Viral</span></figure>
+      <figure class="infl-card"><img src="assets/tab2-인플콘텐츠-합본/03-viral.jpg" alt="바이럴 03" loading="lazy"><span class="infl-badge">Viral</span></figure>
+      <figure class="infl-card"><video src="assets/tab2-인플콘텐츠-합본/04-viral.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="infl-badge">Viral</span></figure>
       <figure class="infl-card"><video src="assets/tab2-인플콘텐츠-합본/05-viral.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="infl-badge">Viral</span></figure>
     </div>
 
-    <!-- 구분선 -->
+    <!-- 구분선 2: 인플 콘텐츠 영역 헤더 -->
     <div class="infl-divider"><span class="infl-divider-label">▼ 인플루언서 콘텐츠 (비주얼 감도 좋은 남녀 혼합)</span></div>
 
     <!-- Rows 2~5: 인플 콘텐츠 20개 (5×4) -->
