@@ -284,10 +284,18 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .ai-conclusion-cell.amber .ai-conclusion-cell-tag { color: #FFD08A; }
 .ai-conclusion-cell.green .ai-conclusion-cell-tag { color: #7EE2B2; }
 .ai-conclusion-cell.purple .ai-conclusion-cell-tag { color: #C8B8FF; }
-.ai-conclusion-cell-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.4; }
-.ai-conclusion-cell-desc { font-size: 12px; line-height: 1.6; }
+.ai-conclusion-cell-title { font-size: 13px; font-weight: 800; color: #fff; margin-bottom: 5px; line-height: 1.4; }
+.ai-conclusion-cell-desc { font-size: 11px; line-height: 1.55; }
 .ai-conclusion-cell.blue .ai-conclusion-cell-desc { color: #D6EEF9; }
 .ai-conclusion-cell.amber .ai-conclusion-cell-desc { color: #FEEDC9; }
+
+/* KEY STAT (메가 키워드/숫자) — 가시성 강화 */
+.ai-conclusion-cell-key { font-size: 30px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin: 6px 0 8px; }
+.ai-conclusion-cell.blue .ai-conclusion-cell-key { background: linear-gradient(90deg, #A8D8EE, #6BBCDE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-key { background: linear-gradient(90deg, #FFD08A, #D4882A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell.green .ai-conclusion-cell-key { background: linear-gradient(90deg, #7EE2B2, #2EAA78); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell.purple .ai-conclusion-cell-key { background: linear-gradient(90deg, #C8B8FF, #A78BFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell-key.sm { font-size: 22px; }
 .ai-conclusion-cell.green .ai-conclusion-cell-desc { color: #B8E8D0; }
 .ai-conclusion-cell.purple .ai-conclusion-cell-desc { color: #E0D6FF; }
 @media (max-width: 1100px) {
@@ -801,29 +809,33 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         <span class="step">③ AI 유효 검증</span><span class="arrow">→</span>
         <span class="step">④ AI 추후 제안</span>
       </div>
-      <p class="ai-conclusion-body">
-        V15에서 진단된 <b class="b">화보 이미지만으로는 구매 전환 미흡 + 매가 인플 PPL·제휴몰 연계 필요</b>를 베이스로, 이번 Phase 3는 <b class="a">V15 로드맵(5/7 닝닝 SU 2차·5/12 메가 인플·5/19 제휴몰)</b>을 실행. <b class="g">앵커×부스터=실판매 공식이 1차 사이클(YoY +266% · 4,158qty · 운동화 3위 ▲14)로 입증</b>되어 2차 사이클은 이 베이스 위에 가동. 다만 1차 매출 효과는 <b class="a">닝닝 앵커 단일 의존</b> 가능성이 있어 메가 인플·제휴몰 채널 확장으로 의존도 분산 + <b class="a">화제성→매출 갭(time lag)</b> 데이터 누적이 필수. <b style="color:#C8B8FF;">26FW에도 풀퍼널 플레이북 표준화 + 2차 사이클 KPI(IMP·전환율·기여 매출)</b>로 다음 시즌 플레이북 정교화.
+      <p class="ai-conclusion-body" style="font-size:13.5px;max-width:920px;margin:0 auto 18px;">
+        V15 <b class="b">화보→매출 갭</b> 진단 위에 <b class="a">V15 로드맵(5/7·5/12·5/19) + AI 메가 인플 3인 + 메인·서브 SKU</b> 실행 — <b class="g">앵커×부스터=실판매 공식 YoY +266%로 입증</b>, 단일 의존 분산 + <b style="color:#C8B8FF;">26FW 풀퍼널 표준화</b> 권고.
       </p>
       <div class="ai-conclusion-grid">
         <div class="ai-conclusion-cell blue">
-          <div class="ai-conclusion-cell-tag">① AI 트렌드 분석</div>
-          <div class="ai-conclusion-cell-title">화보→매출 갭 진단 + PPL 필요성</div>
-          <div class="ai-conclusion-cell-desc">V15: '고윤정 신발' 최대 검색량 / 화보 이미지만으로 구매 전환 미흡 / 매가 인플 PPL·제휴몰 연계 필요</div>
+          <div class="ai-conclusion-cell-tag">① AI 트렌드</div>
+          <div class="ai-conclusion-cell-key sm">화보→매출 갭</div>
+          <div class="ai-conclusion-cell-title">V15 진단 · PPL·제휴몰 필요</div>
+          <div class="ai-conclusion-cell-desc">'고윤정 신발' 최대 검색량 / 화보 이미지만으로 구매 전환 미흡</div>
         </div>
         <div class="ai-conclusion-cell amber">
-          <div class="ai-conclusion-cell-tag">② 우리 진행 전략</div>
-          <div class="ai-conclusion-cell-title">V15 로드맵 실행 + AI 추천 매칭</div>
-          <div class="ai-conclusion-cell-desc">5/7 닝닝 2차 · 5/12 메가 인플 PPL · 5/19 제휴몰 + AI 매가 인플 3인(민영·이유정·박현지) + 메인/서브 상품 선정</div>
+          <div class="ai-conclusion-cell-tag">② 우리 전략</div>
+          <div class="ai-conclusion-cell-key sm">V15 로드맵 실행</div>
+          <div class="ai-conclusion-cell-title">5/7 → 5/12 → 5/19 + AI 매칭</div>
+          <div class="ai-conclusion-cell-desc">닝닝 2차 · 메가 인플 PPL · 제휴몰 + AI 인플 3인(민영·이유정·박현지) + 메인·서브 SKU</div>
         </div>
         <div class="ai-conclusion-cell green">
           <div class="ai-conclusion-cell-tag">③ AI 유효 검증</div>
+          <div class="ai-conclusion-cell-key">YoY +266%</div>
           <div class="ai-conclusion-cell-title">1차 사이클 3단 전환 공식 입증</div>
-          <div class="ai-conclusion-cell-desc">YoY +266% · 4,158qty · 운동화 3위(▲14단계) — 화제성→확산→매출 풀퍼널 구조 작동. 2차 실행 플랜은 이 베이스 위 가동</div>
+          <div class="ai-conclusion-cell-desc">4,158 qty · 운동화 3위(▲14단계) — 화제성→확산→매출 풀퍼널 작동</div>
         </div>
         <div class="ai-conclusion-cell purple">
-          <div class="ai-conclusion-cell-tag">④ AI 추후 제안 · 리스크 관리</div>
-          <div class="ai-conclusion-cell-title">26FW 표준화 + 단일 의존 분산</div>
-          <div class="ai-conclusion-cell-desc">앵커→화제성→매출 3단 자동화 + 시즌별 피크 2회 표준 + 닝닝 단일 의존 분산(메가 인플·제휴몰 채널 확장) + KPI·time lag 누적으로 플레이북 정교화</div>
+          <div class="ai-conclusion-cell-tag">④ AI 추후 제안 · 리스크</div>
+          <div class="ai-conclusion-cell-key sm">26FW 표준화</div>
+          <div class="ai-conclusion-cell-title">풀퍼널 자동화 + 단일 의존 분산</div>
+          <div class="ai-conclusion-cell-desc">시즌별 피크 2회 표준 + 메가 인플·제휴몰 채널 확장 + KPI·time lag 누적</div>
         </div>
       </div>
     </div>
