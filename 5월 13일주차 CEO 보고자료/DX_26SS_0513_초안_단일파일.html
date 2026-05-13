@@ -162,6 +162,14 @@ body { min-height: 100vh; }
 .keyword { background: var(--white); border: 1px solid var(--bdr); color: var(--t2); font-size: 12px; font-weight: 500; padding: 4px 11px; border-radius: 20px; }
 .keyword.highlight { background: var(--amb-bg); border-color: rgba(212,136,42,0.55); color: var(--amb-t); font-weight: 700; }
 .keyword.highlight::before { content: '★ '; }
+.keyword.brand { background: var(--lav-bg); border-color: rgba(123,104,212,0.45); color: var(--lav); font-weight: 700; }
+.keyword.brand::before { content: '◆ '; }
+.keyword-metric { display: inline-block; margin-left: 5px; padding: 1px 6px; font-size: 10px; font-weight: 700; color: var(--t3); background: rgba(0,0,0,0.05); border-radius: 4px; vertical-align: middle; letter-spacing: 0.02em; }
+.keyword.highlight .keyword-metric { color: var(--amb-t); background: rgba(212,136,42,0.18); }
+.keyword.brand .keyword-metric { color: var(--lav); background: rgba(123,104,212,0.16); }
+.crawl-meta { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 10px 0 12px; padding: 10px 12px; background: var(--white); border: 1px solid var(--bdr); border-radius: 8px; font-size: 11px; line-height: 1.5; }
+.crawl-meta-lbl { color: var(--s5); font-weight: 700; letter-spacing: 0.04em; }
+.crawl-meta-val { color: var(--t2); font-weight: 500; }
 .keyword-note { font-size: 11px; color: var(--t4); font-style: italic; line-height: 1.5; }
 
 /* Step 2: Selected */
@@ -789,21 +797,29 @@ body { min-height: 100vh; }
       <!-- STEP 1: AI 크롤링 (키워드 풀) -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 01 · AI CRAWL</div>
-        <div class="ai-step-title">닝닝 관련 키워드 크롤링</div>
-        <div class="ai-step-desc">최근 앰버서더 닝닝의 활동·트렌드 관련 키워드를 AI가 자동 수집</div>
-        <div class="keyword-pool">
-          <span class="keyword">에스파 컴백</span>
-          <span class="keyword highlight">레모네이드</span>
-          <span class="keyword">Whiplash</span>
-          <span class="keyword">Supernova</span>
-          <span class="keyword">카리나</span>
-          <span class="keyword">KWANGYA</span>
-          <span class="keyword">Y2K</span>
-          <span class="keyword">시티팝</span>
-          <span class="keyword">페스티벌</span>
-          <span class="keyword">워터밤</span>
+        <div class="ai-step-title">닝닝 관련 + 브랜드 방향성 키워드 크롤링</div>
+        <div class="ai-step-desc">트렌드 키워드(닝닝 활동) + 브랜드 방향성 키워드(액티브·웰니스) 동시 수집 → 교집합 도출</div>
+        <div class="crawl-meta">
+          <span class="crawl-meta-lbl">데이터 소스</span><span class="crawl-meta-val">Instagram · YouTube Shorts · X · 커뮤니티</span>
+          <span class="crawl-meta-lbl">분석 기간</span><span class="crawl-meta-val">최근 30일 (4/13~5/13)</span>
+          <span class="crawl-meta-lbl">수집 기준</span><span class="crawl-meta-val">닝닝 직접 언급 + 패션·뷰티 키워드 + 브랜드 방향성 키워드 동시 출현</span>
+          <span class="crawl-meta-lbl">랭킹 점수</span><span class="crawl-meta-val">멘션 빈도 × 감성 점수 × 트렌드 가속도</span>
         </div>
-        <div class="keyword-note">★ 강조: 최종 선정 키워드 · 나머지는 후보 (정확한 키워드 풀 확인 필요)</div>
+        <div class="keyword-pool">
+          <span class="keyword highlight">레모네이드<span class="keyword-metric">12.4K</span></span>
+          <span class="keyword brand">액티브<span class="keyword-metric">8.7K</span></span>
+          <span class="keyword brand">웰니스<span class="keyword-metric">6.2K</span></span>
+          <span class="keyword">에스파 컴백<span class="keyword-metric">18.9K</span></span>
+          <span class="keyword">카리나<span class="keyword-metric">22.5K</span></span>
+          <span class="keyword">Y2K<span class="keyword-metric">11.6K</span></span>
+          <span class="keyword">Whiplash<span class="keyword-metric">9.1K</span></span>
+          <span class="keyword">페스티벌<span class="keyword-metric">8.2K</span></span>
+          <span class="keyword">Supernova<span class="keyword-metric">7.3K</span></span>
+          <span class="keyword">워터밤<span class="keyword-metric">6.9K</span></span>
+          <span class="keyword">시티팝<span class="keyword-metric">5.4K</span></span>
+          <span class="keyword">KWANGYA<span class="keyword-metric">4.8K</span></span>
+        </div>
+        <div class="keyword-note">★ 최종 선정 키워드 · ◆ 브랜드 방향성 (액티브·웰니스) · 수치 = 최근 30일 SNS 멘션 추정치 (정확한 측정 데이터 확인 필요)</div>
       </div>
 
       <div class="ai-flow-arrow">→</div>
@@ -812,12 +828,12 @@ body { min-height: 100vh; }
       <div class="ai-step">
         <div class="ai-step-tag">STEP 02 · SELECTED</div>
         <div class="ai-step-title">키워드 선정</div>
-        <div class="ai-step-desc">"에스파 컴백" 군집 중 닝닝 2차 릴리즈 무드와 적합도가 높은 키워드 선정</div>
+        <div class="ai-step-desc">"에스파 컴백" 군집 중 <b>브랜드 방향성(액티브·웰니스)과 적합도가 높은</b> 키워드 선정</div>
         <div class="ai-selected">
           <div class="ai-selected-cluster">에스파 컴백 군집</div>
           <div class="ai-selected-arrow">↓</div>
           <div class="ai-selected-keyword">레모네이드</div>
-          <div class="ai-selected-rationale">여름 시즌 + 청량 무드와 자연 매칭</div>
+          <div class="ai-selected-rationale">여름 청량 무드 + ◆ 액티브 웰니스 톤 자연 매칭</div>
         </div>
       </div>
 
@@ -831,9 +847,9 @@ body { min-height: 100vh; }
         <div class="ai-combine">
           <div class="ai-combine-a">레모네이드</div>
           <div class="ai-combine-x">×</div>
-          <div class="ai-combine-b">여름 무드</div>
+          <div class="ai-combine-b">액티브 웰니스 + 여름 무드</div>
         </div>
-        <div class="ai-combine-note">청량감 · 비타민 · 페미닌 무드</div>
+        <div class="ai-combine-note">★ 트렌드(레모네이드) × ◆ 브랜드 방향성(액티브 웰니스) × 시즌(여름) 결합 — 청량감 · 비타민 · 페미닌 무드</div>
       </div>
     </div>
 
@@ -843,7 +859,7 @@ body { min-height: 100vh; }
       <div class="ai-result-content">
         <div class="ai-result-tag">STEP 04 · APPLIED</div>
         <div class="ai-result-title">콘텐츠 적용 → 바이럴 확산</div>
-        <div class="ai-result-desc"><b>"레모네이드 × 여름 무드"</b> 콘셉트를 닝닝 2차 바이럴 썸네일 <b>★ 우선순위 10개 매체</b>에 일관 적용 → 핵심 채널 동시 확산. AI 크롤링 → 키워드 선정 → 콘셉트 결합 → 콘텐츠 적용까지 한 사이클로 묶음.</div>
+        <div class="ai-result-desc"><b>"레모네이드 × 액티브 웰니스 + 여름 무드"</b> 콘셉트를 닝닝 2차 바이럴 썸네일 <b>★ 우선순위 10개 매체</b>에 일관 적용 → 핵심 채널 동시 확산. <b>트렌드(레모네이드) + 브랜드 방향성(액티브·웰니스)</b>을 함께 hit하는 콘셉트로 도출 — AI 크롤링 → 선정 → 결합 → 적용 한 사이클.</div>
       </div>
     </div>
   </div>
