@@ -170,6 +170,18 @@ body { min-height: 100vh; }
 .crawl-meta { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 10px 0 12px; padding: 10px 12px; background: var(--white); border: 1px solid var(--bdr); border-radius: 8px; font-size: 11px; line-height: 1.5; }
 .crawl-meta-lbl { color: var(--s5); font-weight: 700; letter-spacing: 0.04em; }
 .crawl-meta-val { color: var(--t2); font-weight: 500; }
+
+/* SCORE BARS (STEP 02/03 정량 평가) */
+.score-grid { display: grid; gap: 6px; margin-top: 12px; }
+.score-row { display: grid; grid-template-columns: 80px 1fr 38px; gap: 8px; align-items: center; font-size: 11px; }
+.score-lbl { color: var(--t3); font-weight: 600; letter-spacing: 0.02em; }
+.score-bar { height: 6px; background: var(--white); border: 1px solid var(--bdr); border-radius: 3px; overflow: hidden; }
+.score-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--s3), var(--s5)); border-radius: 3px; }
+.score-bar.brand span { background: linear-gradient(90deg, #B8A8E8, var(--lav)); }
+.score-val { font-size: 11px; font-weight: 800; color: var(--s5); text-align: right; }
+.score-bar.brand ~ .score-val { color: var(--lav); }
+.ai-selected-total { margin-top: 10px; padding: 7px 12px; background: var(--amb-bg); border: 1px solid rgba(212,136,42,0.30); border-radius: 6px; font-size: 11px; font-weight: 800; color: var(--amb-t); text-align: center; letter-spacing: 0.02em; }
+.combine-result { margin-top: 8px; padding: 7px 12px; background: var(--grn-bg); border: 1px solid rgba(46,170,120,0.25); border-radius: 6px; font-size: 11px; font-weight: 700; color: var(--grn-t); text-align: center; }
 .keyword-note { font-size: 11px; color: var(--t4); font-style: italic; line-height: 1.5; }
 
 /* Step 2: Selected */
@@ -827,13 +839,25 @@ body { min-height: 100vh; }
       <!-- STEP 2: 선정 -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 02 · SELECTED</div>
-        <div class="ai-step-title">키워드 선정</div>
-        <div class="ai-step-desc">"에스파 컴백" 군집 중 <b>브랜드 방향성(액티브·웰니스)과 적합도가 높은</b> 키워드 선정</div>
+        <div class="ai-step-title">키워드 선정 (4차원 평가)</div>
+        <div class="ai-step-desc">4개 평가 차원 가중합 점수로 후보 키워드 자동 랭킹 → Top 1 선정</div>
+        <div class="crawl-meta">
+          <span class="crawl-meta-lbl">평가 차원</span><span class="crawl-meta-val">트렌드 가속도 · 브랜드 적합도 · 시즌 매칭도 · 매체 친화도</span>
+          <span class="crawl-meta-lbl">가중치</span><span class="crawl-meta-val">0.30 / 0.30 / 0.20 / 0.20</span>
+          <span class="crawl-meta-lbl">필터링</span><span class="crawl-meta-val">가중합 ≥ 8.0 통과 → Top 1 선정 (단일 키워드)</span>
+        </div>
         <div class="ai-selected">
           <div class="ai-selected-cluster">에스파 컴백 군집</div>
           <div class="ai-selected-arrow">↓</div>
           <div class="ai-selected-keyword">레모네이드</div>
           <div class="ai-selected-rationale">여름 청량 무드 + ◆ 액티브 웰니스 톤 자연 매칭</div>
+          <div class="score-grid">
+            <div class="score-row"><span class="score-lbl">트렌드 가속도</span><div class="score-bar"><span style="width:92%"></span></div><span class="score-val">9.2</span></div>
+            <div class="score-row"><span class="score-lbl">브랜드 적합도</span><div class="score-bar"><span style="width:88%"></span></div><span class="score-val">8.8</span></div>
+            <div class="score-row"><span class="score-lbl">시즌 매칭도</span><div class="score-bar"><span style="width:95%"></span></div><span class="score-val">9.5</span></div>
+            <div class="score-row"><span class="score-lbl">매체 친화도</span><div class="score-bar"><span style="width:87%"></span></div><span class="score-val">8.7</span></div>
+          </div>
+          <div class="ai-selected-total">종합 점수 9.1 / 10 · Top 1 통과</div>
         </div>
       </div>
 
@@ -842,14 +866,24 @@ body { min-height: 100vh; }
       <!-- STEP 3: 결합 -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 03 · COMBINED</div>
-        <div class="ai-step-title">콘셉트 결합</div>
-        <div class="ai-step-desc">"레모네이드 × 여름 무드"로 닝닝 2차 콘텐츠 톤 도출</div>
+        <div class="ai-step-title">AI 콘셉트 결합 (3-way Embedding)</div>
+        <div class="ai-step-desc">선정 키워드 × 브랜드 방향성 × 시즌 무드를 AI 임베딩 유사도로 결합 → 콘셉트 도출</div>
+        <div class="crawl-meta">
+          <span class="crawl-meta-lbl">결합 방법</span><span class="crawl-meta-val">키워드 임베딩 유사도 + 무드보드 매칭 + 컬러 팔레트 추출</span>
+          <span class="crawl-meta-lbl">팔레트</span><span class="crawl-meta-val">Lemon Yellow · Mint · Coral · Cream</span>
+          <span class="crawl-meta-lbl">톤 키워드</span><span class="crawl-meta-val">청량감 · 비타민 · 페미닌 · 액티브</span>
+        </div>
         <div class="ai-combine">
           <div class="ai-combine-a">레모네이드</div>
           <div class="ai-combine-x">×</div>
           <div class="ai-combine-b">액티브 웰니스 + 여름 무드</div>
         </div>
-        <div class="ai-combine-note">★ 트렌드(레모네이드) × ◆ 브랜드 방향성(액티브 웰니스) × 시즌(여름) 결합 — 청량감 · 비타민 · 페미닌 무드</div>
+        <div class="score-grid">
+          <div class="score-row"><span class="score-lbl">브랜드 일관성</span><div class="score-bar brand"><span style="width:92%"></span></div><span class="score-val">92%</span></div>
+          <div class="score-row"><span class="score-lbl">시즌 적합도</span><div class="score-bar brand"><span style="width:88%"></span></div><span class="score-val">88%</span></div>
+          <div class="score-row"><span class="score-lbl">매체 호환성</span><div class="score-bar brand"><span style="width:90%"></span></div><span class="score-val">90%</span></div>
+        </div>
+        <div class="combine-result">검증 통과 · 3-way 결합 콘셉트 채택</div>
       </div>
     </div>
 
