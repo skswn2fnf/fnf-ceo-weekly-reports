@@ -197,7 +197,12 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 
 /* ── STRATEGY 2종 ── */
 .strategy-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.strategy-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; padding: 20px 22px; box-shadow: var(--sh); }
+.strategy-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; padding: 20px 22px; box-shadow: var(--sh); display: flex; flex-direction: column; }
+.shorts-row { flex: 1; display: flex; gap: 8px; align-items: stretch; margin-top: 12px; min-height: 0; }
+.shorts-card { height: 100%; aspect-ratio: 9 / 16; background: #1a1a1a; border-radius: 12px; overflow: hidden; position: relative; flex: 0 0 auto; }
+.shorts-card video, .shorts-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.shorts-card .shorts-badge { position: absolute; top: 6px; left: 6px; font-size: 8px; font-weight: 700; color: #fff; background: rgba(212,136,42,.88); padding: 2px 6px; border-radius: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
+.shorts-card .shorts-cap { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 7px 5px; background: linear-gradient(to top, rgba(0,0,0,.85), transparent); color: #fff; font-size: 9px; font-weight: 500; }
 .strategy-icon { font-size: 26px; margin-bottom: 6px; }
 .strategy-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; background: var(--amb-bg); color: var(--amb-t); margin-bottom: 6px; letter-spacing: 0.06em; text-transform: uppercase; }
 .strategy-title { font-size: 15px; font-weight: 800; color: var(--t1); margin-bottom: 6px; letter-spacing: -0.01em; }
@@ -500,10 +505,10 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         <span class="strategy-tag">STRATEGY A</span>
         <div class="strategy-title">제품 후기형 컨텐츠 (쇼츠)</div>
         <div class="strategy-desc"><b>"가을까지 쭉 신기 좋은" / "예쁘죠 ㅠㅠ"</b> 류의 솔직 후기 톤. 인플 쇼츠 1편으로 <b>구매 자극력</b> 극대화. 매체 후기 = 신뢰도 높음.</div>
-        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
-          <div style="width:108px;height:192px;background:#1a1a1a;border-radius:12px;overflow:hidden;position:relative;flex:0 0 108px;"><video src="assets/tab4-바이럴레퍼런스/reference-01.mov" muted loop autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;"></video><span style="position:absolute;top:6px;left:6px;font-size:8px;font-weight:700;color:#fff;background:rgba(212,136,42,.88);padding:2px 6px;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;">레퍼런스</span><div style="position:absolute;bottom:0;left:0;right:0;padding:14px 7px 5px;background:linear-gradient(to top,rgba(0,0,0,.85),transparent);color:#fff;font-size:9px;font-weight:500;">쇼츠 후기 벤치마크</div></div>
-          <div style="width:108px;height:192px;background:#1a1a1a;border-radius:12px;overflow:hidden;position:relative;flex:0 0 108px;"><img src="assets/tab4-바이럴레퍼런스/reference-puma-meryjane.jpg" alt="푸마 메리제인 SNS 후기" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;top:6px;left:6px;font-size:8px;font-weight:700;color:#fff;background:rgba(212,136,42,.88);padding:2px 6px;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;">레퍼런스</span><div style="position:absolute;bottom:0;left:0;right:0;padding:14px 7px 5px;background:linear-gradient(to top,rgba(0,0,0,.85),transparent);color:#fff;font-size:9px;font-weight:500;">푸마 메리제인 SNS 후기</div></div>
-          <div style="width:108px;height:192px;background:#1a1a1a;border-radius:12px;overflow:hidden;position:relative;flex:0 0 108px;"><video src="assets/tab4-바이럴레퍼런스/reference-fila-meryjane.mp4" muted loop autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;"></video><span style="position:absolute;top:6px;left:6px;font-size:8px;font-weight:700;color:#fff;background:rgba(212,136,42,.88);padding:2px 6px;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;">레퍼런스</span><div style="position:absolute;bottom:0;left:0;right:0;padding:14px 7px 5px;background:linear-gradient(to top,rgba(0,0,0,.85),transparent);color:#fff;font-size:9px;font-weight:500;">휠라 에샤페 메리제인 후기</div></div>
+        <div class="shorts-row">
+          <div class="shorts-card"><video src="assets/tab4-바이럴레퍼런스/reference-01.mov" muted loop autoplay playsinline preload="metadata"></video><span class="shorts-badge">레퍼런스</span><div class="shorts-cap">쇼츠 후기 벤치마크</div></div>
+          <div class="shorts-card"><img src="assets/tab4-바이럴레퍼런스/reference-puma-meryjane.jpg" alt="푸마 메리제인 SNS 후기"><span class="shorts-badge">레퍼런스</span><div class="shorts-cap">푸마 메리제인 SNS 후기</div></div>
+          <div class="shorts-card"><video src="assets/tab4-바이럴레퍼런스/reference-fila-meryjane.mp4" muted loop autoplay playsinline preload="metadata"></video><span class="shorts-badge">레퍼런스</span><div class="shorts-cap">휠라 에샤페 메리제인 후기</div></div>
         </div>
       </div>
 
