@@ -8,23 +8,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <style>
 :root {
-  --s0:#F0F8FD; --s1:#D6EEF9; --s2:#A8D8EE; --s3:#6BBCDE; --s4:#3AA4CD; --s5:#1A7FAA;
-  --bg:#F4F9FD; --white:#fff;
-  --t1:#0F2733; --t2:#2C4F61; --t3:#5A7F92; --t4:#A0BCC8;
-  --bdr:rgba(58,164,205,0.18); --bdr2:rgba(58,164,205,0.38);
+  --s0:#FBF8F0; --s1:#F3EDDD; --s2:#E5DCC4; --s3:#C5B69A; --s4:#9B8870; --s5:#6F5E4A;
+  --bg:#FBF7EE; --white:#fff;
+  --t1:#3D2E20; --t2:#5E4F40; --t3:#8A7B68; --t4:#C5B79E;
+  --bdr:rgba(155,136,112,0.18); --bdr2:rgba(155,136,112,0.38);
   --grn:#2EAA78; --grn-bg:#E8F7F1; --grn-t:#0A4A2A;
   --red:#E05A6B; --red-bg:#FEF0F2; --red-t:#7A1A2A;
   --amb:#D4882A; --amb-bg:#FDF3E3; --amb-t:#7A3E00;
   --lav:#7B68D4; --lav-bg:#F0EEF9;
-  --rad:14px; --sh:0 2px 18px rgba(58,164,205,0.10);
+  --rad:14px; --sh:0 2px 18px rgba(155,136,112,0.10);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: var(--t1); font-size: 14px; }
 .main { max-width: 1340px; margin: 0 auto; padding: 28px 40px 80px; }
 
 /* HERO */
-.hero { background: linear-gradient(135deg, #0D2230 0%, #163A50 50%, #1A7FAA 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(107,188,222,0.18), transparent 65%); pointer-events: none; }
+.hero { background: linear-gradient(135deg, #3D2E20 0%, #6F5E4A 50%, #6F5E4A 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(197,182,154,0.18), transparent 65%); pointer-events: none; }
 .hero-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--s2); margin-bottom: 12px; }
 .hero-title { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 26px; color: #fff; line-height: 1.45; margin-bottom: 14px;  font-weight: 800; letter-spacing: -0.02em; }
 .hero-body { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.85; margin-bottom: 24px; max-width: 920px; }
@@ -81,7 +81,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 24px; box-shadow: var(--sh); }
 .flow-step { padding: 16px 18px; border-radius: 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
 .flow-step.p1 { background: linear-gradient(160deg, #FDF3E3, #F8E7C0); }
-.flow-step.p2 { background: linear-gradient(160deg, #D6EEF9, #B8DDF0); }
+.flow-step.p2 { background: linear-gradient(160deg, #F3EDDD, #B8DDF0); }
 .flow-step.p3 { background: linear-gradient(160deg, #E8F7F1, #C9EEDB); }
 .flow-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
 .flow-step.p1 .flow-tag { color: var(--amb); }
@@ -105,19 +105,19 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   <!-- ━━━ HERO (Discovery 표준 — 중앙 정렬 · pill chips · CORE STRATEGIC PROPOSITION) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <div class="hero" style="text-align:center;padding:38px 42px 32px;">
     <!-- 상단 장식 pill -->
-    <div style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.18em;padding:6px 22px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(168,216,238,0.35);color:var(--s2);text-transform:uppercase;margin-bottom:14px;">✦ DX 26SS · OVERVIEW ✦</div>
+    <div style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.18em;padding:6px 22px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(229,220,196,0.35);color:var(--s2);text-transform:uppercase;margin-bottom:14px;">✦ DX 26SS · OVERVIEW ✦</div>
     <!-- 서브 라벨 -->
     <div style="font-size:13px;font-weight:700;color:var(--s2);letter-spacing:.04em;margin-bottom:12px;">⚡ AI 권고 · 26SS 승부 공식 정의</div>
     <!-- 중앙 큰 타이틀 -->
     <div style="font-family:'Pretendard Variable',Pretendard,sans-serif;font-weight:800;font-size:46px;line-height:1.15;letter-spacing:-0.03em;margin-bottom:14px;color:#fff;">
-      <span style="background:linear-gradient(180deg,#fff 0%,#A8D8EE 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">ACTIVE WELLNESS</span>
+      <span style="background:linear-gradient(180deg,#fff 0%,#E5DCC4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">ACTIVE WELLNESS</span>
     </div>
     <!-- 3단 플로우 강조 -->
     <div style="display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:14px;font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.005em;">
       <span style="display:inline-block;padding:6px 14px;border-radius:24px;background:rgba(255,208,138,0.16);border:1px solid rgba(255,208,138,0.40);">변우석 행사</span>
       <span style="color:rgba(255,208,138,0.7);font-weight:800;font-size:20px;">→</span>
-      <span style="display:inline-block;padding:6px 14px;border-radius:24px;background:rgba(168,216,238,0.16);border:1px solid rgba(168,216,238,0.40);">닝닝 2차 릴리즈</span>
-      <span style="color:rgba(168,216,238,0.7);font-weight:800;font-size:20px;">→</span>
+      <span style="display:inline-block;padding:6px 14px;border-radius:24px;background:rgba(229,220,196,0.16);border:1px solid rgba(229,220,196,0.40);">닝닝 2차 릴리즈</span>
+      <span style="color:rgba(229,220,196,0.7);font-weight:800;font-size:20px;">→</span>
       <span style="display:inline-block;padding:6px 14px;border-radius:24px;background:rgba(92,219,164,0.16);border:1px solid rgba(92,219,164,0.50);">웨이브제인 셀링</span>
     </div>
     <!-- 서브 디스크립션 -->
@@ -126,11 +126,11 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     </div>
     <!-- 수평 pill chips 5장 -->
     <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:26px;">
-      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(168,216,238,0.30);font-size:12.5px;font-weight:700;color:#fff;">🎯 <span style="color:rgba(255,255,255,0.7);">AI Confidence</span> 96.5%</span>
-      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(168,216,238,0.30);font-size:12.5px;font-weight:700;color:#fff;">📈 <span style="color:rgba(255,255,255,0.7);">1차 사이클</span> +266% YoY</span>
-      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(168,216,238,0.30);font-size:12.5px;font-weight:700;color:#fff;">🏃 <span style="color:rgba(255,255,255,0.7);">운동화 카테고리</span> 3위 ▲14</span>
-      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(168,216,238,0.30);font-size:12.5px;font-weight:700;color:#fff;">⚡ <span style="color:rgba(255,255,255,0.7);">2차 사이클</span> 가속 진행</span>
-      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(168,216,238,0.30);font-size:12.5px;font-weight:700;color:#fff;">📅 <span style="color:rgba(255,255,255,0.7);">닝닝 2차</span> 5/7 공개</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(229,220,196,0.30);font-size:12.5px;font-weight:700;color:#fff;">🎯 <span style="color:rgba(255,255,255,0.7);">AI Confidence</span> 96.5%</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(229,220,196,0.30);font-size:12.5px;font-weight:700;color:#fff;">📈 <span style="color:rgba(255,255,255,0.7);">1차 사이클</span> +266% YoY</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(229,220,196,0.30);font-size:12.5px;font-weight:700;color:#fff;">🏃 <span style="color:rgba(255,255,255,0.7);">운동화 카테고리</span> 3위 ▲14</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(229,220,196,0.30);font-size:12.5px;font-weight:700;color:#fff;">⚡ <span style="color:rgba(255,255,255,0.7);">2차 사이클</span> 가속 진행</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,0.10);border:1px solid rgba(229,220,196,0.30);font-size:12.5px;font-weight:700;color:#fff;">📅 <span style="color:rgba(255,255,255,0.7);">닝닝 2차</span> 5/7 공개</span>
     </div>
 
     <!-- CORE STRATEGIC PROPOSITION 카드 -->
@@ -144,8 +144,8 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
       <!-- ★ MAIN + ◆ CYCLE = ✓ RESULT 시각 공식 -->
       <div style="display:flex;justify-content:center;align-items:stretch;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
         <!-- Box 1: MAIN -->
-        <div style="flex:1;min-width:180px;max-width:260px;background:rgba(168,216,238,0.10);border:1.5px solid rgba(168,216,238,0.40);border-radius:14px;padding:18px 16px;text-align:center;">
-          <div style="font-size:10px;font-weight:800;letter-spacing:.18em;color:#A8D8EE;margin-bottom:8px;">★ MAIN</div>
+        <div style="flex:1;min-width:180px;max-width:260px;background:rgba(229,220,196,0.10);border:1.5px solid rgba(229,220,196,0.40);border-radius:14px;padding:18px 16px;text-align:center;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:.18em;color:#E5DCC4;margin-bottom:8px;">★ MAIN</div>
           <div style="font-size:17px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:6px;">ACTIVE WELLNESS</div>
           <div style="font-size:11.5px;color:rgba(255,255,255,0.72);line-height:1.55;">+ AI 검증 3축<br>(성수·러닝·소셜레이브)</div>
         </div>
@@ -160,7 +160,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         <!-- = 기호 -->
         <div style="display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;color:rgba(92,219,164,0.85);min-width:24px;">=</div>
         <!-- Result Box (완화된 톤 — 매출 집중 X, 기대치) -->
-        <div style="flex:1;min-width:180px;max-width:280px;background:linear-gradient(135deg,rgba(92,219,164,0.18),rgba(58,164,205,0.14));border:1.5px solid rgba(92,219,164,0.55);border-radius:14px;padding:18px 16px;text-align:center;">
+        <div style="flex:1;min-width:180px;max-width:280px;background:linear-gradient(135deg,rgba(92,219,164,0.18),rgba(155,136,112,0.14));border:1.5px solid rgba(92,219,164,0.55);border-radius:14px;padding:18px 16px;text-align:center;">
           <div style="font-size:10px;font-weight:800;letter-spacing:.18em;color:#5CDBA4;margin-bottom:8px;">◐ EXPECTED</div>
           <div style="font-size:17px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:6px;">매출 상승 기대</div>
           <div style="font-size:11.5px;color:rgba(234,251,243,0.78);line-height:1.55;">1차 사이클 검증 베이스 위에<br>2차 사이클로 동일 공식 확장</div>
@@ -177,7 +177,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
   <!-- ━━━ AI 분석 3축 (시각화 카드) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-  <div class="sec"><span style="display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;padding:3px 9px;border-radius:20px;background:linear-gradient(135deg,#1A7FAA,#0F2733);color:#5CDBA4;letter-spacing:.12em;margin-right:6px;">✦ AI</span>AI 분석 — ACTIVE WELLNESS 검증 3축 신호</div>
+  <div class="sec"><span style="display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;padding:3px 9px;border-radius:20px;background:linear-gradient(135deg,#6F5E4A,#3D2E20);color:#5CDBA4;letter-spacing:.12em;margin-right:6px;">✦ AI</span>AI 분석 — ACTIVE WELLNESS 검증 3축 신호</div>
   <div class="sg" style="margin-bottom:8px;">
     <div class="sc" style="border-top:3px solid var(--grn);">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
@@ -286,27 +286,27 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   <div class="sec">04 · 종합 인사이트</div>
 
   <!-- AI CONCLUSION 카드 (V15 스타일) -->
-  <div style="background:linear-gradient(135deg,#0D2230 0%,#163A50 45%,#1A7FAA 100%);border-radius:20px;padding:44px 48px;margin:0 0 16px;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(13,34,48,0.35);">
-    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(107,188,222,0.28),transparent 70%);pointer-events:none;"></div>
+  <div style="background:linear-gradient(135deg,#3D2E20 0%,#6F5E4A 45%,#6F5E4A 100%);border-radius:20px;padding:44px 48px;margin:0 0 16px;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(61,46,32,0.35);">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(197,182,154,0.28),transparent 70%);pointer-events:none;"></div>
     <div style="position:absolute;bottom:-60px;left:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(46,170,120,0.20),transparent 70%);pointer-events:none;"></div>
 
     <div style="position:relative;z-index:2;text-align:center;">
       <!-- AI badge + Confidence bar (MLB 패턴) -->
       <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px;flex-wrap:wrap;">
-        <span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#5CDBA4,#3AA4CD);color:#0F2733;font-size:11px;font-weight:800;letter-spacing:.22em;padding:7px 18px;border-radius:24px;text-transform:uppercase;box-shadow:0 6px 18px rgba(92,219,164,0.35);">✦ AI-DRIVEN CONCLUSION</span>
-        <span style="display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:24px;background:rgba(255,255,255,0.10);border:1px solid rgba(168,216,238,0.35);font-size:10px;font-weight:700;color:#A8D8EE;letter-spacing:.08em;">
+        <span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#5CDBA4,#9B8870);color:#3D2E20;font-size:11px;font-weight:800;letter-spacing:.22em;padding:7px 18px;border-radius:24px;text-transform:uppercase;box-shadow:0 6px 18px rgba(92,219,164,0.35);">✦ AI-DRIVEN CONCLUSION</span>
+        <span style="display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:24px;background:rgba(255,255,255,0.10);border:1px solid rgba(229,220,196,0.35);font-size:10px;font-weight:700;color:#E5DCC4;letter-spacing:.08em;">
           <span>AI CONFIDENCE</span>
-          <span style="width:80px;height:5px;background:rgba(255,255,255,0.15);border-radius:3px;overflow:hidden;display:inline-block;"><span style="display:block;height:100%;width:96.5%;background:linear-gradient(90deg,#5CDBA4,#A8D8EE);border-radius:3px;"></span></span>
+          <span style="width:80px;height:5px;background:rgba(255,255,255,0.15);border-radius:3px;overflow:hidden;display:inline-block;"><span style="display:block;height:100%;width:96.5%;background:linear-gradient(90deg,#5CDBA4,#E5DCC4);border-radius:3px;"></span></span>
           <span style="color:#fff;font-size:13px;font-weight:800;">96.5%</span>
         </span>
       </div>
       <h2 style="font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-weight:800;font-size:30px;color:#fff;margin-bottom:14px;line-height:1.3;letter-spacing:-0.02em;">
         AI는 DX 26SS 승부 공식을<br>
-        <span style="background:linear-gradient(90deg,#5CDBA4,#A8D8EE,#FFD08A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">「ACTIVE WELLNESS × 3단 전환 사이클」</span>로 정의했습니다
+        <span style="background:linear-gradient(90deg,#5CDBA4,#E5DCC4,#FFD08A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">「ACTIVE WELLNESS × 3단 전환 사이클」</span>로 정의했습니다
       </h2>
-      <p style="font-size:14px;color:#D6EEF9;max-width:880px;margin:0 auto 28px;line-height:1.85;">
+      <p style="font-size:14px;color:#F3EDDD;max-width:880px;margin:0 auto 28px;line-height:1.85;">
         AI 트렌드 검증으로 도출된 <b style="color:#FFD08A;">ACTIVE WELLNESS</b>를 축으로 설계한 <b style="color:#fff;">변우석 행사 → 닝닝 2차 → 웨이브제인 셀링</b>의 3단 전환 사이클이
-        <b style="color:#5CDBA4;">1차 사이클에서 +266% 매출</b>로 입증됐고, 동일 공식으로 <b style="color:#A8D8EE;">2차 사이클</b>이 가속화되고 있습니다.
+        <b style="color:#5CDBA4;">1차 사이클에서 +266% 매출</b>로 입증됐고, 동일 공식으로 <b style="color:#E5DCC4;">2차 사이클</b>이 가속화되고 있습니다.
         화제성에서 매출까지 끊김 없이 이어지는 풀퍼널이 26SS 시즌 운영의 핵심 자산입니다.
       </p>
 
@@ -316,10 +316,10 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
           <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;">변우석 행사</div>
           <div style="font-size:12px;color:#FEEDC9;line-height:1.55;">액티브 웰니스 + 셀럽 + 느좋남 + 브랜드 버즈 4 후킹 모두 유효 검증</div>
         </div>
-        <div style="background:rgba(107,188,222,0.22);border:1px solid rgba(107,188,222,0.55);border-radius:14px;padding:18px 20px;backdrop-filter:blur(4px);text-align:left;">
-          <div style="font-size:10px;font-weight:800;color:#A8D8EE;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">PHASE 2 · 무드 확산</div>
+        <div style="background:rgba(197,182,154,0.22);border:1px solid rgba(197,182,154,0.55);border-radius:14px;padding:18px 20px;backdrop-filter:blur(4px);text-align:left;">
+          <div style="font-size:10px;font-weight:800;color:#E5DCC4;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">PHASE 2 · 무드 확산</div>
           <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;">닝닝 2차 릴리즈</div>
-          <div style="font-size:12px;color:#D6EEF9;line-height:1.55;">여성 2030 코어 타깃 무드 재집중 · AI 트렌드 기반 콘텐츠 가속</div>
+          <div style="font-size:12px;color:#F3EDDD;line-height:1.55;">여성 2030 코어 타깃 무드 재집중 · AI 트렌드 기반 콘텐츠 가속</div>
         </div>
         <div style="background:rgba(46,170,120,0.22);border:1px solid rgba(46,170,120,0.55);border-radius:14px;padding:18px 20px;backdrop-filter:blur(4px);text-align:left;">
           <div style="font-size:10px;font-weight:800;color:#7EE2B2;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">PHASE 3 · 매출 전환</div>
@@ -333,21 +333,21 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
         <div style="display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;color:#5CDBA4;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;">🧠 AI가 이 공식을 정의한 근거</div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
           <div style="display:flex;gap:10px;">
-            <div style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#5CDBA4,#3AA4CD);color:#0F2733;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(92,219,164,0.3);">1</div>
+            <div style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#5CDBA4,#9B8870);color:#3D2E20;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(92,219,164,0.3);">1</div>
             <div>
               <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:4px;">시장 신호 — 287만+ 누적</div>
               <div style="font-size:11.5px;color:rgba(234,251,243,0.78);line-height:1.6;">웰니스·러닝 SNS 언급 12개월 누적 287만건. 검색 모멘텀 지속 + 액티브 라이프 카테고리 부상.</div>
             </div>
           </div>
           <div style="display:flex;gap:10px;">
-            <div style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#5CDBA4,#3AA4CD);color:#0F2733;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(92,219,164,0.3);">2</div>
+            <div style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#5CDBA4,#9B8870);color:#3D2E20;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(92,219,164,0.3);">2</div>
             <div>
               <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:4px;">제품 적합도 — AI 92pt</div>
               <div style="font-size:11.5px;color:rgba(234,251,243,0.78);line-height:1.6;">DX 26SS RS·WJ 제품군과 액티브 웰니스 무드 적합도 92pt. 러닝>요가>하이킹 — RS와 자연 정합.</div>
             </div>
           </div>
           <div style="display:flex;gap:10px;">
-            <div style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#5CDBA4,#3AA4CD);color:#0F2733;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(92,219,164,0.3);">3</div>
+            <div style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#5CDBA4,#9B8870);color:#3D2E20;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(92,219,164,0.3);">3</div>
             <div>
               <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:4px;">타깃 행동 — 1,100만 / +350%</div>
               <div style="font-size:11.5px;color:rgba(234,251,243,0.78);line-height:1.6;">2030 러닝 인구 1,100만 + #러닝크루 +350% YoY. 자발 인증·바이럴 임계치 돌파한 카테고리.</div>
@@ -359,12 +359,12 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
       <!-- FORWARD: 향후 방향성 결론 -->
       <div style="max-width:960px;margin:0 auto;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.22);border-radius:14px;padding:18px 24px;backdrop-filter:blur(4px);text-align:left;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
         <div style="flex:1;min-width:280px;">
-          <div style="font-size:10px;font-weight:800;color:#A8D8EE;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">⟶ FORWARD · 26SS 시즌 운영 방향</div>
+          <div style="font-size:10px;font-weight:800;color:#E5DCC4;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">⟶ FORWARD · 26SS 시즌 운영 방향</div>
           <div style="font-size:13.5px;color:#EAF6FB;line-height:1.7;">
             동일 공식을 26SS 시즌 내내 일관 운영, 1차 → 2차 사이클 비교로 <b style="color:#5CDBA4;">화제성 → 매출 전환 가속도</b> 정량 트래킹.
           </div>
         </div>
-        <div style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:24px;background:linear-gradient(135deg,rgba(92,219,164,0.22),rgba(58,164,205,0.18));color:#5CDBA4;font-size:11px;font-weight:800;letter-spacing:.1em;border:1px solid rgba(92,219,164,0.4);">NEXT → Phase 2·3 가속</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:24px;background:linear-gradient(135deg,rgba(92,219,164,0.22),rgba(155,136,112,0.18));color:#5CDBA4;font-size:11px;font-weight:800;letter-spacing:.1em;border:1px solid rgba(92,219,164,0.4);">NEXT → Phase 2·3 가속</div>
       </div>
     </div>
   </div>
