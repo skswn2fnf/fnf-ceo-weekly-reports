@@ -8,15 +8,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <style>
 :root {
-  --s0:#F7F3EB; --s1:#EFE8D6; --s2:#CDC2A7; --s3:#A89678; --s4:#7D6957; --s5:#625349;
-  --bg:#F4F0E6; --white:#fff;
-  --t1:#1F1812; --t2:#3D332D; --t3:#5C4F45; --t4:#8B7D6E;
-  --bdr:rgba(98,83,73,0.18); --bdr2:rgba(98,83,73,0.38);
-  --grn:#B87E3A; --grn-bg:#FDF3E3; --grn-t:#5C3811;
-  --red:#8B5A47; --red-bg:#F5EDE0; --red-t:#5C2A1E;
-  --amb:#D4882A; --amb-bg:#FDF3E3; --amb-t:#7A3E00;
-  --lav:#A89678; --lav-bg:#EFE8D6;
-  --rad:14px; --sh:0 2px 18px rgba(98,83,73,0.10);
+  --s0:#FDFBF6; --s1:#F5EFE0; --s2:#CDC2A7; --s3:#B5A98C; --s4:#82785F; --s5:#625349;
+  --bg:#FDFBF6; --white:#fff;
+  --t1:#5A4D40; --t2:#6B5C50; --t3:#82785F; --t4:#CDC2A7;
+  --bdr:rgba(130,120,95,0.18); --bdr2:rgba(130,120,95,0.38);
+  --grn:#82785F; --grn-bg:#F5EFE0; --grn-t:#4A3F37;
+  --red:#82785F; --red-bg:#F5EFE0; --red-t:#4A3F37;
+  --amb:#82785F; --amb-bg:#F5EFE0; --amb-t:#4A3F37;
+  --lav:#82785F; --lav-bg:#F5EFE0;
+  --rad:14px; --sh:0 2px 18px rgba(130,120,95,0.10);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: var(--t1); font-size: 14px; }
@@ -34,14 +34,14 @@ body { min-height: 100vh; }
 .hdr-sub { font-size: 13px; font-weight: 500; color: var(--t3); letter-spacing: 0.04em; }
 .hdr-pills { display: flex; align-items: center; gap: 6px; }
 .pill { background: var(--s1); color: var(--s5); font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 20px; border: 1px solid var(--bdr2); }
-.pill-grn { background: var(--grn-bg); color: var(--grn); font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(184,126,58,0.30); }
-.pill-week { background: var(--amb-bg); color: var(--amb); font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(212,136,42,0.32); }
-.pill-draft { background: #EFE8D6; color: var(--lav); font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(168,150,120,0.32); }
+.pill-grn { background: var(--grn-bg); color: var(--grn); font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(130,120,95,0.30); }
+.pill-week { background: var(--amb-bg); color: var(--amb); font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(130,120,95,0.32); }
+.pill-draft { background: #F5EFE0; color: var(--lav); font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(181,169,140,0.32); }
 
 /* ── TAB BAR ───────────────────────────────────── */
 .tab-bar {
   background: var(--white); border-bottom: 1px solid var(--bdr);
-  display: flex; box-shadow: 0 2px 16px rgba(98,83,73,0.06);
+  display: flex; box-shadow: 0 2px 16px rgba(130,120,95,0.06);
   position: sticky; top: 64px; z-index: 100;
 }
 .tab-btn {
@@ -68,8 +68,8 @@ body { min-height: 100vh; }
 .main { max-width: 1340px; margin: 0 auto; padding: 28px 40px 80px; }
 
 /* ── HERO ───────────────────────────────────── */
-.hero { background: linear-gradient(135deg, #3D332D 0%, #4A3E36 50%, #625349 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(168,150,120,0.18), transparent 65%); pointer-events: none; }
+.hero { background: linear-gradient(135deg, #5A4D40 0%, #625349 50%, #625349 100%); border-radius: 20px; padding: 34px 42px; margin-bottom: 24px; color: #fff; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(181,169,140,0.18), transparent 65%); pointer-events: none; }
 .hero-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--s2); margin-bottom: 12px; }
 .hero-title { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 26px; color: #fff; line-height: 1.45; margin-bottom: 14px;  font-weight: 800; letter-spacing: -0.02em; }
 .hero-body { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.85; margin-bottom: 24px; max-width: 920px; }
@@ -83,25 +83,25 @@ body { min-height: 100vh; }
 
 /* ━━━ HERO V2 — 키워드 중심 구조 (메가 키워드 → 메타 칩 → CORE PROPOSITION) ━━━ */
 .hero-badge-wrap { text-align: center; margin-bottom: 20px; }
-.hero-badge { display: inline-block; padding: 6px 18px; background: linear-gradient(90deg, rgba(205,194,167,0.20), rgba(212,136,42,0.20)); border: 1px solid rgba(205,194,167,0.45); border-radius: 30px; font-size: 11px; font-weight: 800; letter-spacing: 0.20em; color: #fff; text-transform: uppercase; }
+.hero-badge { display: inline-block; padding: 6px 18px; background: linear-gradient(90deg, rgba(205,194,167,0.20), rgba(130,120,95,0.20)); border: 1px solid rgba(205,194,167,0.45); border-radius: 30px; font-size: 11px; font-weight: 800; letter-spacing: 0.20em; color: #fff; text-transform: uppercase; }
 .hero-mega-wrap { text-align: center; margin-bottom: 26px; position: relative; z-index: 1; }
 .hero-mega-eye { font-size: 12px; font-weight: 800; letter-spacing: 0.18em; color: #CDC2A7; margin-bottom: 10px; text-transform: uppercase; }
-.hero-mega { font-size: 54px; font-weight: 900; letter-spacing: -0.03em; background: linear-gradient(90deg, #FFD08A 0%, #CDC2A7 50%, #FFD08A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; margin: 0 0 12px; }
+.hero-mega { font-size: 54px; font-weight: 900; letter-spacing: -0.03em; background: linear-gradient(90deg, #CDC2A7 0%, #CDC2A7 50%, #CDC2A7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; margin: 0 0 12px; }
 .hero-mega-sub { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.80); letter-spacing: 0.01em; line-height: 1.6; max-width: 760px; margin: 0 auto; }
 .hero-mega-sub b { color: #fff; font-weight: 700; }
 .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px; position: relative; z-index: 1; }
 .hero-chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); border-radius: 24px; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.92); backdrop-filter: blur(6px); white-space: nowrap; }
 .hero-chip b { color: #fff; font-weight: 800; margin-left: 2px; }
 .hero-chip-icon { font-size: 14px; }
-.hero-core { background: rgba(45,37,32,0.55); border: 1px solid rgba(205,194,167,0.28); border-radius: 18px; padding: 28px 36px; text-align: center; position: relative; backdrop-filter: blur(6px); }
+.hero-core { background: rgba(90,77,64,0.55); border: 1px solid rgba(205,194,167,0.28); border-radius: 18px; padding: 28px 36px; text-align: center; position: relative; backdrop-filter: blur(6px); }
 .hero-core-deco { display: block; font-size: 10px; color: rgba(205,194,167,0.40); letter-spacing: 0.6em; text-align: center; }
 .hero-core-deco.top { margin-bottom: 14px; }
 .hero-core-deco.bot { margin-top: 14px; }
-.hero-core-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; color: #FFD08A; margin-bottom: 16px; text-transform: uppercase; }
+.hero-core-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; color: #CDC2A7; margin-bottom: 16px; text-transform: uppercase; }
 .hero-core-msg { font-size: 17px; font-weight: 500; color: rgba(255,255,255,0.92); line-height: 1.85; }
 .hero-core-msg b { font-weight: 800; color: #fff; }
-.hero-core-msg b.hl { background: linear-gradient(90deg, #FFD08A, #CDC2A7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
-.hero-core-msg b.hl-a { background: linear-gradient(90deg, #FFD08A, #FF9C5C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.hero-core-msg b.hl { background: linear-gradient(90deg, #CDC2A7, #CDC2A7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.hero-core-msg b.hl-a { background: linear-gradient(90deg, #CDC2A7, #B5A98C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
 
 @media (max-width: 900px) {
   .hero-mega { font-size: 38px; }
@@ -110,15 +110,14 @@ body { min-height: 100vh; }
 }
 
 /* ── SECTION LABEL ─────────────────────────── */
-.sec { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; color: var(--t1); margin: 40px 0 18px; display: flex; align-items: center; gap: 12px; }
-.sec::before { content: ''; display: block; width: 5px; height: 22px; background: linear-gradient(180deg, #D4882A, #B87E3A); border-radius: 2px; }
-.sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); margin-left: 4px; }
+.sec { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); margin: 36px 0 16px; display: flex; align-items: center; gap: 10px; }
+.sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); }
 
 /* ── KPI ─────────────────────────────────── */
 .kpi4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 20px; }
 .kpi { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 20px 22px; box-shadow: var(--sh); position: relative; overflow: hidden; }
 .kpi::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--s2), var(--s4)); border-radius: var(--rad) var(--rad) 0 0; }
-.kpi.hl::after { background: linear-gradient(90deg, var(--grn), #FFD08A); }
+.kpi.hl::after { background: linear-gradient(90deg, var(--grn), #CDC2A7); }
 .kl { font-size: 12px; color: var(--t3); margin-bottom: 6px; }
 .kv { font-size: 28px; font-weight: 700; color: var(--t1); letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
 .kv-lg { font-size: 30px; }
@@ -131,7 +130,7 @@ body { min-height: 100vh; }
 /* ── CARD ───────────────────────────────── */
 .card { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px 24px; box-shadow: var(--sh); }
 .card + .card { margin-top: 16px; }
-.card-t { font-size: 18px; font-weight: 800; color: var(--t1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid var(--bdr); letter-spacing: -0.01em; }
+.card-t { font-size: 15px; font-weight: 700; color: var(--t1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid var(--bdr); letter-spacing: -0.01em; }
 
 /* ── INSIGHT ───────────────────────────── */
 .ins   { background: var(--s0);     border-left: 3px solid var(--s4);  border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--t2);   line-height: 1.7; }
@@ -157,9 +156,9 @@ body { min-height: 100vh; }
 /* ── TAB1 FLOW DIAGRAM ─────────────────── */
 .flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 24px; box-shadow: var(--sh); }
 .flow-step { padding: 16px 18px; border-radius: 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-.flow-step.p1 { background: linear-gradient(160deg, #FDF3E3, #F8E7C0); }
-.flow-step.p2 { background: linear-gradient(160deg, #EFE8D6, #B8DDF0); }
-.flow-step.p3 { background: linear-gradient(160deg, #FDF3E3, #FBE2BD); }
+.flow-step.p1 { background: linear-gradient(160deg, #F5EFE0, #F8E7C0); }
+.flow-step.p2 { background: linear-gradient(160deg, #F5EFE0, #B8DDF0); }
+.flow-step.p3 { background: linear-gradient(160deg, #F5EFE0, #F5EFE0); }
 .flow-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
 .flow-step.p1 .flow-tag { color: var(--amb); }
 .flow-step.p2 .flow-tag { color: var(--s5); }
@@ -178,63 +177,63 @@ body { min-height: 100vh; }
 
 /* ── TAB3 AI BRIDGE 2-COL ─────────────── */
 .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-/* AI FLOW (03 · AI 기반 무드 강화 — 4단 카드 플로우) */
-.ai-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; margin-bottom: 16px; }
-.ai-step { background: var(--s0); border: 1px solid var(--bdr); border-radius: 14px; padding: 20px 18px; position: relative; }
-.ai-step-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: var(--s5); padding: 3px 10px; border-radius: 5px; margin-bottom: 10px; text-transform: uppercase; }
-.ai-step-title { font-size: 17px; font-weight: 800; color: var(--t1); margin-bottom: 6px; letter-spacing: -0.015em; }
-.ai-step-desc { font-size: 12px; color: var(--t3); line-height: 1.65; margin-bottom: 14px; }
-.ai-flow-arrow { display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--t4); padding: 0 8px; font-weight: 700; }
+/* AI FLOW (03 · AI 기반 무드 강화 — 4단 카드 플로우) — 1/2 압축 버전 */
+.ai-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; margin-bottom: 10px; }
+.ai-step { background: var(--s0); border: 1px solid var(--bdr); border-radius: 10px; padding: 10px 12px; position: relative; }
+.ai-step-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #fff; background: var(--s5); padding: 2px 8px; border-radius: 4px; margin-bottom: 5px; text-transform: uppercase; }
+.ai-step-title { font-size: 13px; font-weight: 800; color: var(--t1); margin-bottom: 3px; letter-spacing: -0.015em; line-height: 1.25; }
+.ai-step-desc { font-size: 10.5px; color: var(--t3); line-height: 1.4; margin-bottom: 6px; }
+.ai-flow-arrow { display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--t4); padding: 0 5px; font-weight: 700; }
 
 /* Step 1: Keyword pool */
-.keyword-pool { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
-.keyword { background: var(--white); border: 1px solid var(--bdr); color: var(--t2); font-size: 12px; font-weight: 500; padding: 4px 11px; border-radius: 20px; }
-.keyword.highlight { background: var(--amb-bg); border-color: rgba(212,136,42,0.55); color: var(--amb-t); font-weight: 700; }
+.keyword-pool { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+.keyword { background: var(--white); border: 1px solid var(--bdr); color: var(--t2); font-size: 10.5px; font-weight: 500; padding: 2px 8px; border-radius: 14px; }
+.keyword.highlight { background: var(--amb-bg); border-color: rgba(130,120,95,0.55); color: var(--amb-t); font-weight: 700; }
 .keyword.highlight::before { content: '★ '; }
-.keyword.brand { background: var(--lav-bg); border-color: rgba(168,150,120,0.45); color: var(--lav); font-weight: 700; }
+.keyword.brand { background: var(--lav-bg); border-color: rgba(181,169,140,0.45); color: var(--lav); font-weight: 700; }
 .keyword.brand::before { content: '◆ '; }
-.keyword-metric { display: inline-block; margin-left: 5px; padding: 1px 6px; font-size: 10px; font-weight: 700; color: var(--t3); background: rgba(0,0,0,0.05); border-radius: 4px; vertical-align: middle; letter-spacing: 0.02em; }
-.keyword.highlight .keyword-metric { color: var(--amb-t); background: rgba(212,136,42,0.18); }
-.keyword.brand .keyword-metric { color: var(--lav); background: rgba(168,150,120,0.16); }
-.crawl-meta { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 10px 0 12px; padding: 10px 12px; background: var(--white); border: 1px solid var(--bdr); border-radius: 8px; font-size: 11px; line-height: 1.5; }
+.keyword-metric { display: inline-block; margin-left: 3px; padding: 0 5px; font-size: 9px; font-weight: 700; color: var(--t3); background: rgba(0,0,0,0.05); border-radius: 3px; vertical-align: middle; letter-spacing: 0.02em; }
+.keyword.highlight .keyword-metric { color: var(--amb-t); background: rgba(130,120,95,0.18); }
+.keyword.brand .keyword-metric { color: var(--lav); background: rgba(181,169,140,0.16); }
+.crawl-meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; margin: 5px 0 6px; padding: 5px 8px; background: var(--white); border: 1px solid var(--bdr); border-radius: 6px; font-size: 10px; line-height: 1.3; }
 .crawl-meta-lbl { color: var(--s5); font-weight: 700; letter-spacing: 0.04em; }
 .crawl-meta-val { color: var(--t2); font-weight: 500; }
 
 /* SCORE BARS (STEP 02/03 정량 평가) */
-.score-grid { display: grid; gap: 6px; margin-top: 12px; }
-.score-row { display: grid; grid-template-columns: 80px 1fr 38px; gap: 8px; align-items: center; font-size: 11px; }
+.score-grid { display: grid; gap: 3px; margin-top: 5px; }
+.score-row { display: grid; grid-template-columns: 70px 1fr 32px; gap: 6px; align-items: center; font-size: 10px; }
 .score-lbl { color: var(--t3); font-weight: 600; letter-spacing: 0.02em; }
-.score-bar { height: 6px; background: var(--white); border: 1px solid var(--bdr); border-radius: 3px; overflow: hidden; }
-.score-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--s3), var(--s5)); border-radius: 3px; }
+.score-bar { height: 4px; background: var(--white); border: 1px solid var(--bdr); border-radius: 2px; overflow: hidden; }
+.score-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--s3), var(--s5)); border-radius: 2px; }
 .score-bar.brand span { background: linear-gradient(90deg, #B8A8E8, var(--lav)); }
-.score-val { font-size: 11px; font-weight: 800; color: var(--s5); text-align: right; }
+.score-val { font-size: 10px; font-weight: 800; color: var(--s5); text-align: right; }
 .score-bar.brand ~ .score-val { color: var(--lav); }
-.ai-selected-total { margin-top: 10px; padding: 7px 12px; background: var(--amb-bg); border: 1px solid rgba(212,136,42,0.30); border-radius: 6px; font-size: 11px; font-weight: 800; color: var(--amb-t); text-align: center; letter-spacing: 0.02em; }
-.combine-result { margin-top: 8px; padding: 7px 12px; background: var(--grn-bg); border: 1px solid rgba(184,126,58,0.25); border-radius: 6px; font-size: 11px; font-weight: 700; color: var(--grn-t); text-align: center; }
-.keyword-note { font-size: 11px; color: var(--t4); font-style: italic; line-height: 1.5; }
+.ai-selected-total { margin-top: 5px; padding: 4px 8px; background: var(--amb-bg); border: 1px solid rgba(130,120,95,0.30); border-radius: 5px; font-size: 10px; font-weight: 800; color: var(--amb-t); text-align: center; letter-spacing: 0.02em; }
+.combine-result { margin-top: 5px; padding: 4px 8px; background: var(--grn-bg); border: 1px solid rgba(130,120,95,0.25); border-radius: 5px; font-size: 10px; font-weight: 700; color: var(--grn-t); text-align: center; }
+.keyword-note { font-size: 10px; color: var(--t4); font-style: italic; line-height: 1.35; }
 
 /* Step 2: Selected */
-.ai-selected { background: var(--white); border-radius: 10px; padding: 16px 14px; text-align: center; }
-.ai-selected-cluster { font-size: 11px; font-weight: 700; color: var(--s5); letter-spacing: 0.04em; padding: 4px 10px; background: var(--s1); border-radius: 5px; display: inline-block; margin-bottom: 8px; }
-.ai-selected-arrow { font-size: 18px; color: var(--t4); margin: 4px 0; }
-.ai-selected-keyword { font-size: 22px; font-weight: 900; color: var(--amb); letter-spacing: -0.02em; margin-bottom: 6px; }
+.ai-selected { background: var(--white); border-radius: 8px; padding: 8px 10px; text-align: center; }
+.ai-selected-cluster { font-size: 10px; font-weight: 700; color: var(--s5); letter-spacing: 0.04em; padding: 2px 7px; background: var(--s1); border-radius: 4px; display: inline-block; margin-bottom: 4px; }
+.ai-selected-arrow { font-size: 13px; color: var(--t4); margin: 2px 0; }
+.ai-selected-keyword { font-size: 16px; font-weight: 900; color: var(--amb); letter-spacing: -0.02em; margin-bottom: 3px; }
 .ai-selected-keyword::before { content: '★ '; }
-.ai-selected-rationale { font-size: 11px; color: var(--t3); font-weight: 500; line-height: 1.5; }
+.ai-selected-rationale { font-size: 10px; color: var(--t3); font-weight: 500; line-height: 1.35; }
 
 /* Step 3: Combined */
-.ai-combine { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--white); border-radius: 10px; padding: 18px 12px; margin-bottom: 8px; }
-.ai-combine-a { font-size: 14px; font-weight: 800; color: var(--amb-t); padding: 6px 12px; background: var(--amb-bg); border-radius: 6px; border: 1px solid rgba(212,136,42,0.35); white-space: nowrap; }
-.ai-combine-x { font-size: 18px; color: var(--t3); font-weight: 700; }
-.ai-combine-b { font-size: 14px; font-weight: 800; color: var(--s5); padding: 6px 12px; background: var(--s1); border-radius: 6px; border: 1px solid var(--bdr2); white-space: nowrap; }
-.ai-combine-note { font-size: 11px; color: var(--t3); text-align: center; line-height: 1.5; font-weight: 500; }
+.ai-combine { display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--white); border-radius: 8px; padding: 9px 8px; margin-bottom: 5px; }
+.ai-combine-a { font-size: 11.5px; font-weight: 800; color: var(--amb-t); padding: 3px 9px; background: var(--amb-bg); border-radius: 5px; border: 1px solid rgba(130,120,95,0.35); white-space: nowrap; }
+.ai-combine-x { font-size: 13px; color: var(--t3); font-weight: 700; }
+.ai-combine-b { font-size: 11.5px; font-weight: 800; color: var(--s5); padding: 3px 9px; background: var(--s1); border-radius: 5px; border: 1px solid var(--bdr2); white-space: nowrap; }
+.ai-combine-note { font-size: 10px; color: var(--t3); text-align: center; line-height: 1.35; font-weight: 500; }
 
 /* Step 4: Result */
-.ai-result { display: flex; gap: 16px; align-items: center; background: linear-gradient(135deg, var(--grn-bg), #FBE2BD); border: 1px solid rgba(184,126,58,0.30); border-radius: 14px; padding: 20px 24px; }
-.ai-result-icon { font-size: 36px; flex-shrink: 0; }
+.ai-result { display: flex; gap: 10px; align-items: center; background: linear-gradient(135deg, var(--grn-bg), #F5EFE0); border: 1px solid rgba(130,120,95,0.30); border-radius: 10px; padding: 10px 14px; }
+.ai-result-icon { font-size: 24px; flex-shrink: 0; }
 .ai-result-content { flex: 1; }
-.ai-result-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: var(--grn); padding: 3px 10px; border-radius: 5px; margin-bottom: 6px; text-transform: uppercase; }
-.ai-result-title { font-size: 16px; font-weight: 800; color: var(--grn-t); margin-bottom: 6px; letter-spacing: -0.01em; }
-.ai-result-desc { font-size: 13px; color: var(--grn-t); line-height: 1.75; }
+.ai-result-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #fff; background: var(--grn); padding: 2px 8px; border-radius: 4px; margin-bottom: 3px; text-transform: uppercase; }
+.ai-result-title { font-size: 13px; font-weight: 800; color: var(--grn-t); margin-bottom: 3px; letter-spacing: -0.01em; }
+.ai-result-desc { font-size: 11.5px; color: var(--grn-t); line-height: 1.45; }
 .ai-result-desc b { color: var(--grn-t); font-weight: 800; }
 
 
@@ -242,7 +241,7 @@ body { min-height: 100vh; }
 .yoy { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 24px; box-shadow: var(--sh); align-items: stretch; }
 .yoy-side { padding: 16px 22px; border-radius: 12px; }
 .yoy-side.prev { background: var(--s0); }
-.yoy-side.curr { background: linear-gradient(160deg, #FDF3E3, #FBE2BD); }
+.yoy-side.curr { background: linear-gradient(160deg, #F5EFE0, #F5EFE0); }
 .yoy-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--t3); margin-bottom: 8px; }
 .yoy-side.curr .yoy-tag { color: var(--grn); }
 .yoy-val { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 32px; color: var(--t1); margin-bottom: 4px; line-height: 1.1;  font-weight: 900; letter-spacing: -0.02em; }
@@ -285,23 +284,23 @@ body { min-height: 100vh; }
 .video-card video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
 .video-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .video-badge { position: absolute; top: 10px; left: 10px; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 5px; color: #fff; letter-spacing: 0.08em; backdrop-filter: blur(4px); text-transform: uppercase; }
-.video-badge.interview { background: rgba(212,136,42,.88); }
-.video-badge.meme { background: rgba(98,83,73,.88); }
+.video-badge.interview { background: rgba(130,120,95,.88); }
+.video-badge.meme { background: rgba(130,120,95,.88); }
 .video-num { position: absolute; top: 10px; right: 10px; font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 13px; color: #fff; background: rgba(0,0,0,.55); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);  font-weight: 800; }
 .video-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 12px 10px; background: linear-gradient(to top, rgba(0,0,0,.85), transparent); color: rgba(255,255,255,0.96); font-size: 11px; line-height: 1.4; font-weight: 500; }
 .video-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 12px; color: var(--t3); }
 .video-meta b { color: var(--t1); font-weight: 700; }
 .video-legend { display: inline-flex; align-items: center; gap: 12px; font-size: 11px; color: var(--t3); }
 .video-legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
-.video-legend .dot.interview { background: rgba(212,136,42,.88); }
-.video-legend .dot.meme { background: rgba(98,83,73,.88); }
-.video-legend .dot.fan { background: rgba(168,150,120,.88); }
-.video-fan-tag { position: absolute; top: 10px; right: 10px; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 5px; color: #fff; letter-spacing: 0.08em; backdrop-filter: blur(4px); text-transform: uppercase; background: rgba(168,150,120,.88); }
+.video-legend .dot.interview { background: rgba(130,120,95,.88); }
+.video-legend .dot.meme { background: rgba(130,120,95,.88); }
+.video-legend .dot.fan { background: rgba(181,169,140,.88); }
+.video-fan-tag { position: absolute; top: 10px; right: 10px; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 5px; color: #fff; letter-spacing: 0.08em; backdrop-filter: blur(4px); text-transform: uppercase; background: rgba(181,169,140,.88); }
 
 /* ── PRODUCT GRID (닝닝 착장 상품 누끼컷) ── */
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .product-card { background: var(--s0); border: 1px solid var(--bdr); border-radius: 10px; padding: 10px; transition: transform 0.2s, box-shadow 0.2s; }
-.product-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(98,83,73,0.15); }
+.product-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(130,120,95,0.15); }
 .product-img-wrap { background: var(--white); border-radius: 6px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .product-img-wrap img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 .product-meta { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; }
@@ -312,19 +311,19 @@ body { min-height: 100vh; }
 .thumb-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
 .thumb-grid.cols-7 { grid-template-columns: repeat(7, 1fr); gap: 8px; }
 .thumb-card { position: relative; border-radius: 10px; overflow: hidden; background: var(--s0); border: 1px solid var(--bdr); transition: transform 0.2s, box-shadow 0.2s; }
-.thumb-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(98,83,73,0.18); }
+.thumb-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(130,120,95,0.18); }
 .thumb-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
 .thumb-card figcaption { font-size: 11px; color: var(--t2); padding: 6px 8px; background: var(--white); border-top: 1px solid var(--bdr); text-align: center; font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.thumb-card.star { border-color: rgba(212,136,42,0.45); }
+.thumb-card.star { border-color: rgba(130,120,95,0.45); }
 .thumb-card.star figcaption { background: var(--amb-bg); color: var(--amb-t); }
 .thumb-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 12px; color: var(--t3); }
 .thumb-meta b { color: var(--t1); font-weight: 700; }
 .thumb-legend { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--t3); }
 .thumb-legend .dot { width: 10px; height: 10px; border-radius: 3px; border: 1px solid; }
-.thumb-legend .dot.star { background: var(--amb-bg); border-color: rgba(212,136,42,0.45); }
+.thumb-legend .dot.star { background: var(--amb-bg); border-color: rgba(130,120,95,0.45); }
 
 /* ── DRAFT BANNER ─────────────────────── */
-.draft-banner { background: var(--lav-bg); border-bottom: 1px solid rgba(168,150,120,0.20); padding: 8px 40px; font-size: 12px; color: var(--lav); display: flex; align-items: center; gap: 10px; }
+.draft-banner { background: var(--lav-bg); border-bottom: 1px solid rgba(181,169,140,0.20); padding: 8px 40px; font-size: 12px; color: var(--lav); display: flex; align-items: center; gap: 10px; }
 .draft-banner b { font-weight: 700; }
 
 
@@ -360,7 +359,7 @@ body { min-height: 100vh; }
 /* ── 인플 3인 카드 ── */
 .infl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
 .infl-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; overflow: hidden; box-shadow: var(--sh); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
-.infl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(98,83,73,0.18); }
+.infl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(130,120,95,0.18); }
 .infl-photo { background: #EAEAEA; aspect-ratio: 4/5; flex-shrink: 0; width: 100%; display: flex; align-items: center; justify-content: center; color: var(--t4); border-bottom: 1px solid var(--bdr); position: relative; overflow: hidden; }
 .infl-photo img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .infl-photo-icon { font-size: 36px; opacity: 0.4; margin-bottom: 6px; }
@@ -377,18 +376,18 @@ body { min-height: 100vh; }
 .infl-rationale b { color: var(--t1); font-weight: 700; }
 
 /* ── 활용 채널 카드 ── */
-.channel-card { background: linear-gradient(135deg, var(--lav-bg), var(--white)); border: 1px solid rgba(168,150,120,0.30); border-radius: 12px; padding: 16px 20px; }
+.channel-card { background: linear-gradient(135deg, var(--lav-bg), var(--white)); border: 1px solid rgba(181,169,140,0.30); border-radius: 12px; padding: 16px 20px; }
 .channel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; flex-wrap: wrap; }
 .channel-title { font-size: 13px; font-weight: 800; color: var(--t1); }
-.channel-config { font-size: 11px; font-weight: 700; color: var(--lav); padding: 3px 10px; background: rgba(168,150,120,0.14); border-radius: 5px; letter-spacing: 0.02em; }
+.channel-config { font-size: 11px; font-weight: 700; color: var(--lav); padding: 3px 10px; background: rgba(181,169,140,0.14); border-radius: 5px; letter-spacing: 0.02em; }
 .channel-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.channel-tag { font-size: 11px; font-weight: 600; padding: 5px 11px; background: var(--white); border: 1px solid rgba(168,150,120,0.30); border-radius: 20px; color: var(--lav); }
+.channel-tag { font-size: 11px; font-weight: 600; padding: 5px 11px; background: var(--white); border: 1px solid rgba(181,169,140,0.30); border-radius: 20px; color: var(--lav); }
 
 
 /* ── PRODUCT SPEC (메인/서브 상품) ── */
 .product-spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .product-spec-card { background: var(--white); border: 1px solid var(--bdr); border-radius: 14px; padding: 22px 24px; position: relative; box-shadow: var(--sh); }
-.product-spec-card.main { background: linear-gradient(135deg, var(--grn-bg), #FBE2BD); border-color: rgba(184,126,58,0.30); }
+.product-spec-card.main { background: linear-gradient(135deg, var(--grn-bg), #F5EFE0); border-color: rgba(130,120,95,0.30); }
 .product-spec-card.main::before { content: '★ MKT MAIN'; position: absolute; top: 16px; right: 18px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 5px; background: var(--grn); color: #fff; }
 .product-spec-card.sub::before { content: 'MKT SUB'; position: absolute; top: 16px; right: 18px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 5px; background: var(--s4); color: #fff; }
 .spec-name { font-size: 22px; font-weight: 800; color: var(--t1); margin-bottom: 2px; letter-spacing: -0.02em; }
@@ -398,10 +397,10 @@ body { min-height: 100vh; }
 .spec-data-val { font-size: 18px; font-weight: 800; color: var(--t1); letter-spacing: -0.01em; }
 .spec-data-lbl { font-size: 10px; color: var(--t3); margin-top: 2px; letter-spacing: 0.04em; }
 .spec-colorways { display: grid; gap: 8px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); }
-.product-spec-card.main .spec-colorways { grid-template-columns: repeat(3, 1fr); border-top-color: rgba(184,126,58,0.25); }
+.product-spec-card.main .spec-colorways { grid-template-columns: repeat(3, 1fr); border-top-color: rgba(130,120,95,0.25); }
 .product-spec-card.sub .spec-colorways { grid-template-columns: repeat(3, 1fr); }
 .colorway-mini { background: var(--white); border: 1px solid var(--bdr); border-radius: 6px; padding: 5px; }
-.product-spec-card.main .colorway-mini { background: rgba(255,255,255,0.7); border-color: rgba(184,126,58,0.25); }
+.product-spec-card.main .colorway-mini { background: rgba(255,255,255,0.7); border-color: rgba(130,120,95,0.25); }
 .colorway-mini img { width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block; }
 .colorway-mini-lbl { display: block; text-align: center; font-size: 9px; color: var(--t3); margin-top: 2px; font-family: 'SF Mono', 'Menlo', monospace; font-weight: 600; letter-spacing: 0.04em; }
 .product-spec-card { display: flex; flex-direction: column; }
@@ -413,7 +412,7 @@ body { min-height: 100vh; }
 .shorts-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
 .shorts-card { width: 100%; aspect-ratio: 9 / 16; background: #1a1a1a; border-radius: 12px; overflow: hidden; position: relative; }
 .shorts-card video, .shorts-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.shorts-card .shorts-badge { position: absolute; top: 6px; left: 6px; font-size: 8px; font-weight: 700; color: #fff; background: rgba(212,136,42,.88); padding: 2px 6px; border-radius: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
+.shorts-card .shorts-badge { position: absolute; top: 6px; left: 6px; font-size: 8px; font-weight: 700; color: #fff; background: rgba(130,120,95,.88); padding: 2px 6px; border-radius: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
 .shorts-card .shorts-cap { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 7px 5px; background: linear-gradient(to top, rgba(0,0,0,.85), transparent); color: #fff; font-size: 9px; font-weight: 500; }
 .strategy-icon { font-size: 26px; margin-bottom: 6px; }
 .strategy-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; background: var(--amb-bg); color: var(--amb-t); margin-bottom: 6px; letter-spacing: 0.06em; text-transform: uppercase; }
@@ -426,7 +425,7 @@ body { min-height: 100vh; }
 .strategy-videos { display: flex; gap: 8px; margin-top: 12px; }
 .strategy-videos > .video-card { width: 136px !important; max-width: 136px !important; flex-shrink: 0; flex-grow: 0; aspect-ratio: 9/16; }
 .lifestyle-card { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 3/4; background: var(--s0); border: 1px solid var(--bdr); }
-.lifestyle-card.star { border-color: rgba(212,136,42,0.40); }
+.lifestyle-card.star { border-color: rgba(130,120,95,0.40); }
 .lifestyle-card.star::after { content: '★'; position: absolute; top: 3px; right: 3px; font-size: 9px; color: #fff; background: var(--amb); padding: 1px 5px; border-radius: 3px; font-weight: 700; }
 .lifestyle-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
@@ -452,50 +451,50 @@ body { min-height: 100vh; }
 
 
 /* AI-DRIVEN CONCLUSION (Phase 결론 카드 — V15 패턴 응용) */
-.ai-conclusion { background: linear-gradient(135deg, #3D332D 0%, #4A3E36 45%, #625349 100%); border-radius: 20px; padding: 38px 42px; margin: 36px 0 12px; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(45,37,32,0.30); }
-.ai-conclusion::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(168,150,120,0.28), transparent 70%); pointer-events: none; }
-.ai-conclusion::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(184,126,58,0.20), transparent 70%); pointer-events: none; }
+.ai-conclusion { background: linear-gradient(135deg, #5A4D40 0%, #625349 45%, #625349 100%); border-radius: 20px; padding: 38px 42px; margin: 36px 0 12px; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(90,77,64,0.30); }
+.ai-conclusion::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(181,169,140,0.28), transparent 70%); pointer-events: none; }
+.ai-conclusion::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(130,120,95,0.20), transparent 70%); pointer-events: none; }
 .ai-conclusion-inner { position: relative; z-index: 2; text-align: center; }
-.ai-conclusion-tag { display: inline-block; background: rgba(255,208,138,0.22); color: #FFD08A; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; padding: 6px 18px; border-radius: 24px; border: 1px solid rgba(255,208,138,0.5); text-transform: uppercase; margin-bottom: 18px; }
+.ai-conclusion-tag { display: inline-block; background: rgba(205,194,167,0.22); color: #CDC2A7; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; padding: 6px 18px; border-radius: 24px; border: 1px solid rgba(205,194,167,0.5); text-transform: uppercase; margin-bottom: 18px; }
 .ai-conclusion-title { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 14px; line-height: 1.35; letter-spacing: -0.02em; }
-.ai-conclusion-title .hl { background: linear-gradient(90deg, #FFD08A, #CDC2A7, #FFD08A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
-.ai-conclusion-body { font-size: 14px; color: #EFE8D6; max-width: 920px; margin: 0 auto 24px; line-height: 1.85; }
-.ai-conclusion-body b.g { color: #FFD08A; font-weight: 700; }
-.ai-conclusion-body b.a { color: #FFD08A; font-weight: 700; }
+.ai-conclusion-title .hl { background: linear-gradient(90deg, #CDC2A7, #CDC2A7, #CDC2A7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.ai-conclusion-body { font-size: 14px; color: #F5EFE0; max-width: 920px; margin: 0 auto 24px; line-height: 1.85; }
+.ai-conclusion-body b.g { color: #CDC2A7; font-weight: 700; }
+.ai-conclusion-body b.a { color: #CDC2A7; font-weight: 700; }
 .ai-conclusion-body b.b { color: #CDC2A7; font-weight: 700; }
 .ai-conclusion-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 1100px; margin: 0 auto; }
 .ai-conclusion-flow { display: flex; align-items: center; justify-content: center; gap: 10px; max-width: 880px; margin: 0 auto 20px; flex-wrap: wrap; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #CDC2A7; }
 .ai-conclusion-flow span.step { padding: 4px 12px; background: rgba(205,194,167,0.12); border: 1px solid rgba(205,194,167,0.35); border-radius: 20px; }
 .ai-conclusion-flow span.arrow { color: rgba(205,194,167,0.6); font-size: 14px; }
 .ai-conclusion-cell { border-radius: 14px; padding: 18px 18px 16px; backdrop-filter: blur(4px); text-align: left; }
-.ai-conclusion-cell.blue { background: rgba(168,150,120,0.22); border: 1px solid rgba(168,150,120,0.55); }
-.ai-conclusion-cell.amber { background: rgba(212,136,42,0.22); border: 1px solid rgba(212,136,42,0.55); }
-.ai-conclusion-cell.green { background: rgba(184,126,58,0.18); border: 1px solid rgba(184,126,58,0.45); }
-.ai-conclusion-cell.purple { background: rgba(184,165,137,0.22); border: 1px solid rgba(184,165,137,0.50); }
+.ai-conclusion-cell.blue { background: rgba(181,169,140,0.22); border: 1px solid rgba(181,169,140,0.55); }
+.ai-conclusion-cell.amber { background: rgba(130,120,95,0.22); border: 1px solid rgba(130,120,95,0.55); }
+.ai-conclusion-cell.green { background: rgba(130,120,95,0.18); border: 1px solid rgba(130,120,95,0.45); }
+.ai-conclusion-cell.purple { background: rgba(181,169,140,0.22); border: 1px solid rgba(181,169,140,0.50); }
 .ai-conclusion-cell-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
 .ai-conclusion-cell.blue .ai-conclusion-cell-tag { color: #CDC2A7; }
-.ai-conclusion-cell.amber .ai-conclusion-cell-tag { color: #FFD08A; }
-.ai-conclusion-cell.green .ai-conclusion-cell-tag { color: #FFE3A8; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-tag { color: #CDC2A7; }
+.ai-conclusion-cell.green .ai-conclusion-cell-tag { color: #CDC2A7; }
 .ai-conclusion-cell.purple .ai-conclusion-cell-tag { color: #CDC2A7; }
 .ai-conclusion-cell-title { font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 0; line-height: 1.45; letter-spacing: -0.005em; }
 .ai-conclusion-cell-desc { display: none; }
-.ai-conclusion-cell.blue .ai-conclusion-cell-desc { color: #EFE8D6; }
-.ai-conclusion-cell.amber .ai-conclusion-cell-desc { color: #FEEDC9; }
+.ai-conclusion-cell.blue .ai-conclusion-cell-desc { color: #F5EFE0; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-desc { color: #F5EFE0; }
 .ai-conclusion-cell-key { font-size: 36px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin: 6px 0 8px; }
-.ai-conclusion-cell.blue .ai-conclusion-cell-key { background: linear-gradient(90deg, #CDC2A7, #A89678); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.ai-conclusion-cell.amber .ai-conclusion-cell-key { background: linear-gradient(90deg, #FFD08A, #D4882A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.ai-conclusion-cell.green .ai-conclusion-cell-key { background: linear-gradient(90deg, #FFE3A8, #B87E3A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.ai-conclusion-cell.purple .ai-conclusion-cell-key { background: linear-gradient(90deg, #CDC2A7, #B8A589); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell.blue .ai-conclusion-cell-key { background: linear-gradient(90deg, #CDC2A7, #82785F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell.amber .ai-conclusion-cell-key { background: linear-gradient(90deg, #CDC2A7, #82785F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell.green .ai-conclusion-cell-key { background: linear-gradient(90deg, #CDC2A7, #82785F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ai-conclusion-cell.purple .ai-conclusion-cell-key { background: linear-gradient(90deg, #CDC2A7, #B5A98C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .ai-conclusion-cell-key.sm { font-size: 26px; }
-.ai-conclusion-bridge { margin: 24px auto 0; max-width: 1100px; padding: 20px 26px; background: linear-gradient(90deg, rgba(184,126,58,0.22), rgba(205,194,167,0.22), rgba(212,136,42,0.22)); border: 1px solid rgba(205,194,167,0.45); border-radius: 14px; text-align: left; position: relative; }
+.ai-conclusion-bridge { margin: 24px auto 0; max-width: 1100px; padding: 20px 26px; background: linear-gradient(90deg, rgba(130,120,95,0.22), rgba(205,194,167,0.22), rgba(130,120,95,0.22)); border: 1px solid rgba(205,194,167,0.45); border-radius: 14px; text-align: left; position: relative; }
 .ai-conclusion-bridge-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.15em; padding: 4px 12px; background: rgba(205,194,167,0.30); color: #CDC2A7; border-radius: 16px; margin-bottom: 10px; text-transform: uppercase; }
 .ai-conclusion-bridge-title { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.45; letter-spacing: -0.01em; }
-.ai-conclusion-bridge-desc { font-size: 14px; color: #EFE8D6; line-height: 1.7; font-weight: 600; }
-.ai-conclusion-bridge-desc b.g { color: #FFD08A; font-weight: 700; }
-.ai-conclusion-bridge-desc b.a { color: #FFD08A; font-weight: 700; }
+.ai-conclusion-bridge-desc { font-size: 14px; color: #F5EFE0; line-height: 1.7; font-weight: 600; }
+.ai-conclusion-bridge-desc b.g { color: #CDC2A7; font-weight: 700; }
+.ai-conclusion-bridge-desc b.a { color: #CDC2A7; font-weight: 700; }
 .ai-conclusion-bridge-desc b.b { color: #CDC2A7; font-weight: 700; }
-.ai-conclusion-cell.green .ai-conclusion-cell-desc { color: #F4DEB8; }
-.ai-conclusion-cell.purple .ai-conclusion-cell-desc { color: #E8E0D2; }
+.ai-conclusion-cell.green .ai-conclusion-cell-desc { color: #F5EFE0; }
+.ai-conclusion-cell.purple .ai-conclusion-cell-desc { color: #F5EFE0; }
 @media (max-width: 1100px) {
   .ai-conclusion-grid { grid-template-columns: 1fr 1fr; }
   .ai-conclusion-title { font-size: 22px; }
@@ -804,11 +803,11 @@ body { min-height: 100vh; }
       <span style="background:linear-gradient(180deg,#fff 0%,#CDC2A7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">3중 앵커 STACKING × 메인+부가 BOOST 적층</span>
     </div>
     <div style="display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:10px;font-size:13.5px;font-weight:700;color:#fff;letter-spacing:-0.005em;">
-      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(184,126,58,0.16);border:1px solid rgba(255,208,138,0.45);">1차 닝닝</span>
+      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(130,120,95,0.16);border:1px solid rgba(205,194,167,0.45);">1차 닝닝</span>
       <span style="color:rgba(205,194,167,0.6);font-weight:800;font-size:15px;">→</span>
-      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(98,83,73,0.18);border:1px solid rgba(205,194,167,0.45);">변우석</span>
+      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(130,120,95,0.18);border:1px solid rgba(205,194,167,0.45);">변우석</span>
       <span style="color:rgba(205,194,167,0.6);font-weight:800;font-size:15px;">→</span>
-      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(212,136,42,0.20);border:1px solid rgba(255,208,138,0.55);">2차 닝닝</span>
+      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(130,120,95,0.20);border:1px solid rgba(205,194,167,0.55);">2차 닝닝</span>
     </div>
     <div style="font-size:12px;color:rgba(255,255,255,0.72);margin-bottom:14px;letter-spacing:.01em;">
       → <b style="color:#fff;">5/19 셀링 직전 화제도 최대치 + 매출 전환 가속</b> 준비 완료
@@ -822,9 +821,9 @@ body { min-height: 100vh; }
     </div>
     <div style="background:rgba(0,0,0,0.28);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:18px 22px;text-align:center;backdrop-filter:blur(4px);">
       <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:12px;">
-        <span style="color:rgba(255,208,138,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
-        <span style="font-size:10.5px;font-weight:800;color:#FFD08A;letter-spacing:.20em;">CORE STRATEGIC PROPOSITION</span>
-        <span style="color:rgba(255,208,138,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
+        <span style="color:rgba(205,194,167,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
+        <span style="font-size:10.5px;font-weight:800;color:#CDC2A7;letter-spacing:.20em;">CORE STRATEGIC PROPOSITION</span>
+        <span style="color:rgba(205,194,167,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
       </div>
       <div style="display:flex;justify-content:center;align-items:stretch;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
         <div style="flex:1;min-width:180px;max-width:260px;background:rgba(205,194,167,0.10);border:1.5px solid rgba(205,194,167,0.40);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
@@ -837,25 +836,25 @@ body { min-height: 100vh; }
             <div style="font-size:10.5px;color:rgba(255,255,255,0.72);line-height:1.5;">메인 종합 9.4점<br>(브랜드 적합 9.8 · 시즌 9.0)</div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(255,208,138,0.85);min-width:18px;">+</div>
-        <div style="flex:1;min-width:180px;max-width:260px;background:rgba(255,208,138,0.10);border:1.5px solid rgba(255,208,138,0.40);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(205,194,167,0.85);min-width:18px;">+</div>
+        <div style="flex:1;min-width:180px;max-width:260px;background:rgba(205,194,167,0.10);border:1.5px solid rgba(205,194,167,0.40);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
           <div style="background:#1F1812;height:175px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
             <img src="assets/tab3-닝닝-헤드라인-이미지/boost-lemonade.jpg" alt="에스파 컴백 LEMONADE 트렌드" style="width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block;" loading="lazy">
           </div>
           <div style="padding:10px 12px 12px;">
-            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#FFD08A;margin-bottom:5px;">◆ BOOST</div>
+            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#CDC2A7;margin-bottom:5px;">◆ BOOST</div>
             <div style="font-size:14px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:4px;">레모네이드 · 에스파 컴백</div>
             <div style="font-size:10.5px;color:rgba(255,255,255,0.72);line-height:1.5;">트렌드 가속 9.2 · 멘션 12.4K<br>+ 바이럴 boost layer</div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(255,208,138,0.85);min-width:18px;">=</div>
-        <div style="flex:1;min-width:180px;max-width:280px;background:linear-gradient(135deg,rgba(255,208,138,0.18),rgba(98,83,73,0.14));border:1.5px solid rgba(255,208,138,0.55);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(205,194,167,0.85);min-width:18px;">=</div>
+        <div style="flex:1;min-width:180px;max-width:280px;background:linear-gradient(135deg,rgba(205,194,167,0.18),rgba(130,120,95,0.14));border:1.5px solid rgba(205,194,167,0.55);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
           <div style="background:#fff;height:175px;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;box-sizing:border-box;">
             <img src="assets/tab3-닝닝-헤드라인-이미지/result-tshirt.jpg" alt="DWRS94063 링거티 IVD" style="max-height:100%;max-width:48%;width:auto;height:auto;object-fit:contain;display:block;" loading="lazy">
             <img src="assets/tab3-닝닝-헤드라인-이미지/result-shoes.jpg" alt="DXSH7275N 웨이브 제인 BDS" style="max-height:100%;max-width:48%;width:auto;height:auto;object-fit:contain;display:block;" loading="lazy">
           </div>
           <div style="padding:10px 12px 12px;">
-            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#FFD08A;margin-bottom:5px;">✓ RESULT</div>
+            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#CDC2A7;margin-bottom:5px;">✓ RESULT</div>
             <div style="font-size:14px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:4px;">매출 전환율 극대화</div>
             <div style="font-size:10.5px;color:rgba(234,251,243,0.78);line-height:1.5;">★ 우선순위 10개 매체 확산<br>→ 5/19 셀링 화제도 최대치</div>
           </div>
@@ -903,18 +902,18 @@ body { min-height: 100vh; }
       <div>
         <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;color:var(--amb-t);margin-bottom:8px;text-transform:uppercase;">⚡ 매출 전환 가속 조짐 발견</div>
         <div style="font-size:20px;font-weight:900;color:var(--t1);line-height:1.35;margin-bottom:12px;letter-spacing:-0.02em;">
-          여성 프레시벤트 레터링 세미크롭 <span style="background:linear-gradient(90deg,#B87E3A,#FFD08A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">링거티셔츠</span>
+          여성 프레시벤트 레터링 세미크롭 <span style="background:linear-gradient(90deg,#82785F,#CDC2A7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">링거티셔츠</span>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <span style="font-size:14px;font-weight:800;background:rgba(184,126,58,0.16);color:var(--amb-t);padding:7px 13px;border-radius:7px;border:1px solid rgba(184,126,58,0.40);">▲ <b style="font-size:16px;">+114.6%</b></span>
-          <span style="font-size:14px;font-weight:800;background:rgba(184,126,58,0.16);color:var(--amb-t);padding:7px 13px;border-radius:7px;border:1px solid rgba(184,126,58,0.40);">5/9 단일 <b style="font-size:16px;">114qty</b></span>
-          <span style="font-size:14px;font-weight:800;background:rgba(184,126,58,0.16);color:var(--amb-t);padding:7px 13px;border-radius:7px;border:1px solid rgba(184,126,58,0.40);">점유율 22%→<b style="font-size:16px;">43%</b></span>
+          <span style="font-size:14px;font-weight:800;background:rgba(130,120,95,0.16);color:var(--amb-t);padding:7px 13px;border-radius:7px;border:1px solid rgba(130,120,95,0.40);">▲ <b style="font-size:16px;">+114.6%</b></span>
+          <span style="font-size:14px;font-weight:800;background:rgba(130,120,95,0.16);color:var(--amb-t);padding:7px 13px;border-radius:7px;border:1px solid rgba(130,120,95,0.40);">5/9 단일 <b style="font-size:16px;">114qty</b></span>
+          <span style="font-size:14px;font-weight:800;background:rgba(130,120,95,0.16);color:var(--amb-t);padding:7px 13px;border-radius:7px;border:1px solid rgba(130,120,95,0.40);">점유율 22%→<b style="font-size:16px;">43%</b></span>
         </div>
       </div>
     </div>
 
     <!-- 일별 차트 + 3구간 stat (링거티 전체 4컬러 합산) -->
-    <div style="background:linear-gradient(135deg,#FDF3E3 0%,#FCF7EE 100%);border:1px solid rgba(184,126,58,0.40);border-radius:14px;padding:18px 20px;">
+    <div style="background:linear-gradient(135deg,#F5EFE0 0%,#FCF7EE 100%);border:1px solid rgba(130,120,95,0.40);border-radius:14px;padding:18px 20px;">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">
         <span style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:var(--grn);padding:3px 10px;border-radius:5px;">📈 일별 매출 추이</span>
         <b style="font-size:13.5px;color:var(--t1);">5/7 노출 → 5/9 (D+2) 매출 폭발 · 1~2일 타임 래그</b>
@@ -930,16 +929,16 @@ body { min-height: 100vh; }
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:50%;background:#B7C9D2;border-radius:3px 3px 0 0;"></div></div>
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:75%;background:#B7C9D2;border-radius:3px 3px 0 0;"></div></div>
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:25%;background:#B7C9D2;border-radius:3px 3px 0 0;"></div></div>
-          <div style="width:2px;background:linear-gradient(180deg,#FFD08A,rgba(255,208,138,0.3));margin:0 1px;position:relative;"><div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:8px;font-weight:800;color:#D4882A;white-space:nowrap;">🎤 5/7</div></div>
+          <div style="width:2px;background:linear-gradient(180deg,#CDC2A7,rgba(205,194,167,0.3));margin:0 1px;position:relative;"><div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:8px;font-weight:800;color:#82785F;white-space:nowrap;">🎤 5/7</div></div>
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:32%;background:#CDC2A7;border-radius:3px 3px 0 0;"></div></div>
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:26%;background:#CDC2A7;border-radius:3px 3px 0 0;"></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative;"><div style="position:absolute;top:-12px;font-size:9px;font-weight:900;color:var(--grn-t);white-space:nowrap;">★ 114</div><div style="width:100%;height:100%;background:linear-gradient(180deg,#B87E3A,#FFD08A);border-radius:3px 3px 0 0;"></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:82%;background:linear-gradient(180deg,#B87E3A,#FFD08A);border-radius:3px 3px 0 0;"></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:63%;background:linear-gradient(180deg,#B87E3A,#FFD08A);border-radius:3px 3px 0 0;"></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:25%;background:linear-gradient(180deg,#B87E3A,#FFD08A);border-radius:3px 3px 0 0;"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative;"><div style="position:absolute;top:-12px;font-size:9px;font-weight:900;color:var(--grn-t);white-space:nowrap;">★ 114</div><div style="width:100%;height:100%;background:linear-gradient(180deg,#82785F,#CDC2A7);border-radius:3px 3px 0 0;"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:82%;background:linear-gradient(180deg,#82785F,#CDC2A7);border-radius:3px 3px 0 0;"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:63%;background:linear-gradient(180deg,#82785F,#CDC2A7);border-radius:3px 3px 0 0;"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;"><div style="width:100%;height:25%;background:linear-gradient(180deg,#82785F,#CDC2A7);border-radius:3px 3px 0 0;"></div></div>
         </div>
         <div style="display:flex;gap:3px;margin-top:5px;font-size:8.5px;color:var(--t3);font-weight:600;">
-          <div style="flex:1;text-align:center;">4/30</div><div style="flex:1;text-align:center;">5/1</div><div style="flex:1;text-align:center;">5/2</div><div style="flex:1;text-align:center;">5/3</div><div style="flex:1;text-align:center;">5/4</div><div style="flex:1;text-align:center;">5/5</div><div style="flex:1;text-align:center;">5/6</div><div style="width:2px;margin:0 1px;"></div><div style="flex:1;text-align:center;color:#D4882A;font-weight:800;">5/7</div><div style="flex:1;text-align:center;">5/8</div><div style="flex:1;text-align:center;color:var(--grn-t);font-weight:800;">5/9</div><div style="flex:1;text-align:center;color:var(--grn-t);font-weight:800;">5/10</div><div style="flex:1;text-align:center;color:var(--grn-t);font-weight:800;">5/11</div><div style="flex:1;text-align:center;">5/12</div>
+          <div style="flex:1;text-align:center;">4/30</div><div style="flex:1;text-align:center;">5/1</div><div style="flex:1;text-align:center;">5/2</div><div style="flex:1;text-align:center;">5/3</div><div style="flex:1;text-align:center;">5/4</div><div style="flex:1;text-align:center;">5/5</div><div style="flex:1;text-align:center;">5/6</div><div style="width:2px;margin:0 1px;"></div><div style="flex:1;text-align:center;color:#82785F;font-weight:800;">5/7</div><div style="flex:1;text-align:center;">5/8</div><div style="flex:1;text-align:center;color:var(--grn-t);font-weight:800;">5/9</div><div style="flex:1;text-align:center;color:var(--grn-t);font-weight:800;">5/10</div><div style="flex:1;text-align:center;color:var(--grn-t);font-weight:800;">5/11</div><div style="flex:1;text-align:center;">5/12</div>
         </div>
       </div>
 
@@ -952,7 +951,7 @@ body { min-height: 100vh; }
           <div style="font-size:9px;font-weight:700;color:var(--s5);letter-spacing:0.06em;text-transform:uppercase;">확산 중 · 5/7~5/8</div>
           <div style="font-size:20px;font-weight:900;color:var(--s5);line-height:1;margin-top:4px;">33.0 <span style="font-size:10px;color:var(--s5);font-weight:600;">qty/일</span></div>
         </div>
-        <div style="background:linear-gradient(135deg,rgba(184,126,58,0.22),rgba(255,208,138,0.12));padding:10px 12px;border-radius:8px;text-align:center;border:1.5px solid rgba(184,126,58,0.55);">
+        <div style="background:linear-gradient(135deg,rgba(130,120,95,0.22),rgba(205,194,167,0.12));padding:10px 12px;border-radius:8px;text-align:center;border:1.5px solid rgba(130,120,95,0.55);">
           <div style="font-size:9px;font-weight:800;color:var(--grn-t);letter-spacing:0.06em;text-transform:uppercase;">★ 매출 반응 · 5/9~5/12</div>
           <div style="font-size:16px;font-weight:900;color:var(--grn);line-height:1;margin-top:4px;">77.3 <span style="font-size:11px;color:var(--grn-t);font-weight:700;">qty/일 ▲+35.8%</span></div>
         </div>
@@ -971,7 +970,7 @@ body { min-height: 100vh; }
         <div class="cmp-head">지표</div>
         <div class="cmp-head">변우석</div>
         <div class="cmp-head">닝닝 1차</div>
-        <div class="cmp-head" style="background:linear-gradient(135deg, rgba(184,126,58,0.16), rgba(205,194,167,0.16));color:var(--grn);font-weight:800;">★ 닝닝 2차 (이번)</div>
+        <div class="cmp-head" style="background:linear-gradient(135deg, rgba(130,120,95,0.16), rgba(205,194,167,0.16));color:var(--grn);font-weight:800;">★ 닝닝 2차 (이번)</div>
 
         <div class="cmp-row-lbl">구매 건수</div>
         <div class="cmp-val">497</div>
@@ -991,28 +990,28 @@ body { min-height: 100vh; }
 
       <!-- 핵심 성과 키워드 카드 4개 -->
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;">
-        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#FDF3E3,#FBE2BD);border:1px solid rgba(184,126,58,0.30);">
+        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#F5EFE0,#F5EFE0);border:1px solid rgba(130,120,95,0.30);">
           <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:var(--grn);margin-bottom:8px;">🎯 KEY WIN 01</div>
           <div style="font-size:13px;font-weight:800;color:var(--t1);margin-bottom:6px;line-height:1.4;">닝닝 착장 상품<br>구매 본격화</div>
           <div style="font-size:24px;font-weight:900;color:var(--grn);line-height:1;letter-spacing:-0.02em;">▲ +680%</div>
           <div style="font-size:11px;color:var(--t3);margin-top:6px;line-height:1.5;"><b style="color:var(--grn-t);">5건 → 39건+ · "금번이 처음"</b></div>
         </div>
 
-        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#F7F3EB,#EFE8D6);border:1px solid rgba(98,83,73,0.30);">
+        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#F7F3EB,#F5EFE0);border:1px solid rgba(130,120,95,0.30);">
           <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:var(--s5);margin-bottom:8px;">🚀 KEY WIN 02</div>
           <div style="font-size:13px;font-weight:800;color:var(--t1);margin-bottom:6px;line-height:1.4;">회원 가입<br>3배 폭증</div>
           <div style="font-size:24px;font-weight:900;color:var(--s5);line-height:1;letter-spacing:-0.02em;">▲ +200%</div>
           <div style="font-size:11px;color:var(--t3);margin-top:6px;line-height:1.5;"><b style="color:var(--s5);">1차 19 → 2차 57 · 신규 유입 가속</b></div>
         </div>
 
-        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#FDF3E3,#FBE2BD);border:1px solid rgba(212,136,42,0.30);">
+        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#F5EFE0,#F5EFE0);border:1px solid rgba(130,120,95,0.30);">
           <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:var(--amb-t);margin-bottom:8px;">💎 KEY WIN 03</div>
           <div style="font-size:13px;font-weight:800;color:var(--t1);margin-bottom:6px;line-height:1.4;">메타 우수 소재<br>발굴</div>
           <div style="font-size:24px;font-weight:900;color:var(--amb-t);line-height:1;letter-spacing:-0.02em;">CTR 2.76%</div>
           <div style="font-size:11px;color:var(--t3);margin-top:6px;line-height:1.5;"><b style="color:var(--amb-t);">단일 구매 5건 · 패턴 학습 → 확산</b></div>
         </div>
 
-        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#EFE8D6,#E0D6C5);border:1px solid rgba(168,150,120,0.30);">
+        <div style="padding:16px 14px;border-radius:12px;background:linear-gradient(135deg,#F5EFE0,#F5EFE0);border:1px solid rgba(181,169,140,0.30);">
           <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:var(--lav);margin-bottom:8px;">👕 KEY WIN 04</div>
           <div style="font-size:13px;font-weight:800;color:var(--t1);margin-bottom:6px;line-height:1.4;">메인 SKU 집중<br>(★ 1번 착장)</div>
           <div style="font-size:20px;font-weight:900;color:var(--lav);line-height:1.15;letter-spacing:-0.02em;">링거티 29<br>+ 스커트 10</div>
@@ -1031,24 +1030,15 @@ body { min-height: 100vh; }
     <div class="card-t">AI 콘텐츠 적용 플로우 — STEP 01 ~ 04</div>
 
     <div class="ai-flow">
-      <!-- STEP 1: AI 크롤링 (키워드 풀) -->
+      <!-- STEP 1: 키워드 크롤링 -->
       <div class="ai-step">
-        <div class="ai-step-tag">STEP 01 · AI CRAWL</div>
-        <div class="ai-step-title">브랜드 핵심 + 트렌드 부가 키워드 크롤링</div>
-        <div class="ai-step-desc">★ 메인 (액티브·웰니스) + ◆ 부가 (레모네이드 외) 동시 크롤링 → 위계 분류</div>
-        <div class="crawl-meta">
-          <span class="crawl-meta-lbl">소스</span><span class="crawl-meta-val">Instagram · YouTube Shorts · X · 커뮤니티 (최근 30일)</span>
-          <span class="crawl-meta-lbl">랭킹</span><span class="crawl-meta-val">멘션 빈도 × 감성 × 트렌드 가속도</span>
+        <div class="ai-step-tag">STEP 01 · CRAWL</div>
+        <div class="ai-step-title">브랜드 + 트렌드 키워드 크롤링</div>
+        <div class="keyword-pool" style="margin-top:8px;">
+          <span class="keyword highlight">★ 액티브</span>
+          <span class="keyword highlight">★ 웰니스</span>
+          <span class="keyword brand">◆ 레모네이드</span>
         </div>
-        <div class="keyword-pool">
-          <span class="keyword highlight">★ 액티브<span class="keyword-metric">8.7K</span></span>
-          <span class="keyword highlight">★ 웰니스<span class="keyword-metric">6.2K</span></span>
-          <span class="keyword brand">◆ 레모네이드<span class="keyword-metric">12.4K</span></span>
-          <span class="keyword">에스파 컴백<span class="keyword-metric">18.9K</span></span>
-          <span class="keyword">카리나<span class="keyword-metric">22.5K</span></span>
-          <span class="keyword">Y2K<span class="keyword-metric">11.6K</span></span>
-        </div>
-        <div class="keyword-note">★ 메인 · ◆ 부가 · 수치 = 최근 30일 SNS 멘션 추정</div>
       </div>
 
       <div class="ai-flow-arrow">→</div>
@@ -1056,29 +1046,12 @@ body { min-height: 100vh; }
       <!-- STEP 2: 선정 -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 02 · SELECTED</div>
-        <div class="ai-step-title">메인 + 부가 키워드 선정</div>
-        <div class="ai-step-desc">★ 메인 = 브랜드 적합도 / ◆ 부가 = 트렌드 가속도 매칭</div>
-        <div class="crawl-meta">
-          <span class="crawl-meta-lbl">가중치</span><span class="crawl-meta-val">메인 = 브랜드 0.40 + 시즌 0.30 / 부가 = 가속 0.40 + boost 0.30</span>
+        <div class="ai-step-title">메인 + 부가 선정</div>
+        <div class="ai-selected" style="margin-top:8px;">
+          <div class="ai-selected-keyword">액티브 웰니스</div>
         </div>
-        <div class="ai-selected" style="padding:12px 12px;">
-          <div class="ai-selected-cluster" style="background:var(--amb-bg);color:var(--amb-t);">★ MAIN · 브랜드 핵심 톤</div>
-          <div class="ai-selected-arrow" style="margin:2px 0;">↓</div>
-          <div class="ai-selected-keyword" style="font-size:19px;margin-bottom:4px;">액티브 웰니스</div>
-          <div class="ai-selected-rationale" style="font-size:10.5px;">DX 26SS 핵심 톤</div>
-          <div class="score-grid" style="grid-template-columns:1fr 1fr;column-gap:12px;row-gap:4px;margin-top:8px;">
-            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">브랜드 적합</span><div class="score-bar" style="height:5px;"><span style="width:98%"></span></div><span class="score-val">9.8</span></div>
-            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">시즌 매칭</span><div class="score-bar" style="height:5px;"><span style="width:90%"></span></div><span class="score-val">9.0</span></div>
-            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">매체 친화</span><div class="score-bar" style="height:5px;"><span style="width:92%"></span></div><span class="score-val">9.2</span></div>
-            <div class="score-row" style="grid-template-columns:56px 1fr 28px;font-size:10px;"><span class="score-lbl">트렌드 가속</span><div class="score-bar" style="height:5px;"><span style="width:87%"></span></div><span class="score-val">8.7</span></div>
-          </div>
-          <div class="ai-selected-total" style="margin-top:8px;padding:5px 10px;font-size:10.5px;">종합 9.4 / 10 · 메인 채택</div>
-        </div>
-        <div class="ai-selected" style="margin-top:8px;padding:10px 12px;border:1px solid rgba(168,150,120,0.30);background:var(--lav-bg);">
-          <div class="ai-selected-cluster" style="background:var(--white);color:var(--lav);">◆ SUPPORT · 트렌드 부가 boost</div>
-          <div class="ai-selected-arrow" style="color:var(--lav);margin:2px 0;">↓</div>
-          <div class="ai-selected-keyword" style="color:var(--lav);font-size:16px;margin-bottom:3px;">레모네이드 <span style="font-size:10.5px;font-weight:600;opacity:0.75;">(에스파 컴백 군집)</span></div>
-          <div class="ai-selected-rationale" style="font-size:10.5px;">가속 9.2 · 멘션 12.4K · 바이럴 boost</div>
+        <div class="ai-selected" style="margin-top:5px;border:1px solid rgba(181,169,140,0.30);background:var(--lav-bg);">
+          <div class="ai-selected-keyword" style="color:var(--lav);font-size:14px;">◆ 레모네이드</div>
         </div>
       </div>
 
@@ -1087,24 +1060,13 @@ body { min-height: 100vh; }
       <!-- STEP 3: 결합 -->
       <div class="ai-step">
         <div class="ai-step-tag">STEP 03 · COMBINED</div>
-        <div class="ai-step-title">메인 톤 × 시즌 + 부가 boost</div>
-        <div class="ai-step-desc">★ 메인 × 시즌 골격 + ◆ 부가 바이럴 layer 결합</div>
-        <div class="crawl-meta">
-          <span class="crawl-meta-lbl">팔레트</span><span class="crawl-meta-val">Mint · Coral · Cream + Lemon Yellow accent</span>
-        </div>
-        <div class="ai-combine">
-          <div class="ai-combine-a" style="font-size:16px;padding:8px 14px;">★ 액티브 웰니스</div>
+        <div class="ai-step-title">메인 × 시즌 + 부가 boost</div>
+        <div class="ai-combine" style="margin-top:8px;">
+          <div class="ai-combine-a">★ 액티브 웰니스</div>
           <div class="ai-combine-x">×</div>
           <div class="ai-combine-b">여름 무드</div>
         </div>
-        <div style="text-align:center;font-size:18px;color:var(--t4);margin:6px 0;">+</div>
-        <div style="text-align:center;padding:8px 14px;background:var(--lav-bg);border:1px solid rgba(168,150,120,0.30);border-radius:6px;font-size:13px;font-weight:700;color:var(--lav);">◆ 레모네이드 (바이럴 boost layer)</div>
-        <div class="score-grid">
-          <div class="score-row"><span class="score-lbl">브랜드 일관성</span><div class="score-bar"><span style="width:95%"></span></div><span class="score-val">95%</span></div>
-          <div class="score-row"><span class="score-lbl">시즌 적합도</span><div class="score-bar"><span style="width:90%"></span></div><span class="score-val">90%</span></div>
-          <div class="score-row"><span class="score-lbl">바이럴 boost</span><div class="score-bar brand"><span style="width:88%"></span></div><span class="score-val">88%</span></div>
-        </div>
-        <div class="combine-result">검증 통과 · 메인 골격 + 부가 boost 콘셉트 채택</div>
+        <div style="text-align:center;padding:5px 10px;background:var(--lav-bg);border:1px solid rgba(181,169,140,0.30);border-radius:5px;font-size:11.5px;font-weight:700;color:var(--lav);">+ ◆ 레모네이드 boost</div>
       </div>
     </div>
 
@@ -1113,8 +1075,7 @@ body { min-height: 100vh; }
       <div class="ai-result-icon">🎯</div>
       <div class="ai-result-content">
         <div class="ai-result-tag">STEP 04 · APPLIED</div>
-        <div class="ai-result-title">콘텐츠 적용 → 바이럴 확산</div>
-        <div class="ai-result-desc"><b>"★ 액티브 웰니스 × 여름 + ◆ 레모네이드 boost"</b> 콘셉트를 ★ 우선순위 10개 매체에 일관 적용 → 핵심 채널 동시 확산</div>
+        <div class="ai-result-title"><b>"★ 액티브 웰니스 × 여름 + ◆ 레모네이드"</b> 콘셉트 → 10개 매체 동시 확산</div>
       </div>
     </div>
   </div>
@@ -1123,7 +1084,7 @@ body { min-height: 100vh; }
   <div class="compare">
     <div class="cmp-head">지표</div>
     <div class="cmp-head">1차 닝닝 (V15 캠페인)</div>
-    <div class="cmp-head" style="background:linear-gradient(135deg, rgba(184,126,58,0.16), rgba(205,194,167,0.16));color:var(--grn);font-weight:800;">★ 2차 닝닝 (이번 사이클)</div>
+    <div class="cmp-head" style="background:linear-gradient(135deg, rgba(130,120,95,0.16), rgba(205,194,167,0.16));color:var(--grn);font-weight:800;">★ 2차 닝닝 (이번 사이클)</div>
     <div class="cmp-head">증감</div>
 
     <div class="cmp-row-lbl">캠페인 구매 건수</div>
@@ -1222,11 +1183,11 @@ body { min-height: 100vh; }
       <span style="background:linear-gradient(180deg,#fff 0%,#CDC2A7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">앵커 × 부스터 = 실판매 공식 가동</span>
     </div>
     <div style="display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:10px;font-size:13.5px;font-weight:700;color:#fff;letter-spacing:-0.005em;">
-      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(184,126,58,0.16);border:1px solid rgba(255,208,138,0.45);">화제도</span>
+      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(130,120,95,0.16);border:1px solid rgba(205,194,167,0.45);">화제도</span>
       <span style="color:rgba(205,194,167,0.6);font-weight:800;font-size:15px;">→</span>
-      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(98,83,73,0.18);border:1px solid rgba(205,194,167,0.45);">PPL</span>
+      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(130,120,95,0.18);border:1px solid rgba(205,194,167,0.45);">PPL</span>
       <span style="color:rgba(205,194,167,0.6);font-weight:800;font-size:15px;">→</span>
-      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(212,136,42,0.20);border:1px solid rgba(255,208,138,0.55);">매출</span>
+      <span style="display:inline-block;padding:4px 11px;border-radius:20px;background:rgba(130,120,95,0.20);border:1px solid rgba(205,194,167,0.55);">매출</span>
     </div>
     <div style="font-size:12px;color:rgba(255,255,255,0.72);margin-bottom:14px;letter-spacing:.01em;">
       → <b style="color:#fff;">5/19 + 6월 2주 매출 피크 2회 견인 · YoY +266% 재현·초과</b> 목표
@@ -1240,9 +1201,9 @@ body { min-height: 100vh; }
     </div>
     <div style="background:rgba(0,0,0,0.28);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:18px 22px;text-align:center;backdrop-filter:blur(4px);">
       <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:12px;">
-        <span style="color:rgba(255,208,138,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
-        <span style="font-size:10.5px;font-weight:800;color:#FFD08A;letter-spacing:.20em;">CORE STRATEGIC PROPOSITION</span>
-        <span style="color:rgba(255,208,138,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
+        <span style="color:rgba(205,194,167,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
+        <span style="font-size:10.5px;font-weight:800;color:#CDC2A7;letter-spacing:.20em;">CORE STRATEGIC PROPOSITION</span>
+        <span style="color:rgba(205,194,167,0.7);font-size:11px;letter-spacing:.4em;">✦ ✦ ✦</span>
       </div>
       <div style="display:flex;justify-content:center;align-items:stretch;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
         <div style="flex:1;min-width:180px;max-width:260px;background:rgba(205,194,167,0.10);border:1.5px solid rgba(205,194,167,0.40);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
@@ -1257,20 +1218,20 @@ body { min-height: 100vh; }
             <div style="font-size:10.5px;color:rgba(255,255,255,0.72);line-height:1.5;">1차 닝닝 + 변우석<br>+ 2차 닝닝 (5/7)</div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(255,208,138,0.85);min-width:18px;">+</div>
-        <div style="flex:1;min-width:180px;max-width:260px;background:rgba(255,208,138,0.10);border:1.5px solid rgba(255,208,138,0.40);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(205,194,167,0.85);min-width:18px;">+</div>
+        <div style="flex:1;min-width:180px;max-width:260px;background:rgba(205,194,167,0.10);border:1.5px solid rgba(205,194,167,0.40);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
           <div style="background:#1F1812;height:175px;display:grid;grid-template-columns:1fr 1fr;gap:2px;overflow:hidden;">
             <img src="assets/tab4-헤드라인-이미지/booster-1-influencer-3.jpg" alt="메가 인플 라이프스타일" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" loading="lazy">
             <img src="assets/tab4-헤드라인-이미지/booster-2-sku-main-sub.jpg" alt="메인·서브 SKU PPL" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;" loading="lazy">
           </div>
           <div style="padding:10px 12px 12px;">
-            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#FFD08A;margin-bottom:5px;">◆ BOOSTER</div>
+            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#CDC2A7;margin-bottom:5px;">◆ BOOSTER</div>
             <div style="font-size:14px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:4px;">AI 메가 인플 3인 PPL</div>
             <div style="font-size:10.5px;color:rgba(255,255,255,0.72);line-height:1.5;">민영 · 이유정 · 박현지<br>+ 메인·서브 SKU</div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(255,208,138,0.85);min-width:18px;">=</div>
-        <div style="flex:1;min-width:180px;max-width:280px;background:linear-gradient(135deg,rgba(255,208,138,0.18),rgba(98,83,73,0.14));border:1.5px solid rgba(255,208,138,0.55);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(205,194,167,0.85);min-width:18px;">=</div>
+        <div style="flex:1;min-width:180px;max-width:280px;background:linear-gradient(135deg,rgba(205,194,167,0.18),rgba(130,120,95,0.14));border:1.5px solid rgba(205,194,167,0.55);border-radius:14px;padding:0;text-align:center;overflow:hidden;display:flex;flex-direction:column;">
           <div style="background:#fff;height:175px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:2px;padding:6px;box-sizing:border-box;overflow:hidden;">
             <img src="assets/tab4-헤드라인-이미지/result-bkd.jpg" alt="웨이브 제인 BKD" style="width:100%;height:100%;min-width:0;min-height:0;max-width:100%;max-height:100%;object-fit:contain;display:block;" loading="lazy">
             <img src="assets/tab4-헤드라인-이미지/result-grl.jpg" alt="웨이브 제인 GRL" style="width:100%;height:100%;min-width:0;min-height:0;max-width:100%;max-height:100%;object-fit:contain;display:block;" loading="lazy">
@@ -1280,7 +1241,7 @@ body { min-height: 100vh; }
             <img src="assets/tab4-헤드라인-이미지/result-rds.jpg" alt="웨이브 제인 RDS" style="width:100%;height:100%;min-width:0;min-height:0;max-width:100%;max-height:100%;object-fit:contain;display:block;" loading="lazy">
           </div>
           <div style="padding:10px 12px 12px;">
-            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#FFD08A;margin-bottom:5px;">✓ RESULT</div>
+            <div style="font-size:9.5px;font-weight:800;letter-spacing:.18em;color:#CDC2A7;margin-bottom:5px;">✓ RESULT</div>
             <div style="font-size:14px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:4px;">풀퍼널 매출 가속</div>
             <div style="font-size:10.5px;color:rgba(234,251,243,0.78);line-height:1.5;">5/19 + 6월 2주 매출 피크 2회<br>→ YoY +266% 재현·초과</div>
           </div>
@@ -1335,7 +1296,7 @@ body { min-height: 100vh; }
     <div class="card-t">메가 인플 3인 라이프스타일 → 웨이브 제인 매출 푸시</div>
 
     <!-- 통합 헤더: 매출 푸시 액션 + AI 선정 기준 -->
-    <div style="background:linear-gradient(135deg, rgba(212,136,42,0.12), rgba(205,194,167,0.12));border:1px solid rgba(212,136,42,0.35);border-radius:12px;padding:14px 18px;margin-bottom:14px;">
+    <div style="background:linear-gradient(135deg, rgba(130,120,95,0.12), rgba(205,194,167,0.12));border:1px solid rgba(130,120,95,0.35);border-radius:12px;padding:14px 18px;margin-bottom:14px;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
         <div style="flex:1;min-width:300px;">
           <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;color:var(--amb-t);margin-bottom:6px;text-transform:uppercase;">🎯 매출 푸시 액션</div>
@@ -1346,9 +1307,9 @@ body { min-height: 100vh; }
         <div style="flex:0 1 auto;">
           <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;color:var(--amb-t);margin-bottom:6px;text-transform:uppercase;">🤖 AI 선정 기준</div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;">
-            <span style="display:inline-block;font-size:11.5px;font-weight:700;background:rgba(255,255,255,0.65);color:var(--t1);padding:4px 10px;border-radius:6px;border:1px solid rgba(212,136,42,0.30);">👟 슈즈 매출 전환력</span>
-            <span style="display:inline-block;font-size:11.5px;font-weight:700;background:rgba(255,255,255,0.65);color:var(--t1);padding:4px 10px;border-radius:6px;border:1px solid rgba(212,136,42,0.30);">🛍️ 제휴몰 활용 빈도</span>
-            <span style="display:inline-block;font-size:11.5px;font-weight:700;background:rgba(255,255,255,0.65);color:var(--t1);padding:4px 10px;border-radius:6px;border:1px solid rgba(212,136,42,0.30);">🔥 슈즈 PPL 화제도</span>
+            <span style="display:inline-block;font-size:11.5px;font-weight:700;background:rgba(255,255,255,0.65);color:var(--t1);padding:4px 10px;border-radius:6px;border:1px solid rgba(130,120,95,0.30);">👟 슈즈 매출 전환력</span>
+            <span style="display:inline-block;font-size:11.5px;font-weight:700;background:rgba(255,255,255,0.65);color:var(--t1);padding:4px 10px;border-radius:6px;border:1px solid rgba(130,120,95,0.30);">🛍️ 제휴몰 활용 빈도</span>
+            <span style="display:inline-block;font-size:11.5px;font-weight:700;background:rgba(255,255,255,0.65);color:var(--t1);padding:4px 10px;border-radius:6px;border:1px solid rgba(130,120,95,0.30);">🔥 슈즈 PPL 화제도</span>
           </div>
         </div>
       </div>
@@ -1360,7 +1321,7 @@ body { min-height: 100vh; }
       <!-- STEP 1: 메가 인플 라이프스타일 4컷 -->
       <div style="background:#1F1812;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="background:rgba(255,255,255,0.06);padding:10px 16px;border-bottom:1px solid rgba(255,255,255,0.10);">
-          <div style="font-size:10px;font-weight:800;color:#FFD08A;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:3px;">STEP 1 · 메가 인플 라이프스타일 콘텐츠</div>
+          <div style="font-size:10px;font-weight:800;color:#CDC2A7;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:3px;">STEP 1 · 메가 인플 라이프스타일 콘텐츠</div>
           <div style="font-size:13px;font-weight:700;color:#fff;">민영 · 이유정 · 박현지 · 여성 2030 코어 도달</div>
         </div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;height:220px;overflow:hidden;">
@@ -1377,17 +1338,17 @@ body { min-height: 100vh; }
       </div>
 
       <!-- STEP 2: 기획전 매출 상품 -->
-      <div style="background:linear-gradient(135deg,#FDF3E3 0%,#FBE2BD 100%);border:1.5px solid rgba(212,136,42,0.45);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;">
-        <div style="background:rgba(255,255,255,0.55);padding:10px 16px;border-bottom:1px solid rgba(212,136,42,0.20);">
+      <div style="background:linear-gradient(135deg,#F5EFE0 0%,#F5EFE0 100%);border:1.5px solid rgba(130,120,95,0.45);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="background:rgba(255,255,255,0.55);padding:10px 16px;border-bottom:1px solid rgba(130,120,95,0.20);">
           <div style="font-size:10px;font-weight:800;color:var(--amb-t);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:3px;">STEP 2 · 기획전 매출 푸시</div>
           <div style="font-size:13px;font-weight:700;color:var(--t1);">웨이브 제인 + 웨이브 스트랩</div>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;padding:12px;flex:1;justify-content:center;">
-          <div style="background:#fff;border-radius:8px;padding:8px;text-align:center;border:1px solid rgba(212,136,42,0.15);">
+          <div style="background:#fff;border-radius:8px;padding:8px;text-align:center;border:1px solid rgba(130,120,95,0.15);">
             <img src="assets/tab4-메가인플-라이프스타일/product-wavejane.jpg" alt="웨이브 제인" style="max-width:100%;max-height:80px;object-fit:contain;display:block;margin:0 auto;" loading="lazy">
             <div style="font-size:11px;font-weight:800;color:var(--amb-t);margin-top:5px;letter-spacing:0.02em;">★ 웨이브 제인 (MAIN)</div>
           </div>
-          <div style="background:#fff;border-radius:8px;padding:8px;text-align:center;border:1px solid rgba(212,136,42,0.15);">
+          <div style="background:#fff;border-radius:8px;padding:8px;text-align:center;border:1px solid rgba(130,120,95,0.15);">
             <img src="assets/tab4-메가인플-라이프스타일/product-wavestrap.jpg" alt="웨이브 스트랩" style="max-width:100%;max-height:80px;object-fit:contain;display:block;margin:0 auto;" loading="lazy">
             <div style="font-size:11px;font-weight:800;color:var(--amb-t);margin-top:5px;letter-spacing:0.02em;">◆ 웨이브 스트랩 (SUB)</div>
           </div>
@@ -1418,7 +1379,7 @@ body { min-height: 100vh; }
   <div class="card">
     <div class="card-t">메가 제휴몰 기획전 — 경쟁사 4건 검증 매출 공식</div>
 
-    <div style="background:linear-gradient(135deg, rgba(184,126,58,0.10), rgba(205,194,167,0.10), rgba(212,136,42,0.10));border:1px solid rgba(205,194,167,0.45);border-radius:14px;padding:18px 22px;margin-bottom:18px;">
+    <div style="background:linear-gradient(135deg, rgba(130,120,95,0.10), rgba(205,194,167,0.10), rgba(130,120,95,0.10));border:1px solid rgba(205,194,167,0.45);border-radius:14px;padding:18px 22px;margin-bottom:18px;">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
         <span style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#fff;background:var(--s5);padding:3px 10px;border-radius:5px;">🔍 AI 시장 리서치</span>
         <b style="font-size:14.5px;color:var(--t1);">메리제인·발레·벨크로 슈즈 카테고리 매출 드라이브 패턴 가설</b>
@@ -1431,8 +1392,8 @@ body { min-height: 100vh; }
 
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
 
-      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#FDF3E3 0%,#FBE2BD 100%);border:1px solid rgba(212,136,42,0.40);position:relative;overflow:hidden;">
-        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(212,136,42,0.20);">
+      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#F5EFE0 0%,#F5EFE0 100%);border:1px solid rgba(130,120,95,0.40);position:relative;overflow:hidden;">
+        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(130,120,95,0.20);">
           <img src="assets/tab4-경쟁사-레퍼런스/case01-fila-fleur.png" alt="휠라 플레르 벨크로 무신사 매거진 기획전" style="width:100%;height:auto;display:block;" loading="lazy">
         </div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
@@ -1448,8 +1409,8 @@ body { min-height: 100vh; }
         <div style="font-size:11px;color:var(--amb-t);font-weight:700;background:rgba(255,255,255,0.55);padding:7px 9px;border-radius:5px;line-height:1.45;">💡 자사 동일 슬롯 활용 · 웨이브 제인 1순위</div>
       </div>
 
-      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#EFE8D6 0%,#E0D6C5 100%);border:1px solid rgba(168,150,120,0.40);position:relative;overflow:hidden;">
-        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(168,150,120,0.20);">
+      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#F5EFE0 0%,#F5EFE0 100%);border:1px solid rgba(181,169,140,0.40);position:relative;overflow:hidden;">
+        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(181,169,140,0.20);">
           <img src="assets/tab4-경쟁사-레퍼런스/case02-rockfish-illit.png" alt="락피쉬 × 아일릿 무신사 드롭" style="width:100%;height:auto;display:block;" loading="lazy">
         </div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
@@ -1465,8 +1426,8 @@ body { min-height: 100vh; }
         <div style="font-size:11px;color:var(--lav);font-weight:700;background:rgba(255,255,255,0.55);padding:7px 9px;border-radius:5px;line-height:1.45;">💡 닝닝(에스파) + 메가 인플 3인 = K-POP × 드롭 공식</div>
       </div>
 
-      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#F7F3EB 0%,#EFE8D6 100%);border:1px solid rgba(98,83,73,0.40);position:relative;overflow:hidden;">
-        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(98,83,73,0.20);">
+      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#F7F3EB 0%,#F5EFE0 100%);border:1px solid rgba(130,120,95,0.40);position:relative;overflow:hidden;">
+        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(130,120,95,0.20);">
           <img src="assets/tab4-경쟁사-레퍼런스/case03-puma-memoria.png" alt="푸마 메모리아 무신사 에디션" style="width:100%;height:auto;display:block;" loading="lazy">
         </div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
@@ -1483,8 +1444,8 @@ body { min-height: 100vh; }
         <div style="font-size:11px;color:var(--s5);font-weight:700;background:rgba(255,255,255,0.55);padding:7px 9px;border-radius:5px;line-height:1.45;">💡 웨이브 제인 단독 컬러웨이 공동 기획</div>
       </div>
 
-      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#FDF3E3 0%,#FBE2BD 100%);border:1px solid rgba(184,126,58,0.40);position:relative;overflow:hidden;">
-        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(184,126,58,0.20);">
+      <div style="padding:14px;border-radius:12px;background:linear-gradient(135deg,#F5EFE0 0%,#F5EFE0 100%);border:1px solid rgba(130,120,95,0.40);position:relative;overflow:hidden;">
+        <div style="margin:-14px -14px 12px;background:#fff;border-bottom:1px solid rgba(130,120,95,0.20);">
           <img src="assets/tab4-경쟁사-레퍼런스/case04-puma-speedcat.png" alt="푸마 스피드캣 발렛 무신사 단독 선발매" style="width:100%;height:auto;display:block;" loading="lazy">
         </div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
@@ -1505,24 +1466,24 @@ body { min-height: 100vh; }
       <b>📊 4건 패턴:</b> ① 휠라 매거진 <b>17.8만</b> · ② 락피쉬×아일릿 K-POP 콜라보 · ③ 푸마 메모리아 단독 에디션 · ④ 푸마 스피드캣 <b>12.7만</b> → <b>경쟁사 全 동일 채널로 매출 드라이브 (우리가 빠지면 채널 점유율 손실)</b>
     </div>
 
-    <div style="margin-top:14px;background:linear-gradient(135deg, #3D332D 0%, #4A3E36 50%, #625349 100%);border-radius:14px;padding:22px 26px;color:#fff;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle, rgba(168,150,120,0.20), transparent 65%);pointer-events:none;"></div>
-      <div style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.18em;color:#FFD08A;text-transform:uppercase;margin-bottom:10px;">⚡ AI 권고 — Discovery Expedition 웨이브 제인 즉시 액션</div>
-      <div style="font-size:17px;font-weight:800;color:#fff;margin-bottom:14px;line-height:1.45;letter-spacing:-0.01em;">메가 인플 PPL 콘텐츠 + 무신사 메가 제휴몰 기획전 <span style="background:linear-gradient(90deg,#FFD08A,#CDC2A7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">조합 A+B 동시 가동</span> 권고</div>
+    <div style="margin-top:14px;background:linear-gradient(135deg, #5A4D40 0%, #625349 50%, #625349 100%);border-radius:14px;padding:22px 26px;color:#fff;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle, rgba(181,169,140,0.20), transparent 65%);pointer-events:none;"></div>
+      <div style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.18em;color:#CDC2A7;text-transform:uppercase;margin-bottom:10px;">⚡ AI 권고 — Discovery Expedition 웨이브 제인 즉시 액션</div>
+      <div style="font-size:17px;font-weight:800;color:#fff;margin-bottom:14px;line-height:1.45;letter-spacing:-0.01em;">메가 인플 PPL 콘텐츠 + 무신사 메가 제휴몰 기획전 <span style="background:linear-gradient(90deg,#CDC2A7,#CDC2A7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">조합 A+B 동시 가동</span> 권고</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-        <div style="padding:14px 16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,208,138,0.40);border-radius:10px;">
-          <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:#FFD08A;margin-bottom:6px;text-transform:uppercase;">🅰 조합 A · 매거진 기획전</div>
+        <div style="padding:14px 16px;background:rgba(255,255,255,0.08);border:1px solid rgba(205,194,167,0.40);border-radius:10px;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:#CDC2A7;margin-bottom:6px;text-transform:uppercase;">🅰 조합 A · 매거진 기획전</div>
           <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;">무신사 트렌드·쇼핑 매거진 스니커즈룩</div>
           <div style="font-size:11.5px;color:rgba(255,255,255,0.80);line-height:1.65;">휠라 플레르 케이스(17.8만) 벤치마크 → 닝닝 PPL 화보·메가 인플 라이프스타일 컷 활용</div>
         </div>
-        <div style="padding:14px 16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,208,138,0.40);border-radius:10px;">
-          <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:#FFD08A;margin-bottom:6px;text-transform:uppercase;">🅱 조합 B · 단독 선발매 드롭</div>
+        <div style="padding:14px 16px;background:rgba(255,255,255,0.08);border:1px solid rgba(205,194,167,0.40);border-radius:10px;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:0.10em;color:#CDC2A7;margin-bottom:6px;text-transform:uppercase;">🅱 조합 B · 단독 선발매 드롭</div>
           <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;">무신사 드롭 한정 발매 (희소성)</div>
           <div style="font-size:11.5px;color:rgba(255,255,255,0.80);line-height:1.65;">푸마 스피드캣 케이스(12.7만) 벤치마크 → 웨이브 제인 단독 컬러웨이 1종 한정 출시</div>
         </div>
       </div>
-      <div style="font-size:13.5px;color:rgba(255,255,255,0.92);line-height:1.7;background:rgba(0,0,0,0.20);padding:12px 16px;border-radius:8px;border-left:3px solid #FFD08A;font-weight:600;">
-        <b style="color:#FFD08A;">기대:</b> <b style="color:#FFD08A;">매거진 + 한정 = 매출 가속</b> · 5/12 PPL × 무신사 동시 → 5/19 매출 피크
+      <div style="font-size:13.5px;color:rgba(255,255,255,0.92);line-height:1.7;background:rgba(0,0,0,0.20);padding:12px 16px;border-radius:8px;border-left:3px solid #CDC2A7;font-weight:600;">
+        <b style="color:#CDC2A7;">기대:</b> <b style="color:#CDC2A7;">매거진 + 한정 = 매출 가속</b> · 5/12 PPL × 무신사 동시 → 5/19 매출 피크
       </div>
     </div>
   </div>
