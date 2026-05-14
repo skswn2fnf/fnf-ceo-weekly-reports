@@ -63,8 +63,9 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   .hero-core-msg { font-size: 15px; line-height: 1.8; }
 }
 
-.sec { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--t3); margin: 36px 0 16px; display: flex; align-items: center; gap: 10px; }
-.sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); }
+.sec { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; color: var(--t1); margin: 40px 0 18px; display: flex; align-items: center; gap: 12px; }
+.sec::before { content: ''; display: block; width: 5px; height: 22px; background: linear-gradient(180deg, #D4882A, #B87E3A); border-radius: 2px; }
+.sec::after { content: ''; flex: 1; height: 1px; background: var(--bdr); margin-left: 4px; }
 
 .kpi4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .kpi { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 20px 22px; box-shadow: var(--sh); position: relative; overflow: hidden; }
@@ -79,7 +80,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 
 .card { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--rad); padding: 22px 24px; box-shadow: var(--sh); }
 .card + .card { margin-top: 16px; }
-.card-t { font-size: 15px; font-weight: 700; color: var(--t1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid var(--bdr); }
+.card-t { font-size: 18px; font-weight: 800; color: var(--t1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid var(--bdr); letter-spacing: -0.01em; }
 
 .ins   { background: var(--s0);     border-left: 3px solid var(--s4);  border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--t2);   line-height: 1.7; }
 .ins-g { background: var(--grn-bg); border-left: 3px solid var(--grn); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: var(--grn-t); line-height: 1.7; }
@@ -119,7 +120,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
 .ai-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; margin-bottom: 16px; }
 .ai-step { background: var(--s0); border: 1px solid var(--bdr); border-radius: 14px; padding: 20px 18px; position: relative; }
 .ai-step-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: var(--s5); padding: 3px 10px; border-radius: 5px; margin-bottom: 10px; text-transform: uppercase; }
-.ai-step-title { font-size: 16px; font-weight: 800; color: var(--t1); margin-bottom: 6px; letter-spacing: -0.01em; }
+.ai-step-title { font-size: 17px; font-weight: 800; color: var(--t1); margin-bottom: 6px; letter-spacing: -0.015em; }
 .ai-step-desc { font-size: 12px; color: var(--t3); line-height: 1.65; margin-bottom: 14px; }
 .ai-flow-arrow { display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--t4); padding: 0 8px; font-weight: 700; }
 
@@ -349,9 +350,9 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
   <!-- ━━━ 02 · 여성 2030 무드 재집중 ━━━━━━━━━━━━━━━━ -->
-  <div class="sec">02 · 여성 2030 웰니스 무드 재집중</div>
+  <div class="sec">02 · 닝닝 2차 바이럴 썸네일 — ★ 우선순위 10개 매체</div>
   <div class="card">
-    <div class="card-t">닝닝 2차 바이럴 썸네일 · ★ 우선순위 10개 매체</div>
+    <div class="card-t">★ 우선순위 10개 매체 — 닝닝 2차 바이럴 썸네일</div>
     <div class="thumb-meta">
       <span><b>★ 우선순위 10개 매체</b> · 핵심 채널 집중 확산</span>
       <span class="thumb-legend"><span class="dot star"></span>★ 우선순위 매체</span>
@@ -513,9 +514,9 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
   </div>
 
   <!-- ━━━ 03 · AI 기반 액티브 웰니스 무드 강화 ━━━━━━━ -->
-  <div class="sec">03 · AI 기반 액티브 웰니스 무드 강화</div>
+  <div class="sec">03 · AI 콘텐츠 플로우 — ★ 메인 + ◆ 부가 적층</div>
   <div class="card">
-    <div class="card-t">AI 인사이트 → 콘텐츠 적용 플로우</div>
+    <div class="card-t">AI 콘텐츠 적용 플로우 — STEP 01 ~ 04</div>
 
     <div class="ai-flow">
       <!-- STEP 1: AI 크롤링 (키워드 풀) -->
@@ -612,7 +613,7 @@ body { background: var(--bg); font-family: 'Pretendard Variable', Pretendard, -a
     </div>
   </div>
   <!-- ━━━ 01 · 1차 vs 2차 닝닝 매출 임팩트 비교 ━━━━━━━━━━━━━━━━ -->
-  <div class="sec">01 · 1차 vs 2차 닝닝 매출 임팩트 비교</div>
+  <div class="sec">01 · 1차 vs 2차 매출 임팩트 — 구매 ▲+33% · 회원 ▲+200%</div>
   <div class="compare">
     <div class="cmp-head">지표</div>
     <div class="cmp-head">1차 닝닝 (V15 캠페인)</div>
