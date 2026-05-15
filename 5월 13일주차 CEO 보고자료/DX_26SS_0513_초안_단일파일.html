@@ -305,6 +305,15 @@ body { min-height: 100vh; }
 .product-sku { font-size: 11px; color: var(--t3); font-family: 'SF Mono', 'Menlo', monospace; letter-spacing: 0.04em; font-weight: 600; }
 .product-color { font-size: 10px; font-weight: 700; color: var(--s5); padding: 2px 8px; background: var(--s1); border-radius: 5px; letter-spacing: 0.06em; }
 
+/* RS 인플 그리드 (느좋남 키워드 컨텐츠 노출) */
+.infl-divider { display: flex; align-items: center; gap: 14px; margin: 28px 0 18px; }
+.infl-divider::before, .infl-divider::after { content: ''; flex: 1; height: 1px; background: var(--bdr2); }
+.infl-divider-label { font-size: 14px; font-weight: 800; color: var(--t1); letter-spacing: -0.005em; }
+.infl-grid-rs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.infl-card-rs { aspect-ratio: 4/5; border-radius: 10px; overflow: hidden; position: relative; background: #1a1a1a; border: 1px solid var(--bdr); }
+.infl-card-rs img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.infl-badge-rs { position: absolute; top: 7px; left: 7px; font-size: 9px; font-weight: 700; padding: 3px 7px; border-radius: 4px; color: #fff; background: rgba(130,120,95,0.92); letter-spacing: 0.08em; text-transform: uppercase; backdrop-filter: blur(3px); }
+
 /* ── THUMBNAIL GRID (19 매체 바이럴 썸네일) ── */
 .thumb-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
 .thumb-grid.cols-7 { grid-template-columns: repeat(7, 1fr); gap: 8px; }
@@ -874,6 +883,23 @@ body { min-height: 100vh; }
       <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★패스트페이퍼 VER 1.jpg" alt="패스트페이퍼" loading="lazy"><figcaption>★ 패스트페이퍼</figcaption></figure>
       <figure class="thumb-card star"><img src="assets/tab3-닝닝-바이럴썸네일/★하입잭 VER 1.jpg" alt="하입잭" loading="lazy"><figcaption>★ 하입잭</figcaption></figure>
     </div>
+
+    <!-- ── 느좋남 키워드 컨텐츠 노출 및 바이럴 진행 ── -->
+    <div class="infl-divider"><span class="infl-divider-label">▼ 느좋남 키워드 컨텐츠 노출 및 바이럴 진행</span></div>
+    <div class="infl-grid-rs">
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/01-rs-mood.jpg" alt="RS 인플 무드 01" loading="lazy"><span class="infl-badge-rs">Mood</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/02-rs-mood.jpg" alt="RS 인플 무드 02" loading="lazy"><span class="infl-badge-rs">Mood</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/03-rs-mood.jpg" alt="RS 인플 무드 03" loading="lazy"><span class="infl-badge-rs">Mood</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/04-rs-mood.jpg" alt="RS 인플 무드 04" loading="lazy"><span class="infl-badge-rs">Mood</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/05-rs-mood.jpg" alt="RS 인플 무드 05" loading="lazy"><span class="infl-badge-rs">Mood</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/11-hyunee.jpg" alt="@hyunee 인스타" loading="lazy"><span class="infl-badge-rs">Viral</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/06-rs-product.jpg" alt="DWRS94063 컷 1" loading="lazy"><span class="infl-badge-rs">Product</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/07-rs-product.jpg" alt="DWRS94063 컷 2" loading="lazy"><span class="infl-badge-rs">Product</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/08-rs-product.jpg" alt="DWRS94063 컷 3" loading="lazy"><span class="infl-badge-rs">Product</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/09-rs-product.jpg" alt="DWRS94063 컷 4" loading="lazy"><span class="infl-badge-rs">Product</span></figure>
+      <figure class="infl-card-rs"><img src="assets/tab3-rs-인플-이미지/10-rs-product.jpg" alt="DWRS94063 컷 5" loading="lazy"><span class="infl-badge-rs">Product</span></figure>
+    </div>
+
     <!-- ── AI 콘텐츠 적용 플로우 (같은 카드 내 통합) ── -->
     <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--bdr);">
       <div style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:12px;">AI 콘텐츠 적용 플로우 — STEP 01 ~ 04</div>
